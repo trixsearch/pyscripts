@@ -278,7 +278,9 @@ if __name__ == "__main__":
     "Dhanushkrishnan.A",
     "Kalaiselvan.S",
     "Sandeep.C.Gupta",
-    "khushi.nigam"
+    "khushi.nigam",
+    "Alquama.Khan",
+    "shatakshi.s"
 ]
 
     # Run the check
