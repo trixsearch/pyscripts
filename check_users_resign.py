@@ -1,4 +1,15 @@
 import subprocess
+import os
+from dotenv import load_dotenv
+
+load_dotenv() # Loads variables from .env into os.environ
+
+def get_users_from_env():
+    # Fetch the string and split it back into a Python list
+    raw_users = os.getenv("USER_LIST", "")
+    if not raw_users:
+        return []
+    return [u.strip() for u in raw_users.split(",")]
 
 def get_resigned_users(user_list):
     # The specific group signature to look for
@@ -44,10 +55,9 @@ def get_resigned_users(user_list):
 
 # --- Main Execution ---
 if __name__ == "__main__":
-    # Add your list of usernames here
-    users_to_check = [
-    
-]
+    # Add your list of usernames here directly or use ENV file
+    # Now use it in your existing script
+    users_to_check = get_users_from_env()
 
     # Run the check
     final_list = get_resigned_users(users_to_check)
