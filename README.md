@@ -12,4 +12,4 @@ for usage just do the following in terminal : -
 ## All Scripts with there usage
 
 ### check_users_resign.py
-    - if you belongs to reliance jio-organisation and want to check whether the person is in Notice period or not , just open the script and replace the person's username to make it work 
+    - if you belongs to an organisation and want to check whether the person is in Notice period or not , just open the script and replace the person's username to make it work 
