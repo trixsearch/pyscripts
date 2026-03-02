@@ -5,7 +5,7 @@ import datetime
 
 # --- CONFIGURATION ---
 # Replace this with your RAW GitHub URL
-GITHUB_URL = "https://raw.githubusercontent.com/trixsearch/pyscripts/refs/heads/master/env.json"
+GITHUB_URL = "https://raw.githubusercontent.com/trixsearch/CPlusPlus/refs/heads/master/env/userchecklist.json"
 
 def get_config_from_github():
     """Fetches both the user list and the target group from GitHub."""
