@@ -13,3 +13,8 @@ for usage just do the following in terminal : -
 
 ### check_users_resign.py
     - if you belongs to an organisation and want to check whether the person is in Notice period or not , just open the script and replace the person's username to make it work 
+
+
+#### used the command to turn my scripts into exe file
+
+- pyinstaller --onefile --name="UserChecker" check_users_using_json.py

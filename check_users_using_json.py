@@ -1,36 +1,32 @@
 import subprocess
-import requests # You might need to run: pip install requests
-import os
+import requests
+import datetime
+# import os
 
 # --- CONFIGURATION ---
 # Replace this with your RAW GitHub URL
-GITHUB_URL = "https://raw.githubusercontent.com/your-username/your-repo/main/user_list.json"
+GITHUB_URL = "https://raw.githubusercontent.com/trixsearch/pyscripts/refs/heads/master/env.json"
 
-def get_users_from_github():
-    """Fetches the user list from a remote JSON file on GitHub."""
-    print(f"Connecting to cloud database...")
+def get_config_from_github():
+    """Fetches both the user list and the target group from GitHub."""
+    print(f"Fetching cloud lists...")
     try:
         response = requests.get(GITHUB_URL)
         if response.status_code == 200:
-            data = response.json()
-            raw_users = data.get("USER_LIST", "")
-            if not raw_users:
-                return []
-            # Split the string by comma and clean whitespace
-            return [u.strip() for u in raw_users.split(",")]
+            return response.json()
         else:
             print(f"Error: Could not reach GitHub (Status: {response.status_code})")
-            return []
+            return None
     except Exception as e:
         print(f"Connection Error: {e}")
-        return []
+        return None
 
-def get_resigned_users(user_list):
-    target_group = "GALL-DL-ResignedOutbo"
+def get_resigned_users(user_list, target_group):
     resigned_users_found = []
     
     print(f"Developed by @trixsearch, check github for more\n")
-    print(f"Processing {len(user_list)} users from cloud...\n")
+    print(f"Searching for group: '{target_group}'")
+    print(f"Processing {len(user_list)} users...\n")
 
     for username in user_list:
         try:
@@ -42,17 +38,16 @@ def get_resigned_users(user_list):
                 check=False
             )
 
-            output = result.stdout
-
             if result.returncode != 0:
                 print(f"[-] Could not retrieve info for: {username}")
                 continue
 
-            if target_group in output:
-                print(f"[+] Found resignation group for: {username}")
+            # Check for the group we fetched from JSON
+            if target_group in result.stdout:
+                print(f"[+] Match found for: {username}")
                 resigned_users_found.append(username)
             else:
-                print(f"[ ] Active/No resignation group: {username}")
+                print(f"[ ] No match: {username}")
 
         except Exception as e:
             print(f"[!] Error processing {username}: {e}")
@@ -61,17 +56,27 @@ def get_resigned_users(user_list):
 
 # --- Main Execution ---
 if __name__ == "__main__":
-    # Fetch list from GitHub instead of local .env
-    users_to_check = get_users_from_github()
+    # 1. Fetch the whole config dictionary
+    config = get_config_from_github()
 
-    if not users_to_check:
-        print("No users found to check. Check your GitHub URL or JSON format.")
+    if config:
+        # 2. Extract the values from the dictionary
+        target = config.get("TARGET_GROUP")
+        raw_users = config.get("USER_LIST", "")
+        
+        # Clean the user list
+        users_to_check = [u.strip() for u in raw_users.split(",") if u.strip()]
+
+        if not users_to_check:
+            print("User list is empty in the cloud JSON.")
+        else:
+            # 3. Run the check using the cloud-fetched target
+            final_list = get_resigned_users(users_to_check, target)
+
+            print("-" * 30)
+            print(f"Final List of users :")
+            print(final_list)
+            currentTime=datetime.datetime.now()
+            print("Total number of persons : ",len(final_list),"||  On Time :",currentTime)
     else:
-        # Run the check
-        final_list = get_resigned_users(users_to_check)
-
-        print("-" * 30)
-        print("Final List of Resigned Users:")
-        for user in final_list:
-            print(f"-> {user}")
-        print(f"\nTotal No. of persons: {len(final_list)}")
+        print("Failed to load configuration. Script stopped.")

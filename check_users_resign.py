@@ -1,6 +1,7 @@
 import subprocess
 import os
 from dotenv import load_dotenv
+import datetime
 
 load_dotenv() # Loads variables from .env into os.environ
 
@@ -65,4 +66,5 @@ if __name__ == "__main__":
     print("-" * 30)
     print("Final List of Resigned Users:")
     print(final_list)
-    print("Total No. of persons : ",len(final_list))
+    currentTime=datetime.datetime.now()
+    print("Total No. of persons : ",len(final_list),"||  Till the Time : ",currentTime)
