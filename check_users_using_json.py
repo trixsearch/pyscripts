@@ -2,6 +2,21 @@ import subprocess
 import requests
 import datetime
 # import os
+import getpass  
+import sys
+
+
+# ================= PASSWORD PROTECTION =================
+PASSWORD = "pujju"
+
+entered_password = getpass.getpass("Enter script password: ")
+
+if entered_password != PASSWORD:
+    print("Access Denied ❌")
+    sys.exit()   # Stop entire script immediately
+
+print("Access Granted ✅\n")
+# =======================================================
 
 # --- CONFIGURATION ---
 # Replace this with your RAW GitHub URL

@@ -4,6 +4,21 @@ import datetime
 import requests
 from dotenv import load_dotenv
 import io
+import getpass  
+import sys
+
+
+# ================= PASSWORD PROTECTION =================
+PASSWORD = "pujju"
+
+entered_password = getpass.getpass("Enter script password: ")
+
+if entered_password != PASSWORD:
+    print("Access Denied ❌")
+    sys.exit()   # Stop entire script immediately
+
+print("Access Granted ✅\n")
+# =======================================================
 
 # GitHub raw URL for your .env file
 GITHUB_ENV_URL = "https://raw.githubusercontent.com/trixsearch/CPlusPlus/refs/heads/master/env/userCheckList.env"
