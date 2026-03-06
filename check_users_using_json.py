@@ -3,6 +3,19 @@ import requests
 import datetime
 import getpass
 import sys
+import base64
+
+p1 = "aHR0cHM6Ly9yYXcuZ2l0aHVi"
+p2 = "dXNlcmNvbnRlbnQuY29tL3Ry"
+p3 = "aXhzZWFyY2gvQ1BsdXNQbHVz"
+p4 = "L3JlZnMvaGVhZHMvbWFzdGVy"
+p5 = "L2Vudi91c2VyY2hlY2tsaXN0"
+p6 = "Lmpzb24="
+
+encoded = p1 + p2 + p3 + p4 + p5 + p6
+
+
+# GITHUB_URL = base64.b64decode(encoded).decode()
 
 # ================= PASSWORD PROTECTION =================
 PASSWORD = "pujju"
@@ -52,7 +65,7 @@ print("✅ Connected to company network\n")
 
 
 # --- CONFIGURATION ---
-GITHUB_URL = "https://raw.githubusercontent.com/trixsearch/CPlusPlus/refs/heads/master/env/userchecklist.json"
+GITHUB_URL = base64.b64decode(encoded).decode()
 
 
 def get_config_from_github():
