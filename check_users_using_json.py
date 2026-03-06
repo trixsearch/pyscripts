@@ -76,7 +76,7 @@ def get_config_from_github():
         if response.status_code == 200:
             return response.json()
         else:
-            print("Error reaching GitHub:", response.status_code)
+            print("Error reaching code:", response.status_code)
             return None
 
     except Exception as e:
