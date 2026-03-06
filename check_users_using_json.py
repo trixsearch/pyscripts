@@ -1,97 +1,144 @@
 import subprocess
 import requests
 import datetime
-# import os
-import getpass  
+import getpass
 import sys
-
 
 # ================= PASSWORD PROTECTION =================
 PASSWORD = "pujju"
 
-entered_password = getpass.getpass("Enter script password: ")
+entered_password = getpass.getpass("Enter Tujju's Name : ")
 
 if entered_password != PASSWORD:
     print("Access Denied ❌")
-    sys.exit()   # Stop entire script immediately
+    input("\nPress Enter to exit...")
+    sys.exit()
 
 print("Access Granted ✅\n")
 # =======================================================
 
+
+# ================= NETWORK CHECK =================
+ALLOWED_GATEWAY = "10.14.128.1"
+ALLOWED_DOMAIN = "in.ril.com"
+
+def check_office_network():
+    try:
+        result = subprocess.run(
+            ["ipconfig", "/all"],
+            capture_output=True,
+            text=True
+        )
+
+        output = result.stdout
+
+        if ALLOWED_GATEWAY in output and ALLOWED_DOMAIN in output:
+            return True
+        else:
+            return False
+
+    except Exception as e:
+        print("Network check failed:", e)
+        return False
+
+
+if not check_office_network():
+    print("❌ Not connected to company WiFi / network")
+    input("\nPress Enter to exit...")
+    sys.exit()
+
+print("✅ Connected to company network\n")
+# =======================================================
+
+
 # --- CONFIGURATION ---
-# Replace this with your RAW GitHub URL
 GITHUB_URL = "https://raw.githubusercontent.com/trixsearch/CPlusPlus/refs/heads/master/env/userchecklist.json"
 
+
 def get_config_from_github():
-    """Fetches both the user list and the target group from GitHub."""
-    print(f"Fetching cloud lists...")
+    print("Fetching cloud lists...")
     try:
         response = requests.get(GITHUB_URL)
+
         if response.status_code == 200:
             return response.json()
         else:
-            print(f"Error: Could not reach GitHub (Status: {response.status_code})")
+            print("Error reaching GitHub:", response.status_code)
             return None
+
     except Exception as e:
-        print(f"Connection Error: {e}")
+        print("Connection Error:", e)
         return None
 
+
 def get_resigned_users(user_list, target_group):
+
     resigned_users_found = []
-    
-    print(f"Developed by @trixsearch, check github for more\n")
-    print(f"Searching for group: '{target_group}'")
-    print(f"Processing {len(user_list)} users...\n")
+
+    print("Developed by whom, we are also searching that guy\n")
+    # print("Searching for group:", target_group)
+    print("Processing", len(user_list), "users...\n")
 
     for username in user_list:
+
         try:
-            # Construct the command: net user /do <username>
             result = subprocess.run(
-                ["net", "user", "/do", username], 
-                capture_output=True, 
-                text=True, 
-                check=False
+                ["net", "user", "/do", username],
+                capture_output=True,
+                text=True
             )
 
             if result.returncode != 0:
-                print(f"[-] Could not retrieve info for: {username}")
+                print("[-] Could not retrieve info for:", username)
                 continue
 
-            # Check for the group we fetched from JSON
             if target_group in result.stdout:
-                print(f"[+] Match found for: {username}")
+                print("[+] Match found:", username)
                 resigned_users_found.append(username)
+
             else:
-                print(f"[ ] No match: {username}")
+                print("[ ] No match:", username)
 
         except Exception as e:
-            print(f"[!] Error processing {username}: {e}")
+            print("[!] Error processing", username, ":", e)
 
     return resigned_users_found
 
-# --- Main Execution ---
+
+# ================= MAIN =================
+
 if __name__ == "__main__":
-    # 1. Fetch the whole config dictionary
+
     config = get_config_from_github()
 
     if config:
-        # 2. Extract the values from the dictionary
+
         target = config.get("TARGET_GROUP")
         raw_users = config.get("USER_LIST", "")
-        
-        # Clean the user list
+
         users_to_check = [u.strip() for u in raw_users.split(",") if u.strip()]
 
         if not users_to_check:
-            print("User list is empty in the cloud JSON.")
+            print("User list is empty in cloud JSON")
+
         else:
-            # 3. Run the check using the cloud-fetched target
+
             final_list = get_resigned_users(users_to_check, target)
 
             print("-" * 30)
-            print(f"Final List of users :")
+            print("Final List of users:")
             print(final_list)
-            currentTime=datetime.datetime.now()
-            print("Total number of persons : ",len(final_list),"||  On Time :",currentTime)
+
+            current_time = datetime.datetime.now()
+
+            print(
+                "\nTotal number of persons:",
+                len(final_list),
+                "|| On Time:",
+                current_time
+            )
+
     else:
-        print("Failed to load configuration. Script stopped.")
+        print("Failed to load configuration.")
+
+input("\nPress Enter to Exit...")
