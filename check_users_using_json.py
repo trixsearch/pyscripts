@@ -5,6 +5,7 @@ import getpass
 import sys
 import base64
 
+# --- BASE64 URL ---
 p1 = "aHR0cHM6Ly9yYXcuZ2l0aHVi"
 p2 = "dXNlcmNvbnRlbnQuY29tL3Ry"
 p3 = "aXhzZWFyY2gvQ1BsdXNQbHVz"
@@ -13,22 +14,7 @@ p5 = "L2Vudi91c2VyY2hlY2tsaXN0"
 p6 = "Lmpzb24="
 
 encoded = p1 + p2 + p3 + p4 + p5 + p6
-
-
-# GITHUB_URL = base64.b64decode(encoded).decode()
-
-# ================= PASSWORD PROTECTION =================
-PASSWORD = "pujju"
-
-entered_password = getpass.getpass("Enter Tujju's Name : ")
-
-if entered_password != PASSWORD:
-    print("Access Denied ❌")
-    input("\nPress Enter to exit...")
-    sys.exit()
-
-print("Access Granted ✅\n")
-# =======================================================
+GITHUB_URL = base64.b64decode(encoded).decode()
 
 
 # ================= NETWORK CHECK =================
@@ -55,21 +41,9 @@ def check_office_network():
         return False
 
 
-if not check_office_network():
-    print("❌ Not connected to company WiFi / network")
-    input("\nPress Enter to exit...")
-    sys.exit()
-
-print("✅ Connected to company network\n")
-# =======================================================
-
-
-# --- CONFIGURATION ---
-GITHUB_URL = base64.b64decode(encoded).decode()
-
-
+# ================= CLOUD CONFIG =================
 def get_config_from_github():
-    print("Fetching cloud lists...")
+    print("Fetching license data & security config...")
     try:
         response = requests.get(GITHUB_URL)
 
@@ -84,16 +58,14 @@ def get_config_from_github():
         return None
 
 
+# ================= AD CHECK =================
 def get_resigned_users(user_list, target_group):
-
     resigned_users_found = []
 
-    print("Developed by whom, we are also searching that guy\n")
-    # print("Searching for group:", target_group)
+    print("\nReliance Corporate IT Park Limited\n")
     print("Processing", len(user_list), "users...\n")
 
     for username in user_list:
-
         try:
             result = subprocess.run(
                 ["net", "user", "/do", username],
@@ -108,7 +80,6 @@ def get_resigned_users(user_list, target_group):
             if target_group in result.stdout:
                 print("[+] Match found:", username)
                 resigned_users_found.append(username)
-
             else:
                 print("[ ] No match:", username)
 
@@ -119,39 +90,88 @@ def get_resigned_users(user_list, target_group):
 
 
 # ================= MAIN =================
-
 if __name__ == "__main__":
 
+    # 1. Verify Network First
+    if not check_office_network():
+        print("❌ Not connected to Jio Intranet WiFi / network || Sending IP Logs to InfoSec team")
+        input("\nPress Enter to exit...")
+        print("\nLogs with the respected system and IP are Logged...")
+        sys.exit()
+
+    print("Connected to R-Secure network\n Sending IP Logs to RIL-InfoSec")
+
+    # 2. Fetch JSON Config
     config = get_config_from_github()
 
     if config:
+        # 3. Password Protection & Role Assignment
+        ADMIN_PASSWORD = config.get("ADMIN_PASSWORD")
+        USER_PASSWORD = config.get("USER_PASSWORD")
 
-        target = config.get("TARGET_GROUP")
-        raw_users = config.get("USER_LIST", "")
+        if not ADMIN_PASSWORD or not USER_PASSWORD:
+            print("❌ Security Error: Password keys missing in cloud config.")
+            input("\nPress Enter to exit...")
+            sys.exit()
 
-        users_to_check = [u.strip() for u in raw_users.split(",") if u.strip()]
+        entered_password = getpass.getpass("Enter Secret Key : ")
 
-        if not users_to_check:
-            print("User list is empty in cloud JSON")
-
+        # Determine access level based on password
+        access_level = None
+        if entered_password == ADMIN_PASSWORD:
+            access_level = "ADMIN"
+            print("\nAdmin Access Granted ✅ - Full List Mode")
+        elif entered_password == USER_PASSWORD:
+            access_level = "USER"
+            print("\nStandard Access Granted ✅ - Single User Mode")
         else:
+            print("Access Denied For Unauthorised person ❌")
+            input("\nPress Enter to exit...")
+            sys.exit()
 
-            final_list = get_resigned_users(users_to_check, target)
+        # 4. Get Configuration Data
+        target = config.get("TARGET_GROUP")
+        
+        # 5. Process Based on Access Level
+        users_to_check = []
+        
+        if access_level == "ADMIN":
+            # Fetch the full list from cloud
+            raw_users = config.get("USER_LIST", "")
+            users_to_check = [u.strip() for u in raw_users.split(",") if u.strip()]
+            
+            if not users_to_check:
+                print("User list is empty in cloud JSON")
+                sys.exit()
+                
+        elif access_level == "USER":
+            # Ask for a single username manually
+            single_user = input("\nEnter the Username to check: ").strip()
+            if not single_user:
+                print("No username entered.")
+                sys.exit()
+            users_to_check = [single_user]
 
-            print("-" * 30)
-            print("Final List of users:")
+        # Execute the check
+        final_list = get_resigned_users(users_to_check, target)
+
+        print("-" * 30)
+        print("Final List of users found in target group:")
+        if final_list:
             print(final_list)
+        else:
+            print("None")
 
-            current_time = datetime.datetime.now()
+        current_time = datetime.datetime.now()
 
-            print(
-                "\nTotal number of persons:",
-                len(final_list),
-                "|| On Time:",
-                current_time
-            )
+        print(
+            "\nTotal number of persons identified:",
+            len(final_list),
+            "|| InfoSec Logged Time:",
+            current_time.strftime("%Y-%m-%d %H:%M:%S")
+        )
 
     else:
         print("Failed to load configuration.")
 
-input("\nPress Enter to Exit...")
+    input("\nPress Enter to Exit...")
