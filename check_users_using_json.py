@@ -62,8 +62,8 @@ def get_config_from_github():
 def get_resigned_users(user_list, target_group):
     resigned_users_found = []
 
-    print("\nReliance Corporate IT Park Limited\n")
-    print("Processing", len(user_list), "users...\n")
+    # print("\nReliance Corporate IT Park Limited\n")
+    # print("Processing", len(user_list), "users...\n")
 
     for username in user_list:
         try:
@@ -136,7 +136,8 @@ if __name__ == "__main__":
         users_to_check = []
         
         if access_level == "ADMIN":
-            # Fetch the full list from cloud
+            print("\nReliance Corporate IT Park Limited\n")
+            
             raw_users = config.get("USER_LIST", "")
             users_to_check = [u.strip() for u in raw_users.split(",") if u.strip()]
             
@@ -144,34 +145,45 @@ if __name__ == "__main__":
                 print("User list is empty in cloud JSON")
                 sys.exit()
                 
+            print("Processing", len(users_to_check), "users...\n")
+            final_list = get_resigned_users(users_to_check, target)
+
+            print("-" * 30)
+            print("Final List of users found in target group:")
+            if final_list:
+                print(final_list)
+            else:
+                print("None")
+
+            current_time = datetime.datetime.now()
+            print(
+                "\nTotal number of persons identified:",
+                len(final_list),
+                "|| InfoSec Logged Time:",
+                current_time.strftime("%Y-%m-%d %H:%M:%S")
+            )
+            input("\nPress Enter to Exit...")
+
         elif access_level == "USER":
-            # Ask for a single username manually
-            single_user = input("\nEnter the Username to check: ").strip()
-            if not single_user:
-                print("No username entered.")
+            print("\nReliance Corporate IT Park Limited")
+            print("[ Continuous Scan Mode - Press Ctrl+C to Exit ]")
+            
+            try:
+                # Infinite loop for continuous checking
+                while True:
+                    single_user = input("\nEnter the Username to check: ").strip().title()
+                    
+                    if not single_user:
+                        continue # Skip empty inputs
+                    
+                    # Run the check for just this one user
+                    get_resigned_users([single_user], target)
+                    
+            except KeyboardInterrupt:
+                # Catches the Ctrl+C command to exit cleanly without throwing massive Python errors
+                print("\n\n⏹️  Scan terminated by user (Ctrl+C). Exiting program safely...")
                 sys.exit()
-            users_to_check = [single_user]
-
-        # Execute the check
-        final_list = get_resigned_users(users_to_check, target)
-
-        print("-" * 30)
-        print("Final List of users found in target group:")
-        if final_list:
-            print(final_list)
-        else:
-            print("None")
-
-        current_time = datetime.datetime.now()
-
-        print(
-            "\nTotal number of persons identified:",
-            len(final_list),
-            "|| InfoSec Logged Time:",
-            current_time.strftime("%Y-%m-%d %H:%M:%S")
-        )
 
     else:
         print("Failed to load configuration.")
-
-    input("\nPress Enter to Exit...")
+        input("\nPress Enter to Exit...")
