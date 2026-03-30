@@ -4,6 +4,7 @@ import datetime
 import getpass
 import sys
 import base64
+import concurrent.futures # <-- Imported for Multithreading
 
 # --- BASE64 URL ---
 p1 = "aHR0cHM6Ly9yYXcuZ2l0aHVi"
@@ -58,33 +59,49 @@ def get_config_from_github():
         return None
 
 
-# ================= AD CHECK =================
+# ================= AD CHECK (MULTITHREADED) =================
+
+def check_single_ad_user(username, target_group):
+    """Helper function to be run by individual threads"""
+    try:
+        result = subprocess.run(
+            ["net", "user", "/do", username],
+            capture_output=True,
+            text=True
+        )
+
+        if result.returncode != 0:
+            return username, False, f"[-] Could not retrieve info for: {username}"
+
+        if target_group in result.stdout:
+            return username, True, f"[+] Match found: {username}"
+        else:
+            return username, False, f"[ ] No match: {username}"
+
+    except Exception as e:
+        return username, False, f"[!] Error processing {username} : {e}"
+
+
 def get_resigned_users(user_list, target_group):
+    """Main function that manages the thread pool"""
     resigned_users_found = []
+    MAX_THREADS = 15
 
-    # print("\nReliance Corporate IT Park Limited\n")
-    # print("Processing", len(user_list), "users...\n")
+    # Create a pool of up to 15 threads
+    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
+        # Submit all users to the threads
+        future_to_user = {executor.submit(check_single_ad_user, username, target_group): username for username in user_list}
 
-    for username in user_list:
-        try:
-            result = subprocess.run(
-                ["net", "user", "/do", username],
-                capture_output=True,
-                text=True
-            )
-
-            if result.returncode != 0:
-                print("[-] Could not retrieve info for:", username)
-                continue
-
-            if target_group in result.stdout:
-                print("[+] Match found:", username)
-                resigned_users_found.append(username)
-            else:
-                print("[ ] No match:", username)
-
-        except Exception as e:
-            print("[!] Error processing", username, ":", e)
+        # Print results as soon as any thread finishes its task
+        for future in concurrent.futures.as_completed(future_to_user):
+            try:
+                username, is_match, log_msg = future.result()
+                print(log_msg)
+                
+                if is_match:
+                    resigned_users_found.append(username)
+            except Exception as exc:
+                print(f"[!] A thread generated an exception: {exc}")
 
     return resigned_users_found
 
@@ -123,7 +140,7 @@ if __name__ == "__main__":
             print("\nAdmin Access Granted ✅ - Full List Mode")
         elif entered_password == USER_PASSWORD:
             access_level = "USER"
-            print("\nStandard Access Granted  -  User Mode")
+            print("\nStandard Access Granted ✅ - Single User Mode")
         else:
             print("Access Denied For Unauthorised person ❌")
             input("\nPress Enter to exit...")
@@ -133,8 +150,6 @@ if __name__ == "__main__":
         target = config.get("TARGET_GROUP")
         
         # 5. Process Based on Access Level
-        users_to_check = []
-        
         if access_level == "ADMIN":
             print("\nReliance Corporate IT Park Limited\n")
             
@@ -145,7 +160,8 @@ if __name__ == "__main__":
                 print("User list is empty in cloud JSON")
                 sys.exit()
                 
-            print("Processing", len(users_to_check), "users...\n")
+            # print(f"Processing {len(users_to_check)} users utilizing 15 concurrent threads...\n")
+            print(f"Processing {len(users_to_check)} users\n")
             final_list = get_resigned_users(users_to_check, target)
 
             print("-" * 30)
