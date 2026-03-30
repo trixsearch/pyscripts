@@ -3,6 +3,7 @@ import subprocess
 import requests
 import datetime
 import threading
+import concurrent.futures # <-- Imported for Multithreading
 import base64
 import time
 import sys
@@ -108,7 +109,7 @@ class RelVmApp(ctk.CTk):
 
         # --- LOGOUT BUTTON ---
         self.logout_btn = ctk.CTkButton(self.dashboard_frame, text="Log Out", fg_color="transparent", text_color="#A0A0A0", hover_color="#333333", border_width=1, border_color="#333333", width=100, command=self.logout)
-        self.logout_btn.pack(pady=(10, 0), anchor="e") # anchor="e" aligns it to the East (Right)
+        self.logout_btn.pack(pady=(10, 0), anchor="e") 
 
         # Start initialization
         threading.Thread(target=self.fetch_config_thread, daemon=True).start()
@@ -116,7 +117,6 @@ class RelVmApp(ctk.CTk):
     # ================= LOGIC & THREADS =================
 
     def log(self, text, tag=None):
-        """Injects text into the console with optional color tags."""
         self.console_box.configure(state="normal")
         if tag:
             self.console_box.insert("end", text + "\n", tag)
@@ -133,7 +133,6 @@ class RelVmApp(ctk.CTk):
                 self.cloud_config = response.json()
                 self.target_group = self.cloud_config.get("TARGET_GROUP")
                 
-                # Update UI safely
                 self.loading_spinner.stop()
                 self.loading_frame.pack_forget()
                 self.login_frame.pack(pady=40, ipadx=20)
@@ -166,7 +165,6 @@ class RelVmApp(ctk.CTk):
         self.login_frame.pack_forget()
         self.dashboard_frame.pack(fill="both", expand=True, padx=30, pady=(0, 20))
 
-        # Clear existing layout in the input container to prevent overlap if swapping roles
         self.single_user_entry.pack_forget()
         self.start_btn.pack_forget()
 
@@ -179,7 +177,6 @@ class RelVmApp(ctk.CTk):
             self.start_btn.configure(width=250)
             self.start_btn.pack(side="top")
             
-        # Clear the terminal screen for the new session
         self.console_box.configure(state="normal")
         self.console_box.delete("1.0", "end")
         self.console_box.configure(state="disabled")
@@ -188,25 +185,15 @@ class RelVmApp(ctk.CTk):
         self.log("Module initialized. Awaiting parameters...\n", "neutral")
 
     def logout(self):
-        """Clears the session and returns to the login screen."""
-        # 1. Hide dashboard, show login
         self.dashboard_frame.pack_forget()
         self.login_frame.pack(pady=40, ipadx=20)
-        
-        # 2. Reset session variables
         self.access_level = None
-        
-        # 3. Clear inputs
         self.password_entry.delete(0, "end")
         self.single_user_entry.delete(0, "end")
         self.error_label.configure(text="")
-        
-        # 4. Stop any running UI tasks
         self.scan_progress.stop()
         self.start_btn.configure(state="normal", text="▶ INITIATE SCAN")
         self.single_user_entry.configure(state="normal")
-        
-        # 5. Set focus back to password
         self.password_entry.focus()
 
     def start_scan(self):
@@ -219,46 +206,65 @@ class RelVmApp(ctk.CTk):
                 self.log(">> CRITICAL: User dataset is empty.", "error")
                 return
         elif self.access_level == "USER":
+            # Added .title() back in so "harsh.pal" becomes "Harsh.Pal"
             single_user = self.single_user_entry.get().strip().title()
             if not single_user:
                 self.log(">> Warning: Target username required.", "error")
                 return
             users_to_check = [single_user]
 
-        # UI Lock during scan
         self.start_btn.configure(state="disabled", text="SCANNING...")
         if self.access_level == "USER":
             self.single_user_entry.configure(state="disabled")
             
         self.scan_progress.start()
-        self.log(f">> Executing batch analysis on {len(users_to_check)} identities...", "header")
+        self.log(f">> Executing batch analysis on {len(users_to_check)} identities utilizing 15 concurrent threads...", "header")
         
         threading.Thread(target=self.execute_ad_checks, args=(users_to_check,), daemon=True).start()
 
+    # --- MULTITHREADING HELPER FUNCTION ---
+    def check_single_ad_user(self, username):
+        """This function checks just ONE user. It is run by the worker threads."""
+        try:
+            result = subprocess.run(
+                ["net", "user", "/do", username],
+                capture_output=True,
+                text=True,
+                creationflags=subprocess.CREATE_NO_WINDOW
+            )
+
+            if result.returncode != 0:
+                return username, "error", f"  [-] ERR: Profile unreachable -> {username}"
+
+            if self.target_group in result.stdout:
+                return username, "match", f"  [+] DETECTED: {username} (Target Group Confirmed)"
+            else:
+                return username, "neutral", f"  [ ] CLEARED: {username}"
+
+        except Exception as e:
+            return username, "error", f"  [!] SYS_ERR on {username}: {e}"
+
+    # --- UPDATED TO USE MULTITHREADING ---
     def execute_ad_checks(self, user_list):
         resigned_users_found = []
 
-        for username in user_list:
-            try:
-                result = subprocess.run(
-                    ["net", "user", "/do", username],
-                    capture_output=True,
-                    text=True,
-                    creationflags=subprocess.CREATE_NO_WINDOW
-                )
+        # Use 15 threads to scan multiple users at the same time
+        MAX_THREADS = 15
 
-                if result.returncode != 0:
-                    self.log(f"  [-] ERR: Profile unreachable -> {username}", "error")
-                    continue
+        with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
+            # Submit all users to the thread pool
+            future_to_user = {executor.submit(self.check_single_ad_user, username): username for username in user_list}
 
-                if self.target_group in result.stdout:
-                    self.log(f"  [+] DETECTED: {username} (Target Group Confirmed)", "match")
-                    resigned_users_found.append(username)
-                else:
-                    self.log(f"  [ ] CLEARED: {username}", "neutral")
-
-            except Exception as e:
-                self.log(f"  [!] SYS_ERR on {username}: {e}", "error")
+            # As each thread finishes a user, print the result immediately
+            for future in concurrent.futures.as_completed(future_to_user):
+                try:
+                    username, status, log_message = future.result()
+                    self.log(log_message, status)
+                    
+                    if status == "match":
+                        resigned_users_found.append(username)
+                except Exception as exc:
+                    self.log(f"  [!] Thread generated an exception: {exc}", "error")
 
         # Post-Scan Summary
         self.log("\n" + "="*50, "header")

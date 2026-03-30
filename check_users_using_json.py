@@ -123,7 +123,7 @@ if __name__ == "__main__":
             print("\nAdmin Access Granted ✅ - Full List Mode")
         elif entered_password == USER_PASSWORD:
             access_level = "USER"
-            print("\nStandard Access Granted ✅ - Single User Mode")
+            print("\nStandard Access Granted  -  User Mode")
         else:
             print("Access Denied For Unauthorised person ❌")
             input("\nPress Enter to exit...")
