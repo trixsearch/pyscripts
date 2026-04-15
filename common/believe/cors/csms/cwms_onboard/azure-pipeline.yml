@@ -1,0 +1,23 @@
+resources:
+  repositories:
+    - repository: pipeline-templates
+      type: git
+      name: CWMS/pipeline-templates
+      ref: jfrog
+
+
+name: $(Build.DefinitionName)_$(SourceBranchName)_$(Build.BuildId)_$(Date:yyyyMMdd)$(Rev:.r)
+  
+
+jobs:
+- template: java-main-ci.yml@pipeline-templates
+  parameters:
+    run_ci: 'true'
+    run_sonar: $(Sonar)
+    run_secops: $(SecOpsFortify)
+    run_release: $(Release)
+    run_blackduck: $(Blackduck)
+    sonar_project_name: '$(Build.Repository.Name)'
+    sonar_project_key: '$(Build.Repository.Name)'
+    sonar_project_version: '$(Build.Repository.Name)'
+    run_pomfile_location: 'pom.xml'

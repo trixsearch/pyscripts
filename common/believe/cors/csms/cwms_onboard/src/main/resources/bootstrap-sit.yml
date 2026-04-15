@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+     uri: http://10.173.173.13:31006
+     #uri: http://localhost:8085
