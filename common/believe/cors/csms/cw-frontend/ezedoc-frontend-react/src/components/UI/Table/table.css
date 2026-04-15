@@ -1,0 +1,18 @@
+.icon_set {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  height: 4px;
+  cursor: pointer;
+}
+
+.table_header {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon_control {
+  height: 4px;
+}

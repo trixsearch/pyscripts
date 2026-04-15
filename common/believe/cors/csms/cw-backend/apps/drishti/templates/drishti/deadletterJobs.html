@@ -1,0 +1,100 @@
+{% extends 'drishti/index.html' %}
+{% block content %}
+{% load static %}
+
+<a href="."> <u>HOME</u></a> <strong style="position: absolute;right: 50%;">TOTAL : {{ total }}</strong>
+{% load static %}
+<script src="{% static "admin/js/copy.js" %}"></script>
+<a style="position: absolute;
+    right: 40px;" href="/cw/admin/logout"> <u>LOG OUT</u>
+</a>
+    <style>
+    ul.pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+    
+    ul.pagination li {display: inline;}
+    
+    ul.pagination li a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    </style>
+
+    {% if tenant_list %}
+    <form action="deadletterJobs" method="get">  
+        <select style="position: absolute;right: 12%;" name="tenantId" id='label'> 
+            {% for tenant in tenant_list %}
+                <option value="{{tenant.id}}" >{{ tenant.name }} ({{ tenant.staticfiles}})</option>
+            {% endfor %}
+        </select>
+        <input style="position: absolute;right: 2%;" type="submit" value="Get Tenant Data">
+    </form>
+    <br><br><br>
+    {% endif %}
+    
+    {% if data %}
+        <table style="width:95vw;">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Process Instance Id</th>
+                    <th>Entity Name</th>
+                    <th>Exception Message</th>
+                    <th>Create Time</th>
+                    <th>Tenant Id</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                    <tr >
+                        <td> {{item.id}} </td>
+                        <td> {{item.processInstanceId}} </td>
+                        <td> {{item.entity_name}}</td>
+                        <td id="exception"> 
+                            {{item.exceptionMessage}} 
+                            <button onclick="myFunction()">Copy</button>
+                        </td>
+                        <td> {{item.createTime}} </td>
+                        <td> {{item.tenantId}} </td>
+                        <td> 
+                            <form class="inlineForm" action="job/dead_letter/jobs/{{item.processInstanceId}}/{{item.tenantId}}/{{item.id}}/" method="post"> {% csrf_token %}
+                            <input hidden type="text" name="type" value="submit">
+                            <input type="submit" value="Detail View">
+                            </form>
+
+                            <form class="inlineForm" action="job/dead_letter/jobs/{{item.processInstanceId}}/{{item.tenantId}}/{{item.id}}/" method="post"> {% csrf_token %}
+                            <input hidden type="text" name="type" value="move">
+                            <input type="submit" value="Move">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {%else%}
+      <h2> No DeadLetter Jobs found </h2>
+    {% endif %}
+
+
+    <ul style="display: inline-block;">
+        {% for item in page_count %}
+            <li style="display: inline;"><a href="{{page_url}}{{item}}&page_size={{page_size}}">{{item}}</a></li>
+        {% endfor %}
+    </ul>
+
+    {% if not tenant_list %}
+    <form class="inlineForm" action="job/dead_letter/move_all/" method="post"> {% csrf_token %}
+        <input hidden type="text" name="type" value="move">
+        <input type="submit" value="Move All">
+    </form>
+    {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

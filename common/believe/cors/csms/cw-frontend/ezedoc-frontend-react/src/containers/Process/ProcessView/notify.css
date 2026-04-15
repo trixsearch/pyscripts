@@ -1,0 +1,85 @@
+.notify_modal .modal-content {
+  min-height: 600px !important;
+  margin-top: -50px;
+}
+
+.notify_modal {
+  top: 50px !important;
+  opacity: 1 !important;
+}
+
+.notify_header.modal-header {
+  padding: 0px;
+}
+
+.notify_header {
+  text-align: center;
+}
+
+.ql-editor {
+  height: 100px !important;
+}
+
+.form-control.ezedox_text {
+  height: 42px;
+}
+
+.notify-modal-body {
+  display: block !important;
+}
+
+.modal-content .notify-modal-body {
+  margin-top: 5px;
+  margin-bottom: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.modal-content .notify-modal-body::-webkit-scrollbar {
+  display: block !important;
+}
+
+.process_checkbox_notify {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.form-check-input.input-email {
+  margin-right: 5px;
+}
+
+.email-text {
+  font-size: 15px;
+}
+
+.notify_select_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 80px;
+  overflow-y: auto;
+  background-color: rgb(242, 242, 242);
+  scrollbar-width: thin;
+}
+
+.notify_select_list > div {
+  background-color: rgb(230, 230, 230);
+  margin-top: 3px;
+  margin-left: 27px;
+  text-align: center;
+}
+
+.notify_select_list::-webkit-scrollbar {
+  display: block !important;
+}
+
+.notify_count {
+  align-self: center;
+  margin-left: 5px;
+  padding: 0.4em;
+  color: var(--main-button-text-color);
+  cursor: pointer;
+  background-image: var(--main-button-gradient-color);
+}

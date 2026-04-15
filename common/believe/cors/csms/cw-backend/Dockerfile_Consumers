@@ -1,0 +1,12 @@
+FROM devopsartifact.jio.com/jpf-cwms__dev__dcr/python:3.8.5-slim_v1
+ENV http_proxy=http://azureproxy.jio.com:8080
+ENV https_proxy=http://azureproxy.jio.com:8080
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+WORKDIR /app
+ADD requirements_consumer.txt /app/requirements.txt
+# RUN apt-get update && apt-get install -y gcc musl-tools musl-dev
+RUN pip install -r requirements.txt
+ADD consumers/ /app/consumers/
+ENV http_proxy=
+ENV https_proxy=

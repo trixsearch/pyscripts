@@ -1,0 +1,83 @@
+.ezedox_main_body #sidebar-wrapper {
+  margin-left: -68px;
+  left: 70px;
+  width: 100px;
+  background-color: var(--main-white-color);
+  position: fixed;
+  height: 100%;
+  transition: all 0.4s ease 0s;
+  box-shadow: 0 0 10px 0 rgba(207, 207, 207, 0.5);
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.ezedox_main_body #sidebar-wrapper .nav-pills > li + li {
+  margin-left: 0px;
+}
+
+.ezedox_main_body .sidebar-nav {
+  display: block;
+  float: left;
+  width: 100px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.ezedox_main_body .sidebar-nav li {
+  line-height: 40px;
+}
+
+.ezedox_main_body .sidebar-nav li a {
+  color: #999;
+  display: block;
+  float: left;
+  text-decoration: none;
+  width: 100px;
+  background-color: var(--main-white-color);
+  border-left: 5px solid transparent;
+}
+
+.ezedox_main_body .sidebar-nav li a:hover {
+  color: var(--main-first-primary-color);
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+.ezedox_main_body .sidebar-nav li a:active,
+.ezedox_main_body .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.ezedox_main_body .side_text_span {
+  padding-left: 10px;
+  text-transform: capitalize;
+}
+
+.ezedox_main_body .powered_by_ezedox {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  position: fixed;
+  bottom: 0px;
+  color: #94979b;
+  font-size: 12px;
+  background-color: var(--main-white-color);
+  height: 50px;
+  width: 240px;
+  left: 0;
+}
+
+.ezedox_main_body ul.sidebar-nav.nav.nav-pills.sub_menu_side_bar.active {
+  display: block;
+}
+
+.sidebutton_blur {
+  opacity: 0.5;
+}
+
+.premium-icon-sidedrawer {
+  padding-left: 0.5rem;
+}

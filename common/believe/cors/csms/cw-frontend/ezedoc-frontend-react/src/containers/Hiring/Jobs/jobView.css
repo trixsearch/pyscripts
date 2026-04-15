@@ -1,0 +1,148 @@
+.job-view {
+    padding-top: 0 !important;
+}
+
+.job-view .job-view-other-desc {
+    /* margin-top: 20px; */
+    padding-left: 0.5rem;
+}
+
+.job-view .job-view-other-desc #job-id-container {
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 5px;
+}
+
+.job-view .job-view-other-desc #job-other-details {
+    display: flex;
+    font-weight: 500;
+    margin: 5px 0 15px;
+}
+
+.job-view .job-view-other-desc #job-other-details > div {
+    display: flex;
+}
+
+.job-view .job-view-other-desc #job-other-details > div:not(:last-child) {
+    padding-right: 20px;
+}
+
+.job-view .job-view-other-desc #job-other-details > div > p {
+    margin: unset;
+    max-width: 150px;
+    overflow: hidden;
+    color: #4a4a4ad9;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.job-view .ant-table-wrapper .ant-table-body {
+    height: calc(100vh - 333px);
+}
+
+.job-view .process_details_btn_cont {
+    bottom: -13px;
+}
+
+.job-view .process_details_btn_cont2 {
+    /* right: 10px; */
+    /* z-index: 999; */
+    /* bottom: -42px; */
+    margin: 0.5rem 0;
+    display: flex;
+    margin-left:15px;
+    /* position: absolute; */
+}
+
+.job-view .charts-container {
+    margin-top: 55px;
+}
+
+.negative_value p{
+    color:red!important;
+}
+
+.job-view .menu_container .menu_btn.dropdown-toggle::after {
+    display: none;
+}
+
+.left-border{
+    border-left:1px solid #cacaca;
+    /* padding:0 0 0 20px; */
+    text-align: center;
+    margin-bottom:0;
+}
+
+.left-border:nth-child(1){
+    border-left:unset;
+}
+
+.candidate_tab_ul{
+    padding:20px;
+    background:#FFF;
+    border-radius:8px;
+    padding-left:0px;
+    border-bottom: unset;
+    /* margin-top:5px; */
+}
+
+.candidate_tab_li{
+    flex-direction: row-reverse!important;
+    /* padding-top:5px!important; */
+    margin:0;
+    padding:12px 0!important;
+}
+
+.candidate_tab_ul .nav-item a{
+    font-size:14px!important;
+}
+
+.job-view .btnDropdown .dropdown-menu{
+    left: -172px !important;
+}
+
+
+/*************************************************************/
+@media only screen and (max-width: 800px) {
+
+	/* Label the data */
+	td:nth-of-type(1):before { content: "Candidate ID"; }
+	td:nth-of-type(2):before { content: "Source"; }
+	td:nth-of-type(3):before { content: "Candidate Name"; }
+    td:nth-of-type(4):before { content: "Mobile"; }
+    td:nth-of-type(5):before { content: "Hiring Status"; }
+    td:nth-of-type(6):before { content: "Actions"; }
+
+    .fancy_btn{
+        min-width:90px!important;
+     }
+
+     .process_details_btn_cont{
+        right:20px!important;
+        
+    }
+
+    .job-view .job-view-other-desc #job-other-details{
+        flex-direction: column;
+    }
+
+    .job-view .job-view-other-desc {
+        margin-left:45px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+
+    .fancy_btn{
+        font-size:10px!important;
+    }
+    .btnDropdown .dropdown-menu{
+        left: -127px!important;;
+    }
+
+    .job-view .job-view-other-desc {
+        margin-left:30px;
+    }
+
+}

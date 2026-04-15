@@ -1,0 +1,435 @@
+@import '../../../theme.scss';
+.DefaultButton{
+    border-radius: 6px;
+    // height: 48px;
+    min-width: 120px;
+    line-height: 17px;
+    text-align: center;
+    color: $white100;
+    outline: none;
+    border: none;
+    background-color: $primaryBlue100;
+    &:hover {
+        text-decoration: none;
+        color: $white100;
+        background-color: $primaryBlue100;
+      }
+      &:active {
+        text-decoration: none;
+        color: $white100;
+        background-color: $primaryBlue100;
+    }
+    @include body_r_r;
+}
+
+
+.bt{
+    outline: none;
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        text-decoration: none;
+        color:$white100;
+    }
+}
+
+.DisabledButton{
+    background-color: $black30;
+    border-radius: 6px;
+    height: 48px;
+    min-width: 120px;
+    line-height: 17px;
+    text-align: center;
+    color: $white100;
+    outline: none;
+    border: none;
+    &:hover{
+        color: $white100 ;
+    }
+    @include body_r_r;
+}
+
+.EditIcon{
+    float: left;
+    margin-top: 0.1rem;
+    margin-left: 0.2rem;
+}
+
+.EditMode{ 
+    background-color: $black50;
+    color: $white100;
+}
+
+.SaveMode{
+    background-color: $primaryBlue100;
+    &:hover{
+        background-color: $primaryBlue100;
+        color: $white100;
+    }
+    &:active{
+        background-color: $primaryBlue100;
+        color: $white100;
+        border:0;
+    }
+}
+.LargeButton{
+    border-radius: 6px;
+    height: 3.3rem;
+    min-width: 17.5rem;
+    line-height: 29px;
+    color: $white100;
+    @include heading1_lt_m
+}
+
+.MediumButton{
+    border-radius: 6px;
+    height: 3rem;
+    font-family: 'Inter';
+    text-align: center;
+    line-height: 17px;
+    color: $white100;   
+    @include body_r_r;
+}
+
+.largeButtonIcon{
+   float: right;
+   margin-right: 1.2rem;
+   margin-top: 0.5rem;
+}
+
+.largeButtonLabel{
+    float: left;
+    margin-left: 1.2rem;
+    margin-bottom: 0rem;
+}
+
+.mediumButtonIcon{
+    float: right;
+    margin-top: 0.15rem;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+.mediumButtonLoader{
+    float: right;
+    margin-top: -0.25rem;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+.largeButtonLoader{
+    float: right;
+    margin-top: 0.25rem;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+}
+
+.smallButtonLoader{
+    float: right;
+    margin-top: 0rem;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+}
+ 
+.mediumButtonLabel{
+    float: left;
+    margin-left: 1.2rem;
+    margin-bottom: 0rem;
+}
+
+.mediumAddIcon{
+    float: left;
+    margin-top: 0.15rem;
+    margin-right: 8px;
+    height: 12px;
+}
+
+.mediumDropdownIcon{
+    float: right;
+    margin-top: 0.25rem;
+}
+
+.mediumAddLabel{
+    float: left;
+    margin-left: 0.4rem;
+    margin-top: 0.26rem;
+}
+
+.SmallButton{
+    border-radius: 6px;
+    height: 2rem;
+    min-width: 172px;
+    line-height: 20px;
+    color: $white100;
+    @include caption_m_m;
+}
+
+.SmallButtonIcon{
+    margin-left: 5rem;
+    margin-bottom: 0rem;
+    height:50%;
+}
+
+.SmallButtonLabel{
+    float: left;
+    margin-left: 0.4rem;
+}
+
+.AddButton{
+    border-radius: 6px;
+    height: 2rem;
+    text-align: center;
+    line-height: 17px;
+    color: $white100; 
+    @include body_r_r;
+}
+
+.AddMiniButton{
+    border-radius: 6px;
+    height: 2rem;
+    text-align: center;
+    line-height: 17px;
+    color: $white100; 
+    @include caption_m_m;
+}
+
+.DefaultMiniButton{
+    border-radius: 6px;
+    height: 32px;
+    min-width: 70px;
+    line-height: 17px;
+    text-align: center;
+    color: $white100;
+    outline: none;
+    border: none;
+    background-color: $primaryBlue100;
+    &:hover {
+        text-decoration: none;
+        color: $white100;
+        background-color: $primaryBlue100;
+      }
+      &:active {
+        text-decoration: none;
+        color: $white100;
+        background-color: $primaryBlue100;
+      }
+      @include caption_m_m;
+}
+
+.DisabledMiniButton{
+    background-color: $black30;
+    border-radius: 6px;
+    height: 32px;
+    min-width: 70px;
+    line-height: 17px;
+    text-align: center;
+    color: $white100;
+    outline: none;
+    border: none;
+    &:hover{
+        color: $white100 ;
+    }
+    @include caption_m_m;
+}
+
+.printButton{
+    height: 48px;
+    max-width: 130px;
+    background-color: $primaryBlue100;
+    border-radius: 6px;
+    line-height: 16px;
+    color: $white100;
+    padding: 8px 24px 8px 24px;
+    display: flex;
+    text-align: center;
+    outline: none;
+    @include body_r_r;
+}
+
+.printButtonDisabled{
+    background-color: $primaryBlue100;
+    border-radius: 6px;
+}
+
+.DefaultSecondaryButton{
+    border-radius: 6px;
+    height: 48px;
+    min-width: 120px;
+    line-height: 17px;
+    text-align: center;
+    color: $primaryBlue100;
+    outline: none;
+    border: none;
+    background-color: $primaryBlueBg;
+    &:hover {
+        text-decoration: none;
+        color: $primaryBlue100;
+        // background-color: $primaryBlue100;
+      }
+      &:active {
+        text-decoration: none;
+        color: $primaryBlue100;
+        background-color: $primaryBlue100;
+    }
+    @include body_r_r;
+}
+
+.WhiteButton{
+    border-radius: 6px;
+    height: 48px;
+    min-width: 120px;
+    line-height: 17px;
+    text-align: center;
+    color: $primaryBlue100;
+    outline: none;
+    border: none;
+    background-color: $white100;
+    &:hover {
+        text-decoration: none;
+        color: $primaryBlue100;
+        background-color: $white100;
+      }
+      &:active {
+        text-decoration: none;
+        color: $primaryBlue100;
+        background-color: $white100;
+    }
+    @include body_r_r;
+}
+
+.Cursor{
+    cursor: pointer;
+}
+
+button:focus { outline: none !important; box-shadow: none !important; }
+
+.DefaultSecondaryButtonWithArrow{
+    border-radius: 6px;
+    height: 48px;
+    min-width: 8rem;
+    line-height: 17px;
+    text-align: center;
+    color: $primaryBlue100;
+    outline: none;
+    border: none;
+    font-family: 'Inter-SemiBold';
+    background-color: $primaryBlue10;
+    &:hover {
+        text-decoration: none;
+        color: $primaryBlue100;
+        // background-color: $primaryBlue100;
+    }
+    @include body_r_r;
+}
+
+.SecondaryButtonArrow{
+    float: right;
+    height: 63%;
+}
+
+.paddingTop{
+    margin-bottom: 0;
+}
+
+.noButton{
+    min-width: 4rem ;
+    background-color: $white100 ;
+    color: $black100 ;
+    margin-right: 1rem ;
+    height: 2rem !important ;
+    &:hover{
+        background-color: $white100 ;
+        color: $black100 ;
+    }
+
+}
+.yesButton{
+    min-width: 4rem ;
+    background-color: $infoFailed100 ;
+    color: $white100 ;
+    height: 2rem !important ;
+    &:hover{
+        background-color: $infoFailed100 ;
+        color: $white100 ;
+    }
+
+}
+
+.secondary{
+    background-color: $primaryBlue10;
+    color: $primaryBlue100;
+    &:hover {
+        background-color: $primaryBlue10;
+        color: $primaryBlue100;
+    }
+}
+
+.mediumArrowIcon{
+    margin: -1px 8px 0 0;
+}
+
+.commonLabel{
+    cursor: pointer;
+}
+
+.cancelButton {
+    color: $black50;
+    border-radius: 6px;
+    background-color: $white100;
+    padding: 14px 0px;
+    min-width: 120px;
+    text-align: center;
+    outline: none;
+    border: none;
+    margin-left: 1rem;
+    position: initial;
+    &:visited {
+        border: 0px;
+        background: $white100;
+    }
+    &:active {
+        border: none;
+        outline: none;
+    }
+    &:hover {
+        color: $black50;
+    }
+    @include body_r_r;
+}
+.deleteBtn {
+    color: $black50;
+    border-radius: 6px;
+    background-color: $white100;
+    padding: 10px 0px;
+    min-width: 6rem;
+    outline: none;
+    border: none;
+    &:hover {
+        color: $black50;
+    }
+    @include body_r_r;
+}
+
+.deleteWithBackgroundBtn {
+	color: $infoFailed100;
+	border-radius: 6px;
+	background-color: $infoFailed05;
+	min-height: 48px;
+	padding: 10px 1rem 10px 0px;
+	min-width: 6rem;
+	outline: none;
+	border: none;
+	&:hover {
+			color: $infoFailed100;
+	}
+    @include body_r_r;
+}
+
+.deleteImg {
+    margin: 0rem 0.75rem;
+}
+
+.noClickEvents{
+	pointer-events: none;
+}

@@ -1,0 +1,10 @@
+.ezedox_app_top {
+  padding-top: 30px !important;
+}
+.ezedox_main_body .app_category_card p,
+.ezedox_main_body .app_category_card.active p {
+  text-align: center;
+}
+.ezedox_main_body .app_category_inner_card .icon-onboarding {
+  font-size: 28px;
+}

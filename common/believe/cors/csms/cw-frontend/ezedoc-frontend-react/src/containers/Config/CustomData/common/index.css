@@ -1,0 +1,3 @@
+.lists_pages_container .table.table_container > thead > tr:first-child {
+    border-top: unset !important;
+}

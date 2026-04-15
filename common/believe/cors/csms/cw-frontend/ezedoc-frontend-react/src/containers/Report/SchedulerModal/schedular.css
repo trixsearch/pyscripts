@@ -1,0 +1,40 @@
+.scheduler_datetime .rdtPicker {
+    position: relative;
+    border: 1px solid #d8d7d7;
+}
+    
+.scheduler_datetime .datetime-text {
+    position: absolute;
+    left: 24px;
+    z-index: 1;
+    opacity: 0.95;
+    top: -14px;
+    background-color: white;
+    padding: 4px;
+}
+
+.scheduler_datetime .form-control {
+    min-height: 45px;
+    border-width: 1px;
+    border-color:#ccc;
+    box-shadow: none;
+}
+
+  
+.scheduler_range {
+    margin:5px;
+    height: 120px;
+    border-radius: 8px;
+    padding: 8px 0px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.scheduler_save {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.scheduler_save .fancy_btn{
+    margin-right: 10px;
+}

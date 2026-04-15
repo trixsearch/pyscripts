@@ -1,0 +1,54 @@
+.job-role-create-edit-page {
+    width: 100%;
+}
+
+.job-role-create-edit-page .app_error_msg {
+    height: 40px;
+}
+
+.job-role-create-edit-page .ql-editor {
+    height: 265px !important;
+}
+.job-role-select-2 {
+    width:300px;
+    margin: 10px 0px;
+    color: #828792;
+}
+.job-role-description{
+    margin: 5px 20px 20px 20px;
+    width:400px;
+}
+/**********************************************/
+@media only screen and (max-width: 800px) {
+
+	/* Label the data */
+	td:nth-of-type(1):before { content: "Name"; }
+	td:nth-of-type(2):before { content: "Actions"; }
+	
+    .fancy_btn{
+        min-width:0px!important;
+    }
+}
+.job-role-form-label{
+    margin-bottom: 0;
+    /* margin-left: 15px; */
+    font-weight:400;  
+}
+.job-role-quill-container{
+    margin: 5px 0px;
+    background-color: white;
+}
+.job-role-edit-heading{
+    margin-top: 10px;
+    /* margin-left: 25px; */
+    font-size: 20px;
+}
+.job-role-edit-heading p{
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.jobRoleSelect {
+    width:300px;
+    margin: 10px 0px;
+    color: #828792;
+}

@@ -1,0 +1,44 @@
+.form_version {
+  margin-right: 10px;
+  line-height: 30px;
+}
+
+.ezedox_form_io_preview .alert.alert-success {
+  display: none;
+}
+
+.ezedox_form_io_preview {
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.ezedox_form_io_preview::-webkit-scrollbar {
+  display: block !important;
+}
+
+.ezedox_form_io_footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.form_viewer {
+  background: #fbfcfd;
+}
+
+.form_viewer .form_top_content {
+  height: 125px;
+}
+
+.form_viewer .form_middle_content {
+  height: calc(100vh - 223px);
+}
+
+.form_viewer .form_bottom_content {
+  height: 78px;
+  background: #fbfcfd;
+}

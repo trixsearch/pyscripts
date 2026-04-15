@@ -1,0 +1,121 @@
+version: "3"
+services:
+  celery:
+    network_mode: host
+    restart: unless-stopped
+    build: .
+    command: celery -A ezedox worker --loglevel=info --concurrency 1 -E --logfile=logs/celery.log
+    volumes:
+      - .:/code
+      - tmp_files:/tmp
+    environment:
+      - DEBUG
+      - CHANNEL_LAYER_URL
+      - CELERY_BROKER_URL
+      - BROKER_URL
+      - REDIS_CACHE_URL
+      - DJANGO_DB
+      - POSTGRES_HOST
+      - POSTGRES_NAME
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_PORT
+  celery-launch:
+    network_mode: host
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery -A ezedox worker --loglevel=info -Q launch_process_bulk_queue --concurrency 1 -E --logfile=logs/celerylaunch.log
+    volumes:
+      - .:/code
+      - tmp_files:/tmp
+    environment:
+      - DEBUG
+      - CHANNEL_LAYER_URL
+      - CELERY_BROKER_URL
+      - BROKER_URL
+      - REDIS_CACHE_URL
+      - DJANGO_DB
+      - POSTGRES_HOST
+      - POSTGRES_NAME
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_PORT
+  celery-emp-verify-launch:
+    network_mode: host
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery -A ezedox worker --loglevel=info -Q launch_process_emp_verify_bulk_queue --concurrency 1 -E --logfile=logs/celeryEmpVerifyLaunch.log
+    volumes:
+      - .:/code
+      - tmp_files:/tmp
+    environment:
+      - DEBUG
+      - CHANNEL_LAYER_URL
+      - CELERY_BROKER_URL
+      - BROKER_URL
+      - REDIS_CACHE_URL
+      - DJANGO_DB
+      - POSTGRES_HOST
+      - POSTGRES_NAME
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_PORT
+  celery-report:
+    network_mode: host
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery -A ezedox worker --loglevel=info -Q report_queue --concurrency 1 -E --logfile=logs/celeryreports.log
+    volumes:
+      - .:/code
+      - tmp_files:/tmp
+    environment:
+      - DEBUG
+      - CHANNEL_LAYER_URL
+      - CELERY_BROKER_URL
+      - BROKER_URL
+      - REDIS_CACHE_URL
+      - DJANGO_DB
+      - POSTGRES_HOST
+      - POSTGRES_NAME
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_PORT
+  web:
+    network_mode: host
+    build: 
+      context: .
+      dockerfile: bp.Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+      - tmp_files:/tmp
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_NAME
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+  launch_event_consumer:
+    network_mode: host
+    build: 
+      context: .
+      dockerfile: Dockerfile_Consumers
+    command: python consumers/launch_event_controller.py
+    volumes:
+      - .:/code
+  domain_updates_consumer:
+    network_mode: host
+    build: 
+      context: .
+      dockerfile: Dockerfile_Consumers
+    command: python consumers/domain_updates.py
+    volumes:
+      - .:/code
+volumes:
+    tmp_files:

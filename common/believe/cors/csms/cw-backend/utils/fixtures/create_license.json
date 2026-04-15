@@ -1,0 +1,11 @@
+[
+  {
+    "model": "license.license",
+    "pk": 1,
+    "fields": {
+      "name": "basic",
+      "transactions": -1,
+      "slug": "basic"
+    }
+  }
+]

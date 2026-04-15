@@ -1,0 +1,2 @@
+OrganisationEntityMasterModel_filter_fields = ['name', 'model_type']
+OrganisationEntityMasterData_filter_fields = ["candidateId", "entity_name", "entity_phone_number", "gender", "entity_email", "created_at", "updated_at"]

@@ -1,0 +1,62 @@
+.template-preview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.template-preview label {
+  font-weight: bolder;
+  color: #666;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.template-preview > textarea {
+  height: 250px;
+  width: 350px;
+}
+
+.template-preview-toolbar {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  align-content: center;
+  padding: 12px 14px;
+  margin: 0 0 20px;
+  background: #f8f8f8;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  text-align: right;
+  overflow: hidden;
+}
+
+.template-preview-toolbar-label {
+}
+
+.preview-btn {
+  border-radius: 4px;
+  background: transparent;
+  background-color: cadetblue;
+  padding: 10px 12px;
+  color: white;
+  border: 1px solid black;
+}
+
+.preview-btn:hover {
+  background-color: rgb(214, 214, 60);
+}
+
+.preview-btn:focus {
+  outline: none !important;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-black:hover {
+  background-color: darkslategrey;
+}

@@ -1,0 +1,289 @@
+.reports_container .process_details_btn_cont > div {
+  margin: 5px;
+  text-align: center;
+}
+
+.query_builder {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  /* margin: 0 12px; */
+  align-items: center;
+}
+
+.query_builder-row-delete:focus {
+  outline: none !important;
+}
+
+.query_builder > div {
+  margin: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.query_builder > div select {
+  width: 150px;
+}
+
+.query_builder > div input {
+  width: 180px;
+  height: 30px;
+}
+
+.query_builder > div input date {
+  width: 160px;
+  height: 30px;
+}
+
+.query_builder > div button {
+  width: 32px;
+  height: 32px;
+}
+
+.report-create-link {
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 8px; */
+}
+
+.report-view-table {
+  margin-top: 22px;
+}
+
+.report-create-btn {
+  margin-left: auto;
+}
+
+.create-report-text {
+  margin-top: 10px;
+  align-self: center;
+}
+
+.create-report-form {
+  margin-top: 16px;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.pr-0 {
+  padding-right: 0px !important;
+}
+
+.process-vars-toggle {
+  background-color: transparent;
+  border: none;
+  padding: 0 16px;
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 10px;
+  text-decoration: underline;
+  color: var(--main-first-primary-color);
+}
+
+.process-vars-toggle:focus {
+  border: transparent;
+  outline: 0;
+}
+
+.process-vars-toggle:hover {
+  text-decoration: underline;
+}
+
+.prompt-for-vars-cont {
+  padding: 8px 32px;
+  display: flex;
+}
+
+.prompt-for-vars {
+  width: 16px;
+  height: 16px;
+}
+
+.report-prompt-text {
+  margin-left: 12px;
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+
+.order-helper-text {
+  font-size: 10px;
+  margin-left: 5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  color: #9b9b9b;
+  letter-spacing: 0.1px;
+}
+
+.is-invalid {
+  border: 2px solid #dc3545 !important;
+}
+
+.empty-submit {
+  color: red;
+}
+
+.report-view-table.process_selection_container > table {
+  margin-bottom: 0;
+}
+
+.report-view-table.process_selection_container > table.table_cont > thead {
+  height: 36px;
+}
+
+.report-view-table.process_selection_container
+  > table.table_cont
+  > tbody.report_body {
+  padding-right: 2px;
+}
+
+.report_body {
+  scrollbar-width: thin;
+}
+
+.report_body::-webkit-scrollbar {
+  display: block !important;
+}
+
+.report-create-btn > .fancy_btn {
+  /* top: 6px;
+  right: 0;
+  z-index: 10;
+  position: absolute; */
+}
+
+.report-form-button-cont {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.ezedox_main_body .reports_detals_box {
+  max-height: calc(100vh - 215px);
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.ezedox_main_body .reports_detals_box .graph_cont_body {
+  border-radius: 0px;
+}
+
+.ezedox_main_body .reports_detals_box .graph_cont_heading_text {
+  flex: 1;
+}
+
+.ezedox_main_body .reports_detals_box .graph_cont_heading_dropdown {
+  flex: 1;
+}
+
+.ezedox_main_body .reports_detals_box #process_chart_container {
+  height: initial;
+}
+
+.ezedox_main_body .report_total_loction_graph_box {
+  display: flex;
+  padding: 20px 0px;
+}
+
+.ezedox_main_body .total_report_graph_box {
+  padding-right: 20px;
+  flex: 1;
+}
+
+/* Report page barchart & linechart related not using css */
+.ezedox_main_body .total_count_cricular_box {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.report-query-row-delete button{
+  border-radius: 50%;
+  padding: 0;
+}
+
+.report-query-row-prompt-label {
+  word-break: break-word;
+  margin-left: 8px;
+  margin-top: 4px;
+}
+
+.col-xs-4.text_align{
+  text-align: center;
+  padding-left: 4px;
+}
+
+.action_cont {
+  display: flex !important;
+}
+
+.action_cont > div {
+  width : 25%
+}
+
+.advanced-filter-container {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  background-color: white;
+  margin-left: 2px;
+  margin-right: 6px;
+  margin-bottom: 20px;
+
+  
+}
+.report_filter_info {
+  padding-left: 5px;
+  padding-top: 7px;
+  width: 16px;
+}
+
+.filter_help {
+  color: var(--main-first-primary-color);
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.report-icon {
+  font-size: 14px!important;
+}
+
+.entity-report-text{
+  color: #f93c01;
+  font-size: 10.5px;
+  font-style: italic;
+  padding: 0px 0px 10px 20px;
+}
+
+.entity-query-button{
+  padding-top: 20px;
+}
+
+.report-form-cancel-btn{
+  margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 1080px) {
+  .advanced-filter-user-container{
+    width: 50%;
+  }
+  .advanced-filter-process-container{
+    width: 50%;
+  }
+
+}
+
+@media only screen and (max-width: 576px){
+  .advanced-filter-user-container{
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .advanced-filter-process-container{
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icon / 24 / info / search</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M15.4681107,16.7711066 C14.0495238,17.9058757 12.2501119,18.5844303 10.2922152,18.5844303 C5.71255119,18.5844303 2,14.8718791 2,10.2922152 C2,5.71255119 5.71255119,2 10.2922152,2 C14.8718791,2 18.5844303,5.71255119 18.5844303,10.2922152 C18.5844303,12.2501119 17.9058757,14.0495238 16.7711066,15.4681107 L22,20.6970041 L20.6970041,22 L15.4681107,16.7711066 Z M10.2922152,16.7417158 C13.854176,16.7417158 16.7417158,13.854176 16.7417158,10.2922152 C16.7417158,6.73025429 13.854176,3.84271448 10.2922152,3.84271448 C6.73025429,3.84271448 3.84271448,6.73025429 3.84271448,10.2922152 C3.84271448,13.854176 6.73025429,16.7417158 10.2922152,16.7417158 Z" id="path-1"></path>
+    </defs>
+    <g id="icon-/-24-/-info-/-search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#8697A8" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <rect id="Rectangle" fill="#8697A8" mask="url(#mask-2)" x="0" y="0" width="24" height="24"></rect>
+    </g>
+</svg>

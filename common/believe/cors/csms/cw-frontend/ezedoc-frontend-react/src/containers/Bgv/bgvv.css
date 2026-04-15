@@ -1,0 +1,14 @@
+@media only screen and (max-width: 800px) {
+
+.process_details_btn_cont{
+    position:relative!important;
+    flex-direction:column;
+    bottom:36px!important;
+    
+}
+
+.b_container{
+    justify-content: center;
+}
+
+}

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cw-flower-dev
+  name: cw-flower-dev
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cw-flower-dev
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: cw-flower-dev
+    spec:
+      containers:
+        - command: ["celery"]
+          args: ["-A", "ezedox", "flower", "--port=5555", "--url-prefix=flower", "--basic-auth=flower:ezedox"]
+          image: 372004264077.dkr.ecr.ap-south-1.amazonaws.com/betterplace/cw-backend:dev
+          imagePullPolicy: Always          
+          name: cw-flower-dev
+          volumeMounts:
+            - name: tmp-files
+              mountPath: /tmp
+      volumes:
+        - name: tmp-files
+          emptyDir: {}
+      restartPolicy: Always

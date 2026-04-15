@@ -1,0 +1,10 @@
+class CandidateAuditConstants:
+    APPLICATION_CREATED = 'Application created'
+    CANDIATE_UPDATED= 'Edited'
+    CANDIDATE_CREATED = 'Added'
+
+    MODEL_CHOICES = (
+        (APPLICATION_CREATED, APPLICATION_CREATED),
+        (CANDIATE_UPDATED, CANDIATE_UPDATED),
+        (CANDIDATE_CREATED, CANDIDATE_CREATED),
+    )

@@ -1,0 +1,13 @@
+.onboarding_personal_details_row .ezedox_form_up {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.onboarding_personal_details_row .ezedox_form_up::-webkit-scrollbar {
+  display: block;
+}
+
+.card1 .image-cropper.no-border{
+  border:none;
+}

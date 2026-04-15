@@ -1,0 +1,14 @@
+/* Extra css for the Report modal */
+
+.report-download-modal .warning-img {
+  width: auto;
+  height: 50px;
+}
+
+.report-download-modal .warning-body .modal-body {
+  width: 100%;
+}
+
+.report-download-modal .msg-text {
+  text-align: center;
+}

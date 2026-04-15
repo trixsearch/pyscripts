@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="38px" viewBox="0 0 30 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon / 16 / info / location</title>
+    <defs>
+        <path d="M20,2.5 C12.6666667,2.5 5,8.04347826 5,17.173913 C5,25.8152174 18.3333333,39.0217391 18.8333333,39.5108696 C19.1666667,39.8369565 19.5,40 20,40 C20.5,40 20.8333333,39.8369565 21.1666667,39.5108696 C21.6666667,39.0217391 35,25.8152174 35,17.173913 C35,8.04347826 27.3333333,2.5 20,2.5 Z M20,22.5 C17.1666667,22.5 15,20.3333333 15,17.5 C15,14.6666667 17.1666667,12.5 20,12.5 C22.8333333,12.5 25,14.6666667 25,17.5 C25,20.3333333 22.8333333,22.5 20,22.5 Z" id="path-1"></path>
+    </defs>
+    <g id="⛑-in-progress-screen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="site_configuration_0001-copy-8" transform="translate(-754.000000, -395.000000)">
+            <g id="employee-termination_alert" transform="translate(356.000000, 89.000000)">
+                <g id="adress-map" transform="translate(64.000000, 158.000000)">
+                    <g id="map" transform="translate(40.000000, 33.000000)">
+                        <g id="location-radius" transform="translate(238.000000, 62.000000)">
+                            <g id="icon-/-16-/-info-/-location" transform="translate(51.000000, 51.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                                <rect id="Rectangle" fill="#0059B2" mask="url(#mask-2)" x="0" y="0" width="40" height="40"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

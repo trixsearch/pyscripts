@@ -1,0 +1,550 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?g1g4s3');
+  src:  url('fonts/icomoon.eot?g1g4s3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?g1g4s3') format('truetype'),
+    url('fonts/icomoon.woff?g1g4s3') format('woff'),
+    url('fonts/icomoon.woff2?g1g4s3') format('woff2'),
+    url('fonts/icomoon.svg?g1g4s3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-149408:before {
+  content: "\e900";
+}
+.icon-copy:before {
+  content: "\e901";
+}
+.icon-149446:before {
+  content: "\e902";
+}
+.icon-182448:before {
+  content: "\e903";
+}
+.icon-copy1:before {
+  content: "\e904";
+}
+.icon-248114:before {
+  content: "\e905";
+}
+.icon-293961:before {
+  content: "\e906";
+}
+.icon-554729:before {
+  content: "\e907";
+}
+.icon-554744:before {
+  content: "\e908";
+}
+.icon-782899:before {
+  content: "\e909";
+}
+.icon-912316:before {
+  content: "\e90a";
+}
+.icon-anticlockwise:before {
+  content: "\e90b";
+}
+.icon-approved:before {
+  content: "\e90c";
+}
+.icon-apps:before {
+  content: "\e90d";
+}
+.icon-arrows_updown:before {
+  content: "\e90e";
+}
+.icon-asc:before {
+  content: "\e90f";
+}
+.icon-assets:before {
+  content: "\e910";
+}
+.icon-audit:before {
+  content: "\e911";
+}
+.icon-bulktasks:before {
+  content: "\e912";
+}
+.icon-business-person:before {
+  content: "\e913";
+}
+.icon-candidate:before {
+  content: "\e914";
+}
+.icon-card:before {
+  content: "\e915";
+}
+.icon-clockwise:before {
+  content: "\e916";
+}
+.icon-close:before {
+  content: "\e917";
+}
+.icon-close_circular:before {
+  content: "\e918";
+}
+.icon-config:before {
+  content: "\e919";
+}
+.icon-construction:before {
+  content: "\e91a";
+}
+.icon-content:before {
+  content: "\e91b";
+}
+.icon-corner_path:before {
+  content: "\e91c";
+}
+.icon-covid19:before {
+  content: "\e91d";
+}
+.icon-customattr:before {
+  content: "\e91e";
+}
+.icon-dashboard:before {
+  content: "\e91f";
+}
+.icon-data-table:before {
+  content: "\e920";
+}
+.icon-department:before {
+  content: "\e921";
+}
+.icon-desc:before {
+  content: "\e922";
+}
+.icon-desktop:before {
+  content: "\e923";
+}
+.icon-desktop_preview:before {
+  content: "\e924";
+}
+.icon-detective:before {
+  content: "\e925";
+}
+.icon-distribution:before {
+  content: "\e926";
+}
+.icon-download:before {
+  content: "\e927";
+}
+.icon-edit:before {
+  content: "\e928";
+}
+.icon-employee:before {
+  content: "\e929";
+}
+.icon-employee-2:before {
+  content: "\e92a";
+}
+.icon-employee-3:before {
+  content: "\e92b";
+}
+.icon-employee-4:before {
+  content: "\e92c";
+}
+.icon-entity_report:before {
+  content: "\e92d";
+}
+.icon-entry:before {
+  content: "\e92e";
+}
+.icon-events:before {
+  content: "\e92f";
+}
+.icon-exit:before {
+  content: "\e930";
+}
+.icon-file_copy:before {
+  content: "\e931";
+}
+.icon-filter:before {
+  content: "\e932";
+}
+.icon-filter-applied:before {
+  content: "\e933";
+}
+.icon-full_size:before {
+  content: "\e934";
+}
+.icon-group:before {
+  content: "\e935";
+}
+.icon-group-1:before {
+  content: "\e936";
+}
+.icon-group-2:before {
+  content: "\e937";
+}
+.icon-group-21:before {
+  content: "\e938";
+}
+.icon-group-3:before {
+  content: "\e939";
+}
+.icon-group-4:before {
+  content: "\e93a";
+}
+.icon-group-5:before {
+  content: "\e93b";
+}
+.icon-group-8:before {
+  content: "\e944";
+}
+.icon-group-9:before {
+  content: "\e945";
+}
+.icon-hamburger_close:before {
+  content: "\e946";
+}
+.icon-hamburger_open:before {
+  content: "\e947";
+}
+.icon-headcount:before {
+  content: "\e948";
+}
+.icon-headcountplan:before {
+  content: "\e949";
+}
+.icon-headcountrole:before {
+  content: "\e94a";
+}
+.icon-high-five:before {
+  content: "\e94b";
+}
+.icon-hiring:before {
+  content: "\e94c";
+}
+.icon-history-button:before {
+  content: "\e94d";
+}
+.icon-hospital:before {
+  content: "\e94e";
+}
+.icon-id:before {
+  content: "\e94f";
+}
+.icon-industry:before {
+  content: "\e950";
+}
+.icon-info_logo:before {
+  content: "\e951";
+}
+.icon-inventory:before {
+  content: "\e952";
+}
+.icon-jobs:before {
+  content: "\e953";
+}
+.icon-left_arrow:before {
+  content: "\e954";
+}
+.icon-lists:before {
+  content: "\e955";
+}
+.icon-location:before {
+  content: "\e956";
+}
+.icon-logout:before {
+  content: "\e957";
+}
+.icon-man:before {
+  content: "\e958";
+}
+.icon-manager-1:before {
+  content: "\e959";
+}
+.icon-manager-2:before {
+  content: "\e95a";
+}
+.icon-masterdb:before {
+  content: "\e95b";
+}
+.icon-menu:before {
+  content: "\e95c";
+}
+.icon-message:before {
+  content: "\e95d";
+}
+.icon-model_info_logo:before {
+  content: "\e95e";
+}
+.icon-notification:before {
+  content: "\e95f";
+}
+.icon-noun-add-user-1783250:before {
+  content: "\e960";
+}
+.icon-noun-business-person-1322063:before {
+  content: "\e961";
+}
+.icon-noun-company-975636:before {
+  content: "\e962";
+}
+.icon-noun-company-1410531:before {
+  content: "\e963";
+}
+.icon-noun-company-1422685:before {
+  content: "\e964";
+}
+.icon-noun-company-1549804:before {
+  content: "\e965";
+}
+.icon-noun-company-1837121:before {
+  content: "\e966";
+}
+.icon-noun-employee-1791521:before {
+  content: "\e967";
+}
+.icon-noun-employee-1938172:before {
+  content: "\e968";
+}
+.icon-noun-exhibitors-1244123:before {
+  content: "\e969";
+}
+.icon-noun-financial-partner-1275586:before {
+  content: "\e96a";
+}
+.icon-noun-mail-2125966:before {
+  content: "\e96b";
+}
+.icon-noun-man-167332:before {
+  content: "\e96c";
+}
+.icon-noun-manager-1803481:before {
+  content: "\e96d";
+}
+.icon-noun-marketer-630190:before {
+  content: "\e96e";
+}
+.icon-noun-networking-1892017:before {
+  content: "\e96f";
+}
+.icon-noun-outsourcing-1264418:before {
+  content: "\e970";
+}
+.icon-noun-outsourcing-1985558:before {
+  content: "\e971";
+}
+.icon-noun-partner-1558928:before {
+  content: "\e972";
+}
+.icon-noun-partner-condition-1275590:before {
+  content: "\e973";
+}
+.icon-noun-partners-2061387:before {
+  content: "\e974";
+}
+.icon-noun-person-985482:before {
+  content: "\e975";
+}
+.icon-noun-person-1466422:before {
+  content: "\e976";
+}
+.icon-noun-person-1471179:before {
+  content: "\e977";
+}
+.icon-noun-salesman-1594925:before {
+  content: "\e978";
+}
+.icon-offboarding:before {
+  content: "\e979";
+}
+.icon-offboarding-new:before {
+  content: "\e97a";
+}
+.icon-office:before {
+  content: "\e97b";
+}
+.icon-onboarding:before {
+  content: "\e97c";
+}
+.icon-onboarding-new:before {
+  content: "\e97d";
+}
+.icon-portals:before {
+  content: "\e97e";
+}
+.icon-portal-template:before {
+  content: "\e97f";
+}
+.icon-premium:before {
+  content: "\e980";
+}
+.icon-print:before {
+  content: "\e981";
+}
+.icon-printer:before {
+  content: "\e982";
+}
+.icon-process:before {
+  content: "\e983";
+}
+.icon-processState:before {
+  content: "\e984";
+}
+.icon-profile:before {
+  content: "\e985";
+}
+.icon-question:before {
+  content: "\e9b3";
+}
+.icon-reject:before {
+  content: "\e9b7";
+}
+.icon-reminder:before {
+  content: "\e9b8";
+}
+.icon-report:before {
+  content: "\e9b9";
+}
+.icon-reports:before {
+  content: "\e9ba";
+}
+.icon-right_arrow:before {
+  content: "\e9bb";
+}
+.icon-roles:before {
+  content: "\e9bc";
+}
+.icon-salary:before {
+  content: "\e9bd";
+}
+.icon-save:before {
+  content: "\e9be";
+}
+.icon-school:before {
+  content: "\e9bf";
+}
+.icon-search:before {
+  content: "\e9c0";
+}
+.icon-security:before {
+  content: "\e9c1";
+}
+.icon-server:before {
+  content: "\e9c2";
+}
+.icon-sheight:before {
+  content: "\e9c3";
+}
+.icon-smartphone:before {
+  content: "\e9c4";
+}
+.icon-smartphone_preview:before {
+  content: "\e9c5";
+}
+.icon-stock:before {
+  content: "\e9c6";
+}
+.icon-student:before {
+  content: "\e9c7";
+}
+.icon-student-1:before {
+  content: "\e9c8";
+}
+.icon-student-2:before {
+  content: "\e9c9";
+}
+.icon-student-3:before {
+  content: "\e9ca";
+}
+.icon-student-4:before {
+  content: "\e9cb";
+}
+.icon-student-5:before {
+  content: "\e9cc";
+}
+.icon-student-6:before {
+  content: "\e9cd";
+}
+.icon-student-7:before {
+  content: "\e9ce";
+}
+.icon-success-copy:before {
+  content: "\e9cf";
+}
+.icon-suppliers:before {
+  content: "\e9d0";
+}
+.icon-supply:before {
+  content: "\e9d1";
+}
+.icon-swidth:before {
+  content: "\e9d2";
+}
+.icon-task:before {
+  content: "\e9d3";
+}
+.icon-taxi:before {
+  content: "\e9d4";
+}
+.icon-telephone:before {
+  content: "\e9d5";
+}
+.icon-theme:before {
+  content: "\e9d6";
+}
+.icon-toast-error:before {
+  content: "\e9d7";
+}
+.icon-toast-success:before {
+  content: "\e9d8";
+}
+.icon-toast-warning:before {
+  content: "\e9d9";
+}
+.icon-training:before {
+  content: "\e9da";
+}
+.icon-transfer:before {
+  content: "\e9db";
+}
+.icon-transfer-2:before {
+  content: "\e9dc";
+}
+.icon-transfer-new:before {
+  content: "\e9dd";
+}
+.icon-travel:before {
+  content: "\e9de";
+}
+.icon-upload:before {
+  content: "\e9df";
+}
+.icon-upload-success:before {
+  content: "\e9e0";
+}
+.icon-user:before {
+  content: "\e9e1";
+}
+.icon-user-logo:before {
+  content: "\e9e2";
+}
+.icon-video-conference:before {
+  content: "\e9e5";
+}
+.icon-warning:before {
+  content: "\e9e6";
+}
+.icon-withdraw:before {
+  content: "\e9e7";
+}

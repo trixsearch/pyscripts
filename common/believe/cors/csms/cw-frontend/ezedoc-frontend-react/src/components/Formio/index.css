@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Muli:wght@300;400;500;600;700&display=swap');
+
+.formio_form_wrapper {
+    /* font-family: 'Muli', 'Mukta', sans-serif; */
+    padding-bottom:160px;
+}
+
+.formio_form_wrapper .alert-danger ul{
+    overflow:hidden;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style-type: circle;
+}
+
+.formio_form_wrapper ul.pagination{
+    padding-bottom:25px;
+}

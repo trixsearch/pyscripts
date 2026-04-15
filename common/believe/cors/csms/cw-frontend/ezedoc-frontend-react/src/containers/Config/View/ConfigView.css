@@ -1,0 +1,125 @@
+.config_view_body_container {
+  overflow: hidden;
+  padding-top: 33px;
+  height: calc(100vh - 60px);
+}
+
+.config-view-form-fields-checkbox-container {
+  margin-bottom: 25px;
+}
+
+.config-view-checkbox {
+  display: flex;
+  margin-left: 10px;
+}
+
+.config-view-checkbox-form-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-text {
+  margin-left: 10px;
+}
+
+.checkbox-text > p {
+  margin: 0;
+}
+
+.process-vars-text {
+  width: 160px;
+  font-size: 15px;
+  color: #7b7d85;
+  margin: 1px 8px 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fancy_btn:disabled {
+  opacity: 0.6;
+}
+
+.process_selection_container .checkbox {
+  height: 18px;
+  border-radius: 2px;
+  border: solid 1px #9b9b9b;
+}
+
+.checkbox-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-row-gap: 8px;
+  border-radius: 8px;
+  padding: 8px 0px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-hidden {
+  visibility: hidden;
+}
+
+.save-error {
+  color: red;
+}
+
+.process_selection_container {
+  padding: 0 7px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100vh - 173px);
+}
+
+.config_view_middle_container {
+  display: flex;
+  max-height: 55px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.config_view_middle_container .section-title {
+  margin: 10px 0 0 0;
+}
+
+.config_view_middle_container .note-text {
+  color: #f93c01;
+  font-size: 10.5px;
+  font-style: italic;
+}
+
+.config_view_middle_container .filter_dropdown .filter_button_text {
+  max-width: 165px;
+}
+
+.config_view_middle_container .filter_dropdown .filter_dropdown_menu {
+  max-height: 310px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.process_selection_container,
+.config_view_middle_container .filter_dropdown .filter_dropdown_menu {
+  scrollbar-width: thin;
+}
+
+.process_selection_container::-webkit-scrollbar,
+.config_view_middle_container .filter_dropdown .filter_dropdown_menu::-webkit-scrollbar {
+  height: 0 !important;
+  display: block !important;
+}
+
+.collapse_report_variables {
+  border: none !important;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 55.2 (78181) - https://sketchapp.com -->
+    <title>BE179F69-F061-4BBA-90A4-ABCDA9427ABF</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="16 1.61142857 14.3885714 0 8 6.38857143 1.61142857 0 0 1.61142857 6.38857143 8 0 14.3885714 1.61142857 16 8 9.61142857 14.3885714 16 16 14.3885714 9.61142857 8"></polygon>
+    </defs>
+    <g id="👽-GBV-Client" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BGV-Client-zomato-add-employee-Aadhar_2" transform="translate(-712.000000, -64.000000)">
+            <g id="close" transform="translate(712.000000, 64.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Path" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <rect id="Rectangle" fill="#8697A8" mask="url(#mask-2)" x="0" y="0" width="16" height="16"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

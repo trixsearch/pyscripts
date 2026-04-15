@@ -1,0 +1,1160 @@
+.ezedox_main_body .start_sending_invite_card_box {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.ezedox_main_body .edit_checkbox_heding {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.07;
+  letter-spacing: normal;
+  color: var(--main-input-label-color);
+}
+
+.ezedox_main_body .checkbox_container {
+  width: 95%;
+  margin: 8px auto;
+  padding: 20px;
+}
+
+.main_changable_container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 46px;
+}
+
+.ezedox_tasks_container {
+  padding-top: 2px !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.task_form_loading_text {
+  padding-top: 40px;
+}
+
+.ezedox_form_io {
+  padding: 0px 30px;
+}
+
+.ezedox_form_io.attch_io_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.ezedox_form_io.attch_io_form .formio-form {
+  /* overflow-y: auto; */
+}
+
+.ezedox_form_io.attch_io_form .formio-form > div {
+  margin-right: 5px;
+}
+
+.task_form_top_bar {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task_form_top_bar .form-detail {
+  margin: 0;
+  display: flex;
+  padding: 10px 0 0 10px;
+  width: calc(100vw - 580px);
+}
+
+.task_form_top_bar .form-detail p {
+  margin-bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.task_form_top_bar .form-detail .form-name {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.task_form_top_bar .form-detail .form-description {
+  font-size: 10px;
+  padding-top: 5px;
+}
+
+.task_form_top_bar .attachment-previewer {
+  right: 25px;
+  display: flex!important;
+  align-items: center;
+  margin-bottom: 10px;
+  /* position: fixed; */
+}
+
+.task_form_top_bar .attachment-previewer-text {
+  /* padding-top: 10px;
+  margin-right: 5px; */
+  min-width:105px;
+  margin-bottom:5px;
+}
+
+.task_form_top_bar_split_view {
+  display: flex;
+  position: relative;
+}
+
+.task_form_top_bar_split_view .form-detail {
+  max-width: calc(100% - 140px);
+}
+
+.task_form_top_bar_split_view .form-detail p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.task_form_top_bar_split_view .form-detail .form-description {
+  font-size: 10px;
+}
+
+.task_form_top_bar_split_view > .attachment-previewer {
+  right: 0;
+  width: 180px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+
+.task_form_top_bar_split_view > .attachment-previewer .checkbox-slider--b-flat input:checked+span:after{
+  margin:20px 0 0 20px;
+}
+
+.task_form_top_bar_split_view > .attachment-previewer .fancy_btn{
+  display:none;
+}
+
+.task_form_top_bar_split_view > .attachment-previewer .task_save_draft_review{
+  display:none;
+}
+
+.task_form_top_bar_split_view
+  > .attachment-previewer
+  > .attachment-previewer-text {
+  margin: 0 5px 5px 0;
+}
+
+.ezedox_text_task {
+  justify-content: center;
+  padding: 20%;
+}
+
+.task_form_top_bar {
+  /* position: fixed; */
+  display: inline-flex;
+  background-color: #fbfcfd;
+  width: 100%;
+  /* width: calc(100vw - 270px); */
+  z-index: 999;
+  padding: 0px;
+  max-height: 4em;
+}
+
+.attch_io_form {
+  /* padding: 4em 0px 0px; */
+}
+
+.ezedox_display_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.ezedox_display_section .select_document_box {
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ezedox_display_section .select_document_box p {
+  margin-right: 5px;
+  margin-bottom: unset;
+}
+
+.ezedox_display_section .select_document_box .attachments_dropdown_taskPage {
+  width: calc(100% - 325px);
+}
+
+.ezedox_display_section
+  .select_document_box.pdf_item
+  .attachments_dropdown_taskPage {
+  width: calc(100% - 135px);
+}
+
+.ezedox_display_section
+  .select_document_box.other_item
+  .attachments_dropdown_taskPage {
+  width: calc(100% - 125px);
+}
+
+.ezedox_display_section
+  .select_document_box
+  .attachments_dropdown_taskPage
+  > .filter_dropdown_menu {
+  width: 100%;
+}
+
+.ezedox_display_section
+  .select_document_box
+  .attachments_dropdown_taskPage
+  .filter_button_text {
+  max-width: calc(100% - 15px);
+}
+
+.ezedox_tasks_container .display_document_section_body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 12px;
+  background-color: var(--main-white-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ezedox_tasks_container .disply_document {
+  width: 100%;
+  display: flex;
+  margin: 5px 5px 0 5px;
+  min-height: calc(100vh - 145px);
+  max-height: calc(100vh - 145px);
+  scrollbar-width: thin;
+}
+
+.ezedox_tasks_container .disply_document.pdf_doc {
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px !important;
+}
+
+.ezedox_tasks_container .disply_document.img_doc {
+  margin: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ezedox_tasks_container .disply_document.img_doc.fitToWidthDoc {
+  overflow-y: auto;
+}
+
+.ezedox_tasks_container .disply_document.img_doc.fitToHeightDoc {
+  overflow-x: auto;
+}
+
+.ezedox_tasks_container .disply_document.img_doc.fitToWidthDoc_side {
+  overflow-x: auto;
+}
+
+.ezedox_tasks_container .disply_document.img_doc.fitToHeightDoc_side {
+  overflow-y: auto;
+}
+
+.ezedox_tasks_container .disply_document::-webkit-scrollbar {
+  display: block !important;
+}
+
+.disply_document .pdf_process {
+  width: 100%;
+  height: 100%;
+}
+
+.display_document_section_body .pdf_process::-webkit-scrollbar {
+  display: block !important;
+}
+
+.ezedox_tasks_container .file_functionalities {
+  /* right: 15px; */
+  left:210px;
+  top:175px;
+  width: 195px;
+  display: flex;
+  margin-left: 8px;
+  justify-content: space-between;
+}
+
+.task_verification_page_form_section .task_save_draft_review,
+.ezedox_tasks_container .file_functionalities button {
+  outline: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  background: #fff;
+  color: var(--main-first-primary-color);
+  border: 1px solid var(--main-first-primary-color);
+}
+
+.ezedox_tasks_container .fit_to_icons > button.active_btn {
+  color: #fff;
+  background: var(--main-first-primary-color);
+}
+
+.disply_document .pdf_process canvas {
+  width: 100% !important;
+}
+
+.card_pagination {
+  border: solid 1px #f28c8f;
+  border-radius: 59px;
+  width: 35px !important;
+  height: 35px !important;
+  margin: 5px 0 5px 10px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task_entity_name-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+  white-space: nowrap;
+  color: #000000 !important;
+}
+
+.tooltip-text h6 {
+  color: var(--main-white-color) !important;
+}
+
+.tooltip-text p {
+  color: var(--main-white-color) !important;
+}
+
+.task_details_container {
+  overflow-y: auto;
+}
+
+.task_details_container .ant-table-wrapper .ant-table-body {
+  overflow-y: overlay;
+  scrollbar-width: thin;
+  height: calc(100vh - 400px);
+}
+
+.task_details_container,
+.task_verification_page_form_section
+  .ezedox_form_io.attch_io_form
+  .formio-form {
+  scrollbar-width: thin;
+}
+
+.task_details_container::-webkit-scrollbar,
+.task_verification_page_form_section
+  .ezedox_form_io.attch_io_form
+  .formio-form::-webkit-scrollbar {
+  height: 0 !important;
+  display: block !important;
+}
+
+.ezedox_form_io.attch_io_form .formio-form .pagination {
+  margin-left: 1px;
+}
+
+.task_page .process_tab_ongoing_comp_ul {
+  height: 26px;
+}
+
+.task-navbar .task-navItem .nav-item > p {
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: 6px;
+  margin-top: 5px;
+  color: var(--main-first-primary-color);
+}
+
+.select-field {
+  background-color: white;
+  border-radius: 4px 0px 0px 4px;
+  border: 1px solid #ccc;
+  width: 165px;
+  height: 40px;
+  box-shadow: 0 0 8px 0 rgba(209, 209, 209, 0.5);
+}
+
+.task-navbar .task-navItem .nav-item .nav-button {
+  opacity: 0.5;
+  font-size: 12px;
+  text-align: center;
+  color: #4a4a4a;
+  color: var(--main-input-label-color);
+  border: 0px;
+  border-bottom: 2px solid;
+  border-color: transparent;
+  padding: 0.2rem 0px;
+  background-color: transparent;
+}
+
+.task-navbar .task-navItem .nav-item.active .nav-button {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--main-first-primary-color);
+  background-color: transparent;
+  opacity: 1;
+  border: 0px;
+  border-bottom: 2px solid;
+  border-color: var(--main-first-primary-color);
+}
+
+.task-navbar .task-navItem .nav-item.active button:focus {
+  outline: none;
+}
+
+.task-navbar .task-navItem .nav-item button:focus {
+  outline: none;
+}
+
+.taskPage_workflow_dropdown {
+  /* top: 6px;
+  right: 10px;
+  z-index: 10;
+  position: absolute !important; */
+  display:flex;
+}
+
+.taskPage_workflow_dropdown .taskPage_headers {
+  column-gap: 12px;
+}
+
+.taskPage_sort_dropdown {
+  top: -18px;
+  right: -25px;
+  position: absolute !important;
+}
+
+.taskPage_sort_dropdown .dropdown_icon {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.task_split_section > div {
+  display: flex;
+}
+
+.task_split_section > div > div:first-child {
+  margin-right: 5px;
+}
+
+/* spliter - gutter design */
+.task_split_section > div > div:nth-child(2) {
+  cursor: ew-resize;
+  background: rgb(224, 224, 224, 0.5);
+}
+
+.task_split_section > div > div:nth-child(2):hover {
+  background: rgb(224, 224, 224);
+}
+
+.task_split_section > div > div:last-child {
+  padding-left: 5px;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .img_doc
+  > span
+  > div {
+  justify-content: flex-start !important;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .img_doc
+  > span
+  > div.fetch_error_container {
+  color: red;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center !important;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .attachment_image
+  > div
+  > canvas {
+  border-radius: 7px;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .attachment_image_fitToWidth {
+  width: 100%;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .attachment_image_fitToWidth
+  > div
+  > canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .attachment_image_fitToHeight {
+  height: 100%;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .attachment_image_fitToHeight
+  > div
+  > canvas {
+  width: auto !important;
+  height: 100% !important;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .attachment_image_fitToWidth_side {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .attachment_image_fitToWidth_side
+  > div
+  > canvas {
+  height: 100% !important;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .attachment_image_fitToHeight_side {
+  height: 100%;
+  width: auto;
+  display: flex;
+}
+
+.task_split_section
+  .ezedox_tasks_container
+  .display_document_section_body
+  .attachment_image_fitToHeight_side
+  > div
+  > canvas {
+  width: 100% !important;
+}
+
+.form_desktop.formio_normal_view {
+  overflow-y: auto;
+  padding-left: 10px;
+  max-height: calc(100vh - 60px);
+  scrollbar-width: thin;
+}
+
+.form_desktop.formio_split_view {
+  overflow-y: auto;
+  padding-top: unset;
+  max-height: calc(100vh - 120px);
+  scrollbar-width: thin;
+}
+
+.form_desktop.formio_normal_view::-webkit-scrollbar,
+.form_desktop.formio_split_view::-webkit-scrollbar {
+  display: block !important;
+}
+
+/* Custom CSS classes for formio Attachment Review Form */
+/* Override component: panel & children of panel */
+.attachments_panel.panel,
+.attachments_panel .panel {
+  border: none;
+  box-shadow: none;
+  margin-bottom: unset;
+  background-color: transparent;
+}
+
+.attachments_panel .panel-body {
+  padding: unset;
+}
+
+.form_desktop .attachments_panel > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form_desktop .attachments_panel > div > div {
+  padding: 0 10px;
+}
+
+.form_desktop
+  .attachments_panel
+  > div
+  > div:first-child
+  ul
+  > li
+  > div
+  > div:first-child {
+  display: none;
+}
+
+.form_desktop
+  .attachments_panel
+  > div
+  > div:first-child
+  ul
+  > li
+  > div
+  > div:nth-child(2) {
+  width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.form_desktop
+  .attachments_panel
+  > div
+  > div:first-child
+  ul
+  > li
+  > div
+  > div:last-child {
+  width: 30%;
+}
+
+.form_desktop.formio_normal_view .attachments_panel > div > div:first-child {
+  width: 40%;
+}
+
+.form_desktop.formio_normal_view .attachments_panel > div > div:nth-child(2),
+.form_desktop.formio_normal_view .attachments_panel > div > div:last-child {
+  width: 30%;
+}
+
+.form_desktop.formio_split_view .attachments_panel > div > div {
+  width: 100%;
+}
+/* ========================== */
+
+.downloadable_file_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.downloadable_file_container > span.help_text {
+  color: #999999;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.downloadable_file_container > span.icon-download {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.downloadable_file_container > button {
+  margin: 0 !important;
+}
+
+.task_save_draft {
+  margin-top: 6px;
+  margin-bottom: 0px !important;
+}
+
+.task_save_draft_review {
+  height: 28px;
+  margin-right: 5px;
+  padding: 3.5px 10px !important;
+}
+
+.filter_by_value_dropdown {
+  margin-right: 10px;
+}
+
+.task_page .process_tab_ongoing_comp_ul {
+  height: 40px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.task_page .task-navbar > ul > li,
+.task_page .task-navbar > ul > li > button {
+  height: inherit;
+}
+
+.task_page
+  > .task-navbar
+  > .process_tab_ongoing_comp_ul
+  > li.nav-item {
+  margin-right: 10px;
+  padding:0;
+}
+
+.task_page .task-navbar
+	> .process_tab_ongoing_comp_ul
+	> li.nav-item 
+	> button {
+  min-width: 100px;
+  white-space: nowrap;
+}
+
+.task_page .task-navbar {
+	position: relative;
+  margin-top:10px;
+}
+
+.task_page .task-navbar 
+	> .carousel-button-slider 
+	> .button-slider {
+	top: 10px;
+	padding: 1px 4px;
+	background-color: #dddddd88;
+	position: absolute;
+}
+
+.task_page .task-navbar 
+	> .carousel-button-slider 
+	> .button-slider:first-child {
+	left: -6px;
+}
+
+.task_page .task-navbar 
+	> .carousel-button-slider 
+	> .button-slider:last-child {
+	right: -12px;
+}
+
+.task_page .task-navbar
+	> .task_filters_container { 
+	margin: 5px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+/* content loader css rules */
+.start_sending_invite_card_box .process_details_text svg {
+  width: 180px;
+}
+
+.start_sending_invite_card_box .user_button svg {
+  width: 150px;
+  height: 37px;
+  margin: 2px 10px 0 0;
+}
+/* =============== */
+
+.sort_by_dropdown .dropdown_icon, 
+.workflow_dropdown_taskPage .dropdown_icon {
+  font-weight: 700;
+}
+
+.formio-component-submit{
+  display:block!important;
+  visibility: visible!important;
+}
+
+.taskPage_workflow_dropdown .input_search_cont {
+  height: 34px;
+}
+
+.taskPage_workflow_dropdown .input_search_cont .form-control{
+  height: 34px;
+}
+
+@media only screen and (max-width: 576px) {
+  /* content loader css rules */
+  .start_sending_invite_card_box .user_button svg,
+  .start_sending_invite_card_box .process_details_text svg {
+  	width: 100%;
+  }
+  /* ============= */
+	
+  .task_form_top_bar .attachment-previewer {
+    right: 0;
+    position: absolute;
+    margin-right: unset;
+  }
+
+  .task_form_top_bar .form-name {
+    width: 60%;
+  }
+
+  .task_details_container .user_button .fancy_btn {
+    margin-right: 0;
+  }
+
+  .task_details_container .user_button .fancy_btn .ezedox_text_task {
+    padding: 0;
+  }
+
+  .task_details_container .start_sending_invite_card_box > .task_card {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .task_details_container
+    .start_sending_invite_card_box
+    > .task_card
+    > .process_details_text {
+    display: grid;
+    margin-bottom: 5px;
+    grid-template-columns: 40% 60%;
+  }
+
+  .task_details_container
+    .start_sending_invite_card_box
+    > .task_card
+    > .user_button {
+    margin: 0;
+  }
+
+  .task_details_container
+    .start_sending_invite_card_box
+    > .task_card
+    > .user_button
+    > a {
+    width: 100%;
+  }
+
+  .task-navbar .task-navItem .nav-item > p {
+    display: none;
+  }
+
+  .select-field {
+    height: 30px;
+    width: max-content;
+  }
+
+  .task_form_top_bar {
+    width: calc(100% - 20px);
+  }
+
+  .task_form_top_bar .form-detail {
+    width: 100%;
+    padding: 10px 0 0 0;
+  }
+
+  .attch_io_form {
+    padding-top: 5em;
+  }
+
+  .task_page > .pagination_container > ul.pagination {
+    margin: 13px 0;
+  }
+
+  .taskPage_workflow_dropdown {
+    width: 100%;
+    z-index: 100;
+    margin-top: 3px;
+    position: static !important;
+  }
+
+  .taskPage_workflow_dropdown > .filter_dropdown,
+  .taskPage_workflow_dropdown > .filter_dropdown > .filter_dropdown_menu {
+    width: 100%;
+  }
+
+  .taskPage_workflow_dropdown
+    > .filter_dropdown
+    > .filter_dropdown_button_withIcon {
+    display: grid;
+    grid-template-columns: 10% 10% 75% 5%;
+  }
+
+  .taskPage_workflow_dropdown
+    > .filter_dropdown
+    > .filter_dropdown_button_withIcon
+    > .filter_button_text_withIcon {
+    text-align: left;
+  }
+
+  .taskPage_workflow_dropdown
+    > .filter_dropdown
+    > .filter_dropdown_button_noIcon {
+    display: grid;
+    grid-template-columns: 10% 85% 5%;
+  }
+
+  .taskPage_workflow_dropdown .filter_button_text_withIcon,
+  .taskPage_workflow_dropdown .filter_button_text {
+    max-width: unset;
+  }
+
+  .taskPage_sort_dropdown {
+    top: -32px;
+    right: -20px;
+    position: absolute !important;
+  }
+
+  .taskPage_sort_dropdown > .filter_dropdown {
+    height: 33px;
+  }
+
+  .task_split_section {
+    height: calc(100vh - 60px);
+  }
+
+  .task_split_section > div {
+    flex-direction: column;
+    height: calc(100vh - 60px);
+  }
+
+  .task_split_section > div > div:first-child {
+    margin: 0;
+    width: 100%;
+  }
+
+  /* spliter - gutter design */
+  .task_split_section > div > div:nth-child(2) {
+    cursor: ns-resize;
+  }
+
+  .task_split_section > div > div:last-child {
+    padding: 0;
+    width: 100%;
+  }
+
+  .ezedox_tasks_container .disply_document {
+    width: 100%;
+    min-height: calc(50vh - 140px);
+    max-height: calc(50vh - 140px);
+  }
+
+  .task_form_top_bar_split_view .form-detail p {
+    margin-bottom: unset;
+  }
+
+  .task_form_top_bar_split_view .form-detail .form-name {
+    margin: 10px 0 5px 0;
+  }
+
+  .task_form_top_bar_split_view > .attachment-previewer {
+    width: 137px;
+  }
+
+  .task_form_top_bar + div > .form_mobile.formio_normal_view {
+    padding-top: 55px;
+    max-height: calc(100vh - 60px);
+  }
+
+  .task_form_top_bar .task_save_draft_review {
+    margin: 13px 0;
+  }
+
+  .form_mobile.formio_normal_view {
+    overflow-y: auto;
+    padding-top: unset;
+    max-height: calc(100vh - 114px);
+    scrollbar-width: thin;
+  }
+
+  .form_mobile.formio_split_view {
+    overflow-y: auto;
+    padding-top: unset;
+    max-height: calc(50vh - 90px);
+    scrollbar-width: thin;
+  }
+
+  .form_mobile.formio_normal_view::-webkit-scrollbar,
+  .form_mobile.formio_split_view::-webkit-scrollbar {
+    display: block !important;
+  }
+
+  /* Custom CSS classes for formio Attachment Review Form */
+  /* Override component: children of panel */
+  .form_mobile .attachments_panel > div {
+    padding: 5px !important;
+  }
+  /* ========================== */
+
+  .ezedox_display_section .select_document_box {
+    margin: 5px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ezedox_display_section .select_document_box p {
+    margin: 5px 5px 8px 1px;
+  }
+
+  .ezedox_display_section .select_document_box .attachments_dropdown_taskPage,
+  .ezedox_display_section
+    .select_document_box.pdf_item
+    .attachments_dropdown_taskPage,
+  .ezedox_display_section
+    .select_document_box.other_item
+    .attachments_dropdown_taskPage {
+    width: 100%;
+  }
+
+  .ezedox_tasks_container .file_functionalities {
+    right: 10px;
+    width: 163px;
+  }
+
+  .downloadable_file_container > span.help_text {
+    margin-bottom: 30px;
+	}
+
+	.task_page .task-navbar
+		> .task_filters_container
+		> .mobile_half_filter_dropdown1,
+	.task_page .task-navbar
+		> .task_filters_container
+		> .mobile_half_filter_dropdown2 {
+		width: auto;
+	}
+	
+	.task_page .task-navbar
+		> .task_filters_container
+		> .mobile_half_filter_dropdown1 
+		.filter_dropdown_button {
+		width: 120px;
+	}
+
+	.task_page .task-navbar
+		> .task_filters_container
+		> .mobile_half_filter_dropdown1 
+		.filter_dropdown_menu {
+		width: 120px;
+		min-width: 120px;
+	}
+	
+	.task_page .task-navbar
+		> .task_filters_container
+		> .mobile_half_filter_dropdown2 
+		.filter_dropdown_button {
+		width: 120px;
+	}
+
+	.task_page .task-navbar
+		> .task_filters_container
+		> .mobile_half_filter_dropdown2 
+		.filter_dropdown_menu {
+		width: 165px;
+		min-width: 165px;
+	}
+}
+
+.attachment-previewer .lang_btn {
+  margin-right: 8px;
+  border: none;
+  background-color: transparent;
+}
+
+.attachment-previewer .lang_btn img {
+  height: 1.25rem;
+}
+
+.attachment-previewer .lang_btn.dropdown-toggle::after {
+  display: none;
+}
+
+.task_form_top_bar .attachment-previewer .fancy_btn {
+  margin-top: -4px;
+}
+
+@media only screen and (max-width: 380px) {
+  .task_form_top_bar .form-name {
+    width: 50%;
+  }
+}
+.task_filters_container .ant-tag{
+  height: max-content ;
+}
+
+.task_filters_container span.active_filters_values .ant-tag {
+  max-width: 13rem;
+  overflow: scroll;
+  margin-top: 5px;
+}
+
+
+/* Task home components css */
+.task-workflow-list-container {
+  display: flex;
+  padding: 0px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 15px 10px 15px 0px;
+}
+
+.task-workflow-list-item {
+  display: flex;
+  padding: 23px 30px 23px 29px;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0px;
+  border-radius: 8px;
+  background: #FEFEFF;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.25);
+  width: 375px;
+  cursor: pointer;
+}
+
+.task-workflow-card-header {
+  color: #000;
+  /* Base/Strong */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 157.143% */
+}
+
+.task-workflow-text {
+  color: #585F66;
+  /* Base/Normal */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.task-workflow-card-header[data-error=true] {
+  color: red;
+}
+
+.task-workflow-label-container {
+  display: flex;
+  padding: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 70%;
+}
+.task-workflow-count-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.task-workflow-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

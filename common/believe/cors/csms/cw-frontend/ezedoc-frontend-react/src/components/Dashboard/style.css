@@ -1,0 +1,33 @@
+.fallback-main-container{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px; 
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--main-white-color);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.no_chart_img_text {
+  min-width: 320px;
+  width: 30%;
+  text-align: center;
+}
+
+.no_chart_img_text p {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #545454;
+  margin-bottom: 5px;
+}

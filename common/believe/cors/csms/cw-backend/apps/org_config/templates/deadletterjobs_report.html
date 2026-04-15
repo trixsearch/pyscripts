@@ -1,0 +1,39 @@
+{% load tz %}
+<html>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #696969;
+        }
+        th {
+            padding: 15px;
+            text-align: center;
+        }
+        td {
+            padding: 15px;
+        }
+    </style>
+    <body>
+        <h3>DeadLetter Jobs Summary (TOTAL : {{total}}): </h3>
+        <table border="1">
+            <tr >
+                <th>Id</th>
+                <th>Process Instance Id</th>
+                <th>Exception Message</th>
+                <th>Create Time</th>
+                <th>Tenant Id</th>
+            </tr>
+            {% for instance in data %}
+            <tr>
+                <td>{{instance.id}}</td>
+                <td>{{instance.processInstanceId}}</td>
+                <td>{{instance.exceptionMessage}}</td>
+                <td>{{instance.createTime}}</td>
+                <td>{{instance.tenantId}}</td>
+            </tr>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+.job-chart-config-create-edit-page {
+    position: relative;
+}
+
+.job-chart-config-create-edit-page .filter_dropdown_menu {
+    max-height: 310px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.job-chart-config-create-edit-page .filter_dropdown_menu::-webkit-scrollbar {
+    height: 0 !important;
+    display: block !important;
+}
+
+.job-chart-config-create-edit-page #job-config-container1 {
+    display: flex;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.job-chart-config-create-edit-page .error-message-element {
+    position: absolute;
+    top: 50px;
+}
+
+.job-chart-config-create-edit-page .config-job-form-fields {
+    margin-right: 20px;
+    margin-bottom: unset !important;
+}
+
+.job-chart-config-create-edit-page .app_category_head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.job-chart-config-create-edit-page .app_category_head p {
+    flex: unset;
+    margin-right: 20px;
+}
+
+.job-chart-config-create-edit-page .default-config-rows {
+    height: 107px;
+}
+
+.job-chart-config-create-edit-page .config-rows {
+    height: 190px;
+    overflow-y: overlay;
+    scrollbar-width: thin;
+}
+
+.job-chart-config-create-edit-page .config-rows::-webkit-scrollbar {
+    display: block !important;
+}
+
+.job-chart-config-create-edit-page .config-row {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.job-chart-config-create-edit-page .config-row > span {
+    width: 30px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.job-chart-config-create-edit-page .config-row .filter_dropdown {
+    margin-right: 20px;
+}
+
+.job-chart-config-create-edit-page .config-row .btn-circle {
+    border-radius: 50%;
+    padding: 8px 10px 6px;
+}
+
+.job-chart-config-create-edit-page .cancel_publish_btn {
+    padding-top: 10px;
+}

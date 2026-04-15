@@ -1,0 +1,105 @@
+/* Pagination */
+
+.pagination_container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Overriding css for the pagination */
+
+.pagination > li.disabled > a {
+  color: var(--main-disabled-button-secondary-text-color) !important;
+  border-color: var(--main-first-button-color) !important;
+  background-color: #dddddd60 !important;
+}
+
+.pagination > li.disabled > a:hover {
+  height: 34px;
+  padding: 6px 12px;
+  background-image: none;
+  border: 1px solid var(--main-first-button-color) !important;
+  background-color: #dddddddd !important;
+}
+
+.pagination > li.active > a,
+.pagination > li.active > a:hover, .active-page {
+  border: none;
+  padding: 9px 13px;
+  color: var(--main-button-text-color);
+  background-image: var(--main-button-gradient-color);
+}
+
+.pagination > li > a {
+  color: var(--main-black-color);
+  border-color: var(--main-first-button-color);
+  /* background-image: var(--main-white-color); */
+}
+
+.pagination > li > a:hover {
+  border: none;
+  padding: 9px 13px;
+  color: var(--main-button-text-color);
+  background-image: var(--main-button-gradient-color);
+}
+
+.entity-list-count-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 74px;
+}
+
+.entity-list-count-text p, 
+.pagination-container > p {
+  margin-right: 1em;
+  margin-top: 6px;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 576px) {
+  .entity-list-count-text p, 
+  .pagination-container p {
+    display: none;
+  }
+
+  .pagination_container > ul.pagination > :not(.mobile-visible) {
+    display: none;
+  }
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 74px;
+}
+
+.pagination-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.pagination-list li {
+  border: 1px solid;
+  padding: 7px 10px;
+  border-top: none;
+  border-bottom: none;
+}
+
+.active-page {
+  color: white !important;
+  background-color: var(--main-button-gradient-color) !important;
+}
+
+.page-link-disabled {
+  cursor: not-allowed;
+}
+
+.page-link-disabled:hover {
+  background-image: gainsboro !important;
+}

@@ -1,0 +1,154 @@
+.ezedox_main_body .config_add_user_form .edit_app_detils_form_cont {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.ezedox_main_body .icon_postion_th {
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  bottom: 0px;
+  margin: auto;
+  color: var(--main-first-primary-color);
+}
+
+.table_cont.table > thead > tr > th:nth-child(1) {
+  width: 2%;
+  padding: 8px 0px 6px 5px;
+}
+
+.table_cont.table > tbody > tr > td:nth-child(1) {
+  width: 2%;
+  padding: 9px 0px 3px 5px;
+}
+
+.table_cont.table > thead > tr > th:nth-child(2),
+.table_cont.table > tbody > tr > td:nth-child(2) {
+  width: 8%;
+}
+
+.table_cont.table > thead > tr > th:nth-child(3),
+.table_cont.table > tbody > tr > td:nth-child(3) {
+  width: 13%;
+}
+
+.table_cont.table > thead > tr > th:nth-child(4),
+.table_cont.table > tbody > tr > td:nth-child(4) {
+  width: 12%;
+}
+
+.table_cont.table > thead > tr > th:nth-child(5),
+.table_cont.table > tbody > tr > td:nth-child(5) {
+  width: 9%;
+}
+
+.table_cont.table > thead > tr > th:nth-child(6),
+.table_cont.table > tbody > tr > td:nth-child(6) {
+  width: 15%;
+}
+
+.table_cont.table > thead > tr > th:nth-child(7),
+.table_cont.table > tbody > tr > td:nth-child(7) {
+  width: 10%;
+}
+
+.table_cont.table > thead > tr > th:nth-child(8),
+.table_cont.table > tbody > tr > td:nth-child(8) {
+  width: 7%;
+}
+
+.table_cont.table > thead > tr > th:nth-child(9),
+.table_cont.table > tbody > tr > td:nth-child(9) {
+  width: 7%;
+}
+
+.table_cont.table > thead > tr > th:nth-child(10),
+.table_cont.table > tbody > tr > td:nth-child(10) {
+  width: 17%;
+}
+
+.table_cont.table > tbody > tr.active > td {
+  color: var(--main-first-primary-color);
+}
+
+.table_cont .col_box {
+  padding: 3px 0px 0px 0px;
+}
+
+.table_cont.table .squaredThree label:after {
+  border-color: var(--main-first-primary-color);
+}
+
+.table_cont.table .squaredThree input[type="checkbox"]:checked + label {
+  border-color: var(--main-first-primary-color);
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.config-section-form .floating-input {
+  margin-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.user-create-active-alert {
+  color: red;
+}
+
+.react-phoneinput .react-tel-input {
+  margin-top : 5px
+}
+
+.react-phoneinput .react-tel-input .form-control {
+  width : inherit;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid var(--main-input-boder-color);
+}
+
+.react-phoneinput .react-tel-input .flag-dropdown {
+  border: 1px solid var(--main-input-boder-color);
+  border-radius: 5px 0px 0px 5px;
+}
+
+.phone-number-label {
+  background-color: white;
+}
+
+.deleted-user > td > p {
+  color:red;
+}
+
+.deleted-user > td .squaredThree label { border-color: red }
+
+.user-list-filter-dropdown {
+  margin-right: 10px;
+}
+
+.user-buttons-container .btnDropdown {
+  margin-left: unset !important;
+}
+
+.select-role{
+  margin-bottom:0 !important;
+}
+
+.config_user_view .btnDropdown .dropdown-menu{
+  left:-20px!important;
+}
+
+@media only screen and (max-width: 991px) {
+
+.select-role{
+  margin-bottom:10px !important;
+}
+
+}

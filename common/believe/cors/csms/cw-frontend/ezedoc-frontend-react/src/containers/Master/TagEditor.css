@@ -1,0 +1,76 @@
+.array-edit-modal .tag input, .tag-editor, .tag-editor-placeholder, .tag-editor-mirror {
+    font-size: 1.2rem;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.array-edit-modal  .tag input, .array-edit-modal .tag-editor-placeholder {
+    padding: 1px 2em 1px 0.6em;
+    line-height: 1.8;
+}
+.array-edit-modal  .tag {
+    display: inline-block;
+    margin-right: 0.3em;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+.array-edit-modal  .tag input, .array-edit-modal  .tag-view-only {
+    margin: 0;
+    border: 0;
+    box-sizing: content-box;
+    color: #222;
+    background-color: #cee7f9;
+    min-width: 1em;
+    border-radius: 4px;
+}
+.array-edit-modal  .tag input:focus {
+    color: #111;
+    background-color: transparent;
+    outline: 0;
+}
+.array-edit-modal  .tag input:focus + a {
+    display: none;
+}
+.array-edit-modal  .tag a {
+    position: absolute;
+    top: 50%;
+    right: 0.3em;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+    color: #222;
+    line-height: 1;
+    font-size: 1.231em;
+    background: #fff;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+}
+.array-edit-modal .tag a:hover {
+    color: #111;
+}
+.array-edit-modal  .tag.has-error input {
+    background-color: #f2c9c9;
+}
+.array-edit-modal .tag.has-error input, .array-edit-modal .tag.has-error a {
+    transition: color 1s;
+    color: #5c0909;
+}
+.array-edit-modal  .tag-editor {
+    padding: 0.5em 0.5em 0;
+    border: 1px solid #ccc;
+    cursor: text;
+}
+.array-edit-modal .tag-editor.is-active {
+    border-color: #808080;
+}
+.array-edit-modal .tag-editor-placeholder {
+    color: #777;
+    margin-bottom: 0.5em;
+}
+.tag-editor-mirror {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: auto;
+    visibility: hidden;
+}

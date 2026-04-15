@@ -1,0 +1,123 @@
+.stat-blue {
+    color: #2b80f8;
+}
+
+.stat-green {
+    color: #31a18a;
+}
+
+.stat-orange {
+    color: #f5a623;
+}
+
+.stat-red {
+    color: #ce4545;
+}
+
+.stat-pale-red {
+    color: #d56c4f;
+}
+
+.stat-gray {
+    color: #7b7d85;
+}
+
+.stat-gray2 {
+    color: #8e8e8e;
+}
+
+.stat-darkblue{
+    color:var(--main-primary-color);
+}
+
+.stat-card1 {
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.07), 0 -1px 4px rgba(0, 0, 0, 0.05);
+    background:#fff;
+}
+
+.stat-card2 {
+    display: flex;
+    padding: 15px 10px;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.07), 0 -1px 4px rgba(0, 0, 0, 0.05);
+    background:#fff;
+}
+
+.stat-card1 .card-count,
+.stat-card1 .card-total-count,
+.stat-card2 .card-total-count {
+    font-weight: 500;
+}
+
+.stat-card2 .card-name,
+.stat-card1 .card-name {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    /* text-transform: uppercase; */
+}
+
+.stat-card1 .card-total-count {
+    font-size: 24px;
+}
+
+.stat-card2 > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-card2 .card-count {
+    font-weight: 500;
+    font-size: 20px !important;
+}
+
+.big-cards,
+.small-cards {
+    display: flex;
+    margin: 15px 0;
+}
+
+.big-cards > div:not(:last-child),
+.small-cards > div:not(:last-child) {
+    margin-right: 25px;
+}
+
+.small-card {
+    width: 160px;
+    height: 120px;
+}
+
+.small-card .card-count {
+    font-size: 24px;
+}
+
+.small-card .card-name {
+    font-size: 12px;
+}
+
+.big-card {
+    width: 190px;
+    height: 150px;
+}
+
+.big-card .card-count {
+    font-size: 32px;
+}
+
+.big-card .card-name {
+    font-size: 14px;
+}
+
+.big-card > * {
+    margin-top: 5px;
+}

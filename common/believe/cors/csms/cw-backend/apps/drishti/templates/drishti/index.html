@@ -1,0 +1,107 @@
+{% extends 'admin/index.html' %}
+{% load static %}
+{% block title %}Drishti{% endblock %}
+{% block extrahead %}
+    <link rel="shortcut icon" href="{% static 'admin/img/drishti_icon.png' %}" />
+{% endblock %}
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">Ezedox administration</a></h1>
+{% endblock %}
+{% block content %}
+
+  <h1 style = "display: inline;font-family: Times New Roman, Times, serif;font-size: 45px;color: #333;">
+    {% load static %} 
+    <img style="margin-bottom: 10px;" src="{% static "admin/img/drishti_icon.png" %}" alt="Hi!" height="35px"/>
+        <b>Drishti<b>
+  </h1>
+<div style="position: absolute;right: 100px;">
+    <h1><a href="/cw/admin"> <u>Admin </u></a></h1>
+    <h1><a href="/cw/admin/drishti/deadletterJobs"> <u>Dead Letter Jobs </u></a></h1>
+    <a href="/cw/admin/logout"> <u>LOG OUT</u></a>
+</div>
+    <br><br>
+  {% if tenant_list %}
+    <h1>Search with process Id</h1>
+    <form style="margin-top:30px" action="result" method="get">  
+        <label for="tenant">Tenant :</label>
+        <select style="margin-left:82px" name="tenant" id='label'> 
+            {% for tenant in tenant_list %}
+                <option value="{{tenant.id}}" >{{ tenant.id }} ({{ tenant.name }})</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <label for="process_id">Process Instance Id :</label>
+        <input style="margin-left:2px" id="process_id" type="text" name="process_id" value="{{ process_id }}" required><br><br>
+        <select name="requested_data" >
+            <option value="all" > All</option>
+            <option value="jobs" > Jobs</option>
+            <option value="tasks" >Tasks</option>
+            <option value="identity_links" >Identity Links</option>
+            <option value="activities" > Activities</option>
+            <option value="process_variables" > Process Variables</option>
+        </select>
+        <input type="submit" value="Get Data">
+    </form>
+
+    {% else %}
+        <p>No Tenants are available.</p>
+    {% endif %}
+    <!-- key-value search form -->
+    <hr style="margin: 2rem" >
+
+  {% if tenant_list %}
+    <h1>Search with variables</h1>
+    <form style="margin-top:30px" action="search-result" method="get">  
+        <label for="tenant">Tenant :</label>
+        <select style="margin-left:39px" name="tenant" id='label'> 
+            {% for tenant in tenant_list %}
+                <option value="{{tenant.id}}" >{{ tenant.id }} ({{ tenant.name}})</option>
+            {% endfor %}
+        </select>
+        <br>
+            <label for='search_key' > Search Key : </label>
+            <input style="margin-left:12px" name='search_key' id='search_key' type='text' />
+            <br>
+            <label for='search_value' > Search Value : </label>
+            <input name='search_value' id='search_value' type="text" />
+            <br>
+        <input type="submit" value="Get Data">
+
+    </form>
+    {% else %}
+        <p>No Tenants are available.</p>
+    {% endif %}
+
+    <!-- key-value search form -->
+    <hr style="margin: 2rem" >
+
+  {% if tenant_list %}
+    <h1>Search with task ID</h1>
+    <form style="margin-top:30px" action="search-task" method="get">
+        <label for="tenant">Tenant :</label>
+        <select style="margin-left:4px" name="tenant" id='label'> 
+            {% for tenant in tenant_list %}
+                <option value="{{tenant.id}}" >{{ tenant.id }} ({{ tenant.name}})</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for='task_id' > Task ID : </label>
+        <input name='task_id' id='task_id' type='text' />
+        <br>
+        <input type="submit" value="Get Data">
+        <hr style="margin: 2rem" >
+
+    </form>
+    {% else %}
+        <p>No Tenants are available.</p>
+    {% endif %}
+
+    {%if exception_data%}
+    <br><br>
+    <p>{{exception_data}}</p>
+    {%endif%}
+
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

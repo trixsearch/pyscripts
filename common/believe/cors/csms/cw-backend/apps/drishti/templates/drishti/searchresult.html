@@ -1,0 +1,39 @@
+{% extends 'drishti/index.html' %}
+{% block content %}
+
+<a href="."> <u>HOME</u></a>
+
+<a style="position: absolute;
+    right: 40px;" href="/cw/admin/logout"> <u>LOG OUT</u>
+</a>
+
+    {% if data %}
+        <table>
+            <thead>
+                <tr>
+                    <th><divclass=”text”>Instance ID</divclass=”text”></th>
+                    <th><divclass=”text”>Mobile</divclass=”text”></th>
+                    <th><divclass=”text”>Name</divclass=”text”></th>
+                    <th><divclass=”text”>Email</divclass=”text”></th>
+                    <th><divclass=text>Action</divclass=text></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for process in data %}
+                    <tr >
+                        <td> {{process.id}} </td>
+                        <td> {{process.entity_phone_number}} </td>
+                        <td> {{process.entity_name}} </td>
+                        <td> {{process.entity_email}} </td>
+                        <td><a href={{process.url}}><button type="submit" class=" button">View</button></a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {%else%}
+      <h2> No process found </h2>
+    {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cw-uat-config
+data:
+  KAFKA_BROKERS: "b-2.engineering-kafka-clu.l9lf4l.c2.kafka.ap-south-1.amazonaws.com:9092"
+  BACKEND_DOMAIN_URL: "http://cw-backend-service-uat.engineering.internal"
+  ENV: "uat"
+  LAUNCH_PROCESS_TOPICS: "uat-domain-updates"

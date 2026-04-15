@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>i-remove</title>
+    <desc>Created with Sketch.</desc>
+    <g id="🏂-on-boarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="01-BGV-Client-onboarding_organisation-details_C" transform="translate(-1023.000000, -127.000000)" stroke="#8697A8">
+            <g id="notification-bar" transform="translate(160.000000, 119.000000)">
+                <g id="i-remove" transform="translate(864.000000, 8.000000)">
+                    <g transform="translate(0.000000, 0.000000)" id="Path">
+                        <path d="M8,0 L0,8"></path>
+                        <path d="M8,8 L0,0"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

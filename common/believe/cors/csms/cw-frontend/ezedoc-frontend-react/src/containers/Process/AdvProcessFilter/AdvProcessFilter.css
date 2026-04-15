@@ -1,0 +1,80 @@
+/* Overriding css for Modal */
+
+.adv-process-filter-modal .reusable-modal-body {
+    padding-top: 15px;
+}
+
+.adv-process-filter-modal .modal-footer {
+    padding-top: 25px;
+}
+
+/* ------------------------ */
+
+.adv-filter-query-container {
+    height: 200px;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    margin: 17px 2px 2px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 2px -1px black;
+    scrollbar-width: thin;
+}
+
+.adv-filter-query-container::-webkit-scrollbar {
+    height: 0;
+    display: block;
+}
+
+.adv-filter-query-container .query-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.adv-filter-query-container .query-row .query-column {
+    display: flex;
+    padding-right: 7px;
+    width: 45%;
+    flex-direction: column;
+}
+
+.adv-filter-query-container .query-row .query-column input[type='checkbox'] {
+    width: 20px;
+    margin: unset;
+    outline: none;
+    border: unset;
+    margin-left: 2px;
+    box-shadow: none;
+}
+
+.adv-filter-query-container .query-row .query-column span {
+    font-size: 10px;
+    padding-left: 1px;
+    color: var(--main-input-label-color);
+}
+
+.adv-filter-query-container .query-row .query-row-remove-btn {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    margin-top: 14px;
+    border-radius: 50%;
+}
+
+.adv-filter-query-container .query-row .query-column .required-star {
+    color: crimson !important;
+}
+
+@media only screen and (max-width: 576px) {
+    .adv-process-filter-modal .modal-footer {
+        justify-content: space-between;
+    }
+
+    .adv-process-filter-modal .modal-footer > button {
+        min-width: 64px !important;
+        padding: 0 15px !important;
+        margin-right: unset !important;
+    }
+}

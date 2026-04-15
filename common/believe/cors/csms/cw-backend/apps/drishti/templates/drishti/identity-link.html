@@ -1,0 +1,35 @@
+{% extends 'drishti/index.html' %}
+{% block content %}
+
+<a href="."> <u>HOME</u></a>
+
+<a style="position: absolute;
+    right: 40px;" href="/cw/admin/logout"> <u>LOG OUT</u>
+</a>
+
+    {% if data %}
+        <table>
+            <thead>
+                <tr>
+                    <th><divclass=”text”>User</divclass=”text”></th>
+                    <th><divclass=”text”>Group</divclass=”text”></th>
+                    <th><divclass=”text”>Type</divclass=”text”></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for idlink in data %}
+                    <tr >
+                        <td> {{idlink.user}} </td>
+                        <td> {{idlink.group}} </td>
+                        <td> {{idlink.type}} </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {%else%}
+      <h2> No Identity Link found </h2>
+    {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

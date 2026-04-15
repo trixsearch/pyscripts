@@ -1,0 +1,52 @@
+.custom-data-container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-data-create-container .header,
+.custom-data-create-container .body {
+  display: flex;
+}
+
+.delete-button-container {
+  align-self: center;
+}
+
+.lists-option-row-delete {
+  display: flex;
+  border-radius: 50%;
+  padding: 8px 10px 6px;
+  background-color: #dddddd;
+}
+
+.lists-option-row-delete:focus {
+  outline: none !important;
+}
+
+.lists-options-header {
+  display: flex;
+  align-items: center;
+}
+
+.custom-data-container .form_up_box .floating-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-checkbox {
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.form-checkbox input[type=checkbox] {
+  margin: unset;
+}
+
+.form-checkbox label {
+  margin-left: 10px;
+  margin-bottom: unset;
+  font-weight: normal;
+}

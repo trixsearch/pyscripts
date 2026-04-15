@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cw-launch-consumers
+  name: cw-launch-consumers
+  namespace: cw
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cw-launch-consumers
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: cw-launch-consumers
+    spec:
+      imagePullSecrets:
+        - name: cwms-jfrog 
+      containers:
+        - command: ["python3"]
+          args: ["consumers/launch_event_controller.py"]
+          image: devopsartifact.jio.com/jpf-cwms__sit__dcr/cw-backend/consumers:#{Build.BuildId}#
+          imagePullPolicy: Always          
+          name: cw-launch-consumers
+          env:
+            - name: KAFKA_BROKERS
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: KAFKA_BROKERS
+            - name: BACKEND_DOMAIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: BACKEND_DOMAIN_URL
+            - name: ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: ENV
+            - name: SSL_VERIFICATION
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: SSL_VERIFICATION
+            - name: LAUNCH_PROCESS_TOPICS
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: LAUNCH_PROCESS_TOPICS
+            - name: CELERY_BROKER_URL
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: CELERY_BROKER_URL
+          resources:
+            requests:
+              cpu: 1000m
+              memory: "1Gi"
+            limits:
+              cpu: 2000m
+              memory: "2Gi"
+      volumes:
+        - name: tmp-files
+          emptyDir: {}
+      restartPolicy: Always

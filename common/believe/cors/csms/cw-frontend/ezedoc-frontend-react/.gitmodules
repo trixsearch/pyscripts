@@ -1,0 +1,8 @@
+[submodule "src/submodules/auth-sdk"]
+	path = src/submodules/auth-sdk
+	url = git@bitbucket.org:bpss/auth-sdk.git
+	branch = master
+[submodule "src/submodules/platform-ui-container"]
+	path = src/submodules/platform-ui-container
+	url = ../platform-ui-containers-submodule.git
+	branch = benefits/dev

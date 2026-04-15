@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: cw-backend-service
+  name: cw-backend-service
+  namespace: dev
+spec:
+  type: ClusterIP
+  ports:
+    - name: "cw-backend-http"
+      port: 80
+      targetPort: 8000
+  selector:
+    app: cw-backend-web-dev

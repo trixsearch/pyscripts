@@ -1,0 +1,115 @@
+@import '../../../../theme.scss';
+
+.searchBarTag{
+    padding-right: 2rem;
+    outline: none;
+    padding-bottom: 4px;
+    @include body_r_r;
+    border: none;
+    min-width: 17rem;
+    width: max-content;
+    color: $primaryBlue100;
+    background-color: $primaryBlue5; 
+    &::placeholder{
+        color: $black50;
+    } 
+}
+
+.place{
+    &::placeholder{
+        color: $primaryBlue100;
+    } 
+}
+
+.searchIcon{
+    height:20px;
+
+}
+
+.tagDropDown{
+    cursor: pointer;
+    color : $black50;
+    border-bottom: 1px solid $primaryBlue5;
+    @include body_r_r;
+    padding: 8px 16px 8px 16px;
+    // position: absolute;
+    z-index: 999;
+    &:hover{
+        background-color: $primaryBlue5;
+    }
+}
+
+.labelText{
+    @include caption_m_m;
+    font-weight: bold;
+    color:$black50;
+    display: block;
+    margin-bottom: 8px;
+    min-height: 18px;
+}
+.tagBar{
+    border:1px solid $primaryBlue10;
+    padding-top: 5px;
+    padding-left: 2px;
+    z-index: 0;
+    border-radius: 5px;
+    width: max-content;
+    // background-color: $white100;
+    
+}
+.tagButtons{
+    padding: 2px 12px 2px 8px;
+    background-color: $primaryBlue5;
+    border-radius: 12px;
+	@include caption_m_m;
+    color:$black50;
+    margin-right: 0.5rem;
+    display: inline-block;
+    transform: translateY(-3px);
+}
+.dropdownMenu{
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.11);
+    position: absolute;
+    background: $white100;
+    width: 100%;
+    z-index: 999;
+    max-height: 15rem;
+    overflow-y: auto;
+    overflow-x : auto;
+    margin-top: 0.25rem;
+   
+}
+.close{
+    cursor: pointer ;  
+}
+.closeDisable{
+    cursor: default ;  
+}
+.searchText{
+    color: $primaryBlue100;
+}
+
+.iconStyle{
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.iconSize{
+    height: 14px;
+}
+
+.TagIconSize{
+    height: 16px;
+    padding-left: 0.5rem;
+    padding-right: 0.25rem;
+}
+
+.cancelTag{
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+.cancelTagInactive{
+    padding-right: 1rem;
+    cursor: not-allowed;
+}

@@ -1,0 +1,19 @@
+
+.searchText{
+    color: #1b2d93;
+}
+
+.iconStyle{
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.iconSize{
+    height: 14px;
+}
+
+.jobRoleSelect {
+    width:300px;
+    margin: 10px 15px;
+    color: #828792;
+}

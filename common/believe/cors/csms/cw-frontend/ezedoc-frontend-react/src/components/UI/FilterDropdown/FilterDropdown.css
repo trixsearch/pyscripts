@@ -1,0 +1,211 @@
+.filter_dropdown {
+  width: 205px;
+  height: 37px;
+}
+
+.filter_dropdown .dropdown-toggle[aria-expanded="true"] .caret {
+  transform: rotate(180deg);
+}
+
+.filter_dropdown_button {
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter_dropdown_button,
+.filter_dropdown_split_button {
+  z-index: 1;
+  height: 100%;
+  border-color: #ccc !important;
+  background-color: white;
+  box-shadow: 0 0 4px 0 rgba(209, 209, 209, 0.5);
+}
+
+.filter_dropdown_split_button {
+  padding: 0;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter_dropdown_button:hover,
+.filter_dropdown_split_button:hover {
+  border-color: #adadad;
+}
+
+.filter_dropdown_split_button,
+.filter_dropdown_split_button:focus,
+.filter_dropdown_split_button:active,
+.filter_dropdown_split_button:hover {
+  color: var(--main-first-primary-color);
+}
+
+.filter_dropdown_button_shortened {
+  width: 165px;
+  border-right: unset;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.dropdown_icon {
+  color: var(--main-first-primary-color);
+}
+
+.filter_button_text {
+  max-width: 165px;
+}
+
+.filter_button_text_withIcon,
+.filter_button_text_withDropDownIcon {
+  max-width: 145px;
+}
+
+.filter_button_text_split,
+.filter_button_text_withIcon_withDropDownIcon {
+  max-width: 125px;
+}
+
+.filter_button_text_split_withIcon,
+.filter_button_text_split_withDropDownIcon {
+  max-width: 105px;
+}
+
+.filter_button_text_split_withIcon_withDropDownIcon {
+  max-width: 85px;
+}
+
+.filter_dropdown_menu {
+  width: 205px;
+  margin: 2px 0 0 !important;
+  border-radius: 4px !important;
+}
+
+.filter_dropdown_menu_main {
+  max-height: 300px;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+}
+
+.filter_dropdown_menu_main .input_search_span {
+  display: flex;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  align-items: baseline;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: auto 5px;
+  height: 27px;
+  margin-bottom: 3px;
+}
+.filter_dropdown_menu_main .form-control{
+  border: none;
+  height: 25px;
+  font-size: 14px;
+}
+
+.filter_dropdown_menu_main::-webkit-scrollbar {
+  display: block !important;
+  width: 4px !important;
+}
+
+.filter_dropdown_by_field_name {
+  width: 159px;
+  margin-right: 5px;
+}
+.filter_dropdown_menu > li {
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.filter_dropdown_menu > .filter_dropdown_item {
+  height: 32px;
+  line-height: initial;
+}
+
+.filter_dropdown_item_name{
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 160px;
+  margin-right: 0;
+  top: 4px;
+  position: relative;
+}
+
+.filter_dropdown_menu > li:hover {
+  background-color: #dddddd;
+}
+
+.overflow_text_controller {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sub_list{
+  right: 209px;
+  visibility: hidden;
+  position: absolute;
+  list-style-type:none;
+  padding: 0px;
+  transition-delay: 0s;
+  top: -3px;
+  left: 208px;
+  overflow-y: visible !important;
+  border: 1px solid #ddd;
+  background: white;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.leftArrow {
+  border: solid #333333;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+  margin-right: 5px
+}
+
+.filter_dropdown_menu > li:hover > .sub_list,
+.filter_dropdown_menu li .sub_list:hover {
+  visibility: visible;
+}
+.dropdown-icon{
+  margin-right:5px;
+}
+.hoverPopupMenuClosed{
+  right: 209px;
+  visibility: hidden;
+  position: absolute;
+  list-style-type:none;
+  padding: 0px;
+  transition-delay: 0.5s;
+  top: -3px;
+  left: -208px;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.filter_dropdown_workflow {
+  justify-content: unset !important;
+}
+
+.overflow_text_workflow{
+  width: 160px !important;
+  text-align: left !important;
+}
+
+.workflow_selected_icon {
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 576px) {
+  .filter_dropdown_menu {
+    right: 0px !important;
+  }
+}

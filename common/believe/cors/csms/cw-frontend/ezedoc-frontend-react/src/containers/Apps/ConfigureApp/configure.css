@@ -1,0 +1,183 @@
+.ezedox_model_label {
+  padding: 5px;
+}
+
+.ezedox_user_edit {
+  margin-top: 6px;
+}
+
+.iconPicker-container {
+  display: flex;
+}
+
+.edit_app_detils_form_cont .iconPicker-container {
+  margin-top: 5px;
+}
+
+.iconPicker {
+  padding: 0 56px;
+}
+
+.iconPicker-selected {
+  border: 1px solid #909090;
+  border-radius: 4px;
+  height: 44px;
+  width: 62px;
+  font-size: 24px;
+  padding: 2px;
+  text-align: center;
+}
+
+.iconPicker-button {
+  padding: 0px;
+  background: transparent;
+  border: none;
+}
+
+.icons-name {
+  font-size: 13px;
+}
+
+.icons-picker {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  flex-wrap: wrap;
+  max-height: 320px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.icons-picker::-webkit-scrollbar {
+  display: block;
+}
+
+
+.iconPicker-icon {
+  width: 1em;
+  height: 1em;
+  font-size: 3.5em;
+}
+
+.iconPicker-current-icon {
+  width: 1em;
+  height: 1em;
+  font-size: 1.5em;
+}
+
+.icons-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 20px;
+  padding: 4px;
+}
+
+.icons-item:focus,
+.icons-item:focus-within,
+.icons-item:hover {
+  outline: var(--main-first-primary-color) solid 2px;
+}
+
+.icons-item:hover {
+  cursor: pointer;
+}
+
+.icons-picker-actions-cont {
+  display: flex;
+  position: absolute;
+  bottom: -16px;
+  transform: translate(50%, -50%);
+}
+
+.iconPicker-fallback {
+  font-size: 32px;
+  padding: 12px;
+}
+
+.config-add-modal-body {
+  padding: 0 28px;
+}
+
+.config-add-modal-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.user-group-radio-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 120px;
+}
+
+.config-add-react-select {
+  width: 100%;
+  padding-top: 4;
+}
+
+.config-add-permission {
+  padding: 0;
+  margin: 0;
+}
+
+.permission-edit-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  padding: 0 28px;
+}
+
+.permission-edit-grid {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding-left: 0;
+}
+
+.permission-edit-text {
+  margin: 0;
+  font-size: 11px;
+  padding-left: 8px;
+}
+
+.permission-add-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.open_checkbox {
+  width: 20px;
+  height: 32px;
+}
+
+.open_form {
+  padding-left: 11px;
+  padding-top: 11px;
+}
+
+.open_form_info {
+  padding-left: 3px;
+  padding-top: 11px;
+  width: 16px;
+}
+
+.open_help {
+  color: var(--main-first-primary-color);
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.entity_name-text {
+  color: var(--main-button-text-color);
+}
+
+.overflow-text {
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 90%;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100px;
+}

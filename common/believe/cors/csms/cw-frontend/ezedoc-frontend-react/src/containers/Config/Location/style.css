@@ -1,0 +1,75 @@
+.address-map {
+    padding-top: 20px;
+}
+
+.address-map > div {
+    margin-bottom: 10px;
+}
+
+.address-map .mapInput {
+    width: 100% !important;
+}
+
+.address-map input {
+    padding: 8px 16px;
+    background: #FFFFFF;
+    border: 1px solid #BEC0C2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.address-map .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.address-map .actions>button {
+    margin-right: 10px;
+}
+
+.address-map input:disabled {
+    background-color: #E9EAEB;
+}
+
+.mapModalInput {
+    display: block;
+    border: 2px solid #eeeeee;
+    box-sizing: border-box;
+    width: 36.55vw;
+    height: 44px;
+    color:var(--main-black-color);
+}
+.rightAlign{
+    margin-left: auto; 
+    margin-right: 0;
+    position: absolute;
+    float:right;
+}
+.locationSearch{
+    width: 36.55vw;
+    color: #828792;
+    height:40px;
+}
+
+.siteName,.siteLocation{
+    width: 36.55vw;
+    color: var(--main-black-color);
+    height:40px;
+}
+
+.inputRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.locationSearchButton{
+    height:2.5rem;
+    margin-left: 10px;  
+}
+
+.inputLabel{
+    color:var(--main-input-label-color)
+}

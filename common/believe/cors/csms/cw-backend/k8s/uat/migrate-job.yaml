@@ -1,0 +1,326 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: cw-web-migrate
+  namespace: uat
+spec:
+  template:
+    spec:
+      containers:
+        - command: ["python"]    
+          args: ["manage.py", "migrate"] 
+          image: 372004264077.dkr.ecr.ap-south-1.amazonaws.com/betterplace/cw-backend:uat
+          imagePullPolicy: Always
+          name: cw-backend-web-uat
+          env:
+            - name: POSTGRES_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: POSTGRES_HOST
+            - name: POSTGRES_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: POSTGRES_PORT
+            - name: POSTGRES_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: POSTGRES_DB
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: POSTGRES_USER
+            - name: FLOWABLE_POSTGRES_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: POSTGRES_HOST
+            - name: FLOWABLE_POSTGRES_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: POSTGRES_PORT
+            - name: FLOWABLE_POSTGRES_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: FLOWABLE_POSTGRES_DB
+            - name: FLOWABLE_POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: POSTGRES_PASSWORD
+            - name: FLOWABLE_POSTGRES_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: POSTGRES_USER
+            - name: FILE_BUCKET
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: FILE_BUCKET
+            - name: AZURE_ACCOUNT_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: AZURE_ACCOUNT_NAME
+            - name: AZURE_ACCOUNT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: AZURE_ACCOUNT_KEY
+            - name: AZURE_CONTAINER
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: AZURE_CONTAINER
+            - name: KAFKA_BROKERS
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: KAFKA_BROKERS
+            - name: ENCRYPTION_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: ENCRYPTION_KEY
+            - name: SALT_FOR_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: SALT_FOR_PASSWORD
+            - name: DJANGO_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: DJANGO_SECRET_KEY
+            - name: TEMP_DIR
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: TEMP_DIR
+            - name: ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: ENV
+            - name: PROD
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: PROD
+            - name: DEBUG
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: DEBUG
+            - name: LAUNCH_PROCESS_TOPICS
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: LAUNCH_PROCESS_TOPICS
+            - name: BASE_ORG_DOMAIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: BASE_ORG_DOMAIN_URL
+            - name: DJANGO_ADMIN_DOMAIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: DJANGO_ADMIN_DOMAIN_URL
+            - name: CANDIDATE_DOMAIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: CANDIDATE_DOMAIN_URL
+            - name: BACKEND_DOMAIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: BACKEND_DOMAIN_URL
+            - name: FILE_DOMAIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: FILE_DOMAIN_URL
+            - name: CW_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: CW_BASE_URL
+            - name: PLATFORM_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: PLATFORM_BASE_URL
+            - name: PLATFORM_INTERNAL_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: PLATFORM_INTERNAL_TOKEN
+            - name: INTEGRATION_INTERNAL_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: INTEGRATION_INTERNAL_TOKEN
+            - name: EZEDOX_ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: EZEDOX_ADMIN_PASSWORD
+            - name: EZEDOX_ADMIN_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: EZEDOX_ADMIN_USERNAME
+            - name: EZEDOX_INTERNAL_EMAIL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: EZEDOX_INTERNAL_EMAIL
+            - name: PROCESS_ENGINE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: PROCESS_ENGINE_PASSWORD
+            - name: PROCESS_ENGINE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: PROCESS_ENGINE_URL
+            - name: PROCESS_ENGINE_READ_REPLICA_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: PROCESS_ENGINE_READ_REPLICA_URL
+            - name: PROCESS_ENGINE_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: PROCESS_ENGINE_USER
+            - name: PROCESS_IDM_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: PROCESS_IDM_URL
+            - name: PROCESS_MODELER_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: PROCESS_MODELER_URL
+            - name: RABBITMQ_HTTP_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: RABBITMQ_HTTP_PORT
+            - name: RABBITMQ_HTTP_USER_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: RABBITMQ_HTTP_USER_NAME
+            - name: RABBITMQ_HTTP_USER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: RABBITMQ_HTTP_USER_PASSWORD
+            - name: CELERY_BROKER_URL
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: CELERY_BROKER_URL
+            - name: BROKER_URL
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: BROKER_URL
+            - name: CHANNEL_LAYER_URL
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: CHANNEL_LAYER_URL
+            - name: CELERY_RESULT_BACKEND
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: CELERY_RESULT_BACKEND
+            - name: REDIS_CACHE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: cw-sit-secret
+                  key: REDIS_CACHE_URL
+            - name: CELERY_QUEUE_COUNT
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: CELERY_QUEUE_COUNT
+            - name: REPORT_BATCH_SIZE
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: REPORT_BATCH_SIZE
+            - name: DEADLETTERJOBS_EMAIL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: DEADLETTERJOBS_EMAIL
+            - name: SWAGGER_VIEW
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: SWAGGER_VIEW
+            - name: SENDER_EMAIL_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: SENDER_EMAIL_ID
+            - name: COMMUNICATION_SERVICE_TOPIC
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: COMMUNICATION_SERVICE_TOPIC
+            - name: DEFAULT_SCHEME
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: DEFAULT_SCHEME
+            - name: ALLOWED_HOST_FOR_CW_HEADERS
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: ALLOWED_HOST_FOR_CW_HEADERS
+            - name: KALEYRA_OTP_TEMPLATE_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: KALEYRA_OTP_TEMPLATE_ID
+            - name: SSL_VERIFICATION
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: SSL_VERIFICATION
+            - name: LOG_LEVEL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-sit-config
+                  key: LOG_LEVEL
+          resources:
+            requests:
+              cpu: 1000m
+              memory: "1Gi"
+            limits:
+              cpu: 2000m
+              memory: "2Gi"
+      volumes:
+        - name: tmp-files
+          emptyDir: {}
+      restartPolicy: OnFailure

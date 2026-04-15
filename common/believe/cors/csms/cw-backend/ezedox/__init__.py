@@ -1,0 +1,1 @@
+from ezedox.celery import app

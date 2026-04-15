@@ -1,0 +1,109 @@
+.documents_details {
+    padding: 10px;
+}
+
+.documents_details > .document_details_tabs {
+    padding-top: 5px;
+    margin: 0 10px 10px;
+}
+
+.documents_details > .document_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.NoDocs {
+    margin-left: 10px;
+}
+
+.doc_card {
+    margin: 10px;
+    width: 255px;
+    height: 127px;
+    display: grid;
+    cursor: pointer;
+    border-radius: 8px;
+    grid-template-rows: 75% 25%;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.doc_card p {
+    margin: unset;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.doc_card > .upper_part {
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.doc_card > .upper_part > .left_side_part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doc_card > .upper_part > .left_side_part > img {
+    width: 60px;
+    height: 60px;
+    padding: 7px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.doc_card > .upper_part > .right_side_part {
+    display: flex;
+    padding: 17px 0 16px 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.doc_card > .upper_part > .right_side_part > p {
+    width: 152px;
+}
+
+.doc_card > .upper_part > .right_side_part > .doc_name {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--main-first-primary-color);
+}
+
+.doc_card > .upper_part > .right_side_part > .doc_author {
+    color: #2e2f30;
+    font-size: 12px;
+}
+
+.doc_card > .upper_part > .right_side_part > .doc_author > span {
+    font-weight: bold;
+}
+
+.doc_card > .upper_part > .right_side_part > .doc_date {
+    color: gray;
+    font-size: 11px;
+}
+
+.doc_card > .lower_part {
+    width: 100%;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-image: var(--main-app-gradient-color);
+}
+
+.doc_card > .lower_part > .doc_fileName {
+    font-size: 13px;
+    display: inline-flex;
+}
+
+.doc_card > .lower_part > .doc_fileName > span {
+    max-width: 190px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

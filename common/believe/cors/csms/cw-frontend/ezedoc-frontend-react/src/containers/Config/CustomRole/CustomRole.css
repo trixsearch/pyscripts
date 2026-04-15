@@ -1,0 +1,135 @@
+.display-none {
+  display: none;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 32px;
+  flex: 0 50%;
+}
+
+.custom-role-side-button {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 1rem;
+}
+
+.custom-role-side-button>button {
+  margin-left: 1rem;
+}
+
+.roleListPage .app_buttons {
+  /* top: 2px;
+  right: 0;
+  z-index: 11; */
+  display: flex;
+  /* margin-top: 4px;
+  position: absolute; */
+  align-items: center;
+
+  justify-content: flex-end;
+}
+
+.roleListPage .task-navbar {
+  margin: 0px;
+}
+
+.roleListPage .actionsDropdown .dropdown-menu {
+  left: -5px !important;
+}
+
+.roleListPage .actionsDropdown .dropdown-menu-children {
+  left: -66px !important;
+}
+
+
+.roleListPage .actionsDropdown .dropdown-menu li>div {
+  padding: 5px 15px;
+}
+
+.roleListPage .objectPermissionPage .table.roles_permissions_table > thead > tr:first-child {
+  border-top-color: transparent !important;
+}
+
+.roleListPage .objectPermissionPage .role_permission_save_button_container {
+  margin-top: 15px;
+}
+
+.roleListPage .rolesPermissionRows {
+  display: flex !important;
+  align-items: center;
+  padding-bottom: 1px;
+}
+
+.roleListPage .rolesPermissionRows .permissionDetailsCol {
+  display: inline-flex;
+  padding: 0 !important;
+  justify-content: left;
+}
+
+.roleListPage .rolesPermissionRows .permissionDetails {
+  display: flex;
+  padding: 11px 0px 11px 10px;
+  flex-direction: column;
+}
+
+.roleListPage .rolesPermissionRows .permissionDetails>.permission_name {
+  font-size: 14px;
+}
+
+.roleListPage .rolesPermissionRows span.rolePermissionLevel {
+  width: 5px;
+}
+
+.roleListPage .role_permission_save_button_container {
+  display: flex;
+  justify-content: center;
+}
+
+.roleListPage .rolesPermissionRows .permissions_checkboxes {
+  display: grid;
+  padding-left: 5px;
+  padding-right: 15px;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.roleListPage .rolesPermissionRows .permissions_checkboxes li {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.roleListPage .rolesPermissionRows .permissions_checkboxes li input[type=checkbox] {
+  margin: 0 !important;
+}
+
+.roleListPage .workflowPermissionPage .scrollable_list {
+  overflow-y: overlay;
+  scrollbar-width: thin;
+}
+
+.roleListPage .workflowPermissionPage .scrollable_list::-webkit-scrollbar {
+  height: 0px !important;
+  display: block !important;
+}
+
+.roleListPage .filter_dropdown_menu {
+  max-height: 310px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.roleListPage .filter_dropdown_menu::-webkit-scrollbar {
+  height: 0 !important;
+  display: block !important;
+}
+
+.row_box_body {
+  border-top: 1px solid #ddd;
+}
+
+.small-text-modal {
+  display: flex;
+  flex-direction: column;
+}

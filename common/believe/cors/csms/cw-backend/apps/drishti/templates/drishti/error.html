@@ -1,0 +1,15 @@
+{% extends 'drishti/index.html' %}
+{% block content %}
+
+<button onclick="goBack()">Back</button>
+<br><br>
+{%if exception_data%}
+    <h1>Error Message:</h1>
+    <p>{{exception_data}}</p>
+{%endif%}
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+{% endblock content %}

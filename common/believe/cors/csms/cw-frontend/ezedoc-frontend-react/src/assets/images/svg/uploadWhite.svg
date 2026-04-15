@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>upload</title>
+    <g id="🧑‍💻-Onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="document-generation_3" transform="translate(-663.000000, -731.000000)">
+            <g id="Group-9" transform="translate(385.000000, 128.000000)">
+                <g id="popup" transform="translate(0.000000, 92.000000)">
+                    <g id="Group-3" transform="translate(262.000000, 499.000000)">
+                        <g id="upload" transform="translate(16.000000, 12.000000)">
+                            <rect id="Rectangle" fill="#8297AA" fill-rule="nonzero" opacity="0" x="0" y="0" width="16" height="16" rx="2"></rect>
+                            <g id="Group" transform="translate(3.000000, 1.000000)" fill="#FFFFFF">
+                                <polygon id="Path" points="8.25 3.7125 5.3625 0 2.475 3.7125 4.5375 3.7125 4.5375 9.075 6.1875 9.075 6.1875 3.7125"></polygon>
+                                <path d="M10.3125,13.2 L0.4125,13.2 C0.184682541,13.2 0,13.0153175 0,12.7875 L0,5.775 C0,5.54718254 0.184682541,5.3625 0.4125,5.3625 L3.3,5.3625 L3.3,6.1875 L0.825,6.1875 L0.825,12.375 L9.9,12.375 L9.9,6.1875 L7.425,6.1875 L7.425,5.3625 L10.3125,5.3625 C10.5403175,5.3625 10.725,5.54718254 10.725,5.775 L10.725,12.7875 C10.725,13.0153175 10.5403175,13.2 10.3125,13.2 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

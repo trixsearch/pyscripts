@@ -1,0 +1,41 @@
+<html>
+	<body>
+        <p> Hello, <br> Here is the task summary for you. </p>
+        <div>
+            {% if overdue %}
+                <p> Overdue tasks: </p>
+                <ol>
+                {% for task in overdue %}
+                    <li>
+                        <a href="{{base_url}}{{task.task_id}}" > {{ task.task_name }} </a>                     
+                    </li>
+                {% endfor %}
+                <ol>
+            {% endif %} 
+        </div>
+        <div>
+            {% if today %}
+                <p> Due today tasks: </p>
+                <ol>
+                {% for task in today %}
+                    <li>
+                        <a href="{{base_url}}{{task.task_id}}" > {{ task.task_name }} </a>                     
+                    </li>
+                {% endfor %}
+                <ol>
+            {% endif %} 
+        </div>
+        <div>
+        {% if upcoming %}
+            <p> Upcoming tasks: </p>
+            <ol>
+            {% for task in upcoming %}
+                <li>
+                    <a href="{{base_url}}{{task.task_id}}" > {{ task.task_name }} </a>                     
+                </li>
+            {% endfor %}
+            <ol>
+		 {% endif %} 
+         </div>
+	</body>
+</html>

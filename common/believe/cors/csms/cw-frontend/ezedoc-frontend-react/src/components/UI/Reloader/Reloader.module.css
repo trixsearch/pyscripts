@@ -1,0 +1,26 @@
+.reload {
+    margin: 0 auto;
+    margin-top: 4px;
+    padding: 5px 10px;
+    height: fit-content;
+    background-color: #FBE192;
+}
+
+.reload>span{
+    border-bottom: 1px dashed #999;
+    text-decoration: none;
+    color:#388DD4;
+}
+
+.reload>span:hover{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 576px) {
+    .reload {
+        z-index: 30;
+        margin-top: -5px;
+        position: absolute;
+        text-align: center;
+    }
+}

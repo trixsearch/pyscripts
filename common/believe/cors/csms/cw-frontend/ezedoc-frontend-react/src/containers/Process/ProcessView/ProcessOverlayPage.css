@@ -1,0 +1,33 @@
+@keyframes scale-display {
+    0% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+.processOverlayPage {
+    z-index: 100;
+    display: block;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.processOverlayPage .active_process {
+    border-radius: 10px;
+    margin: 14px 15px 0 !important;
+}
+
+.processOverlayPage .actions-list.show {
+  left: -24px !important;
+  top: -25px !important;
+}
+
+.dristhi-container{
+    display: flex;
+    align-items: baseline;
+  }

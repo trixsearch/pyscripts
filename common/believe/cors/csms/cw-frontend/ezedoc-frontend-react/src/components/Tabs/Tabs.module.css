@@ -1,0 +1,98 @@
+.container {}
+
+.navBar {
+  display:flex;
+  flex-direction: row;
+  border-bottom: 1px solid white;
+}
+
+.tab {
+  /* margin: 0 1.25rem; */
+  margin:0 1rem;
+}
+
+.tab:first-of-type {
+  margin-left: 0;
+}
+
+.tab:last-of-type {
+  margin-right: 0;
+}
+
+.tabContent {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #828792;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9rem;
+  padding-left:0;
+}
+
+.tabContent:hover{
+  color: #1B2D93;
+}
+
+.tabContent:hover img{
+  color: #1B2D93;
+  filter: brightness(0.5) sepia(1) hue-rotate(190deg) saturate(5);
+}
+
+.tabContentDisabled {
+  cursor: not-allowed;
+}
+
+.tabActive {
+  color: #1B2D93;
+}
+
+.tabActive img {
+  filter: brightness(0.5) sepia(1) hue-rotate(190deg) saturate(5);
+}
+
+.tabActive:focus{
+  outline: none;
+}
+
+.tabActiveBackground {
+  background: #E8EAF4;
+  border-radius: 0.25rem;
+  padding-left:0.5rem;
+
+  margin-right:0.5rem;
+}
+
+.tabIcon {
+  height: 1.25em;
+}
+
+.tabIconLeft {
+  margin-right: 0.5rem;
+}
+
+.tabIconRight {
+  margin-left: 0.5rem;
+}
+
+.tabTitle {
+  white-space: nowrap;
+}
+
+.pane {}
+
+.disabledTab {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.toolbarExtras {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+

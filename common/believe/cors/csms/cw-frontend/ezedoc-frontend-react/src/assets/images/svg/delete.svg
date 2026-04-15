@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon / 12 / action / up-arrow copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="🏂-on-boarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-BGV-Client-onboarding_location_A" transform="translate(-889.000000, -394.000000)" fill="#EE3942">
+            <g id="section-1" transform="translate(160.000000, 64.000000)">
+                <g id="section" transform="translate(0.000000, 55.000000)">
+                    <g id="cancel" transform="translate(728.000000, 274.000000)">
+                        <g id="icon-/-12-/-action-/-up-arrow-copy">
+                            <g id="trash" transform="translate(1.000000, 1.000000)">
+                                <path d="M1.25,3.75 L1.25,8.75 C1.25,9.4375 1.8125,10 2.5,10 L7.5,10 C8.1875,10 8.75,9.4375 8.75,8.75 L8.75,3.75 L1.25,3.75 Z" id="Path" fill-rule="nonzero"></path>
+                                <path d="M7.5,1.875 L7.5,0.625 C7.5,0.25 7.25,0 6.875,0 L3.125,0 C2.75,0 2.5,0.25 2.5,0.625 L2.5,1.875 L0,1.875 L0,3.125 L10,3.125 L10,1.875 L7.5,1.875 Z M6.25,1.875 L3.75,1.875 L3.75,1.25 L6.25,1.25 L6.25,1.875 Z" id="Shape" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

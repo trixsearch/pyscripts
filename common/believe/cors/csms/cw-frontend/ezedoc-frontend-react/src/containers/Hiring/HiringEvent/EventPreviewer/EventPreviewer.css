@@ -1,0 +1,35 @@
+/* EzeReactModal overriding css */
+.ReactModalPortal {
+    z-index: 1031 !important;
+}
+
+.ReactModalPortal .eze_react_modal_children_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* ============================ */
+
+.job-event-banner {
+    padding: 10px;
+    display: flex;
+    width: inherit;
+    height: inherit;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.job-event-banner .banner-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 45px);
+}
+
+.job-event-banner .banner-container > img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}

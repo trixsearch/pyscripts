@@ -1,0 +1,173 @@
+.login_logo {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_logo + p {
+  margin: 5px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login_logo div {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.login_logo img {
+  max-width: 140px;
+  max-height: 70px;
+}
+
+.login_body_container .sign_in_up_box {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  min-width: 300px;
+  min-height: 430px;
+  padding: 40px 30px;
+  position: absolute;
+  flex-direction: column;
+  max-width: 85% !important;
+  background-color: #ffffff;
+  box-shadow: 0 7px 20px 7px rgba(0, 0, 0, 0.28);
+}
+
+.sign_in_up_box .floating-label {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.sign_in_up_box .floating-label.forgot_password_box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.sign_in_up_box .floating-label.first_middle_last_name input {
+  border: 0px;
+  width: 33.33%;
+}
+
+.sign_in_up_box .floating-label.first_middle_last_name {
+  border: 1px solid var(--main-input-boder-color);
+  border-radius: 4px;
+}
+
+.sign_in_up_box .floating-label .floating-input::placeholder {
+  color: transparent;
+}
+
+.sign_in_up_box .floating-input:focus ~ #input1::placeholder,
+.sign_in_up_box .floating-input:focus ~ #input2::placeholder,
+.sign_in_up_box .floating-input:focus ~ #input3::placeholder {
+  color: initial;
+}
+
+.sign_in_up_box .floating-input {
+  font-size: 14px;
+  color: var(--main-input-label-color);
+  padding: 15px;
+  background: none;
+  display: block;
+  width: 100%;
+  border: 1px solid;
+  border-color: var(--main-input-boder-color);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.sign_in_up_box .floating-select {
+  font-size: 14px;
+  color: var(--main-input-label-color);
+  padding: 15px;
+  background: none;
+  display: block;
+  width: 100%;
+  height: 53px;
+  border: 1px solid;
+  border-color: var(--main-input-boder-color);
+  border-radius: 4px;
+}
+
+.sign_in_up_box .floating-input:focus,
+.sign_in_up_box .floating-select:focus {
+  outline: none;
+}
+
+.sign_in_up_box label {
+  color: var(--main-input-label-color);
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 17px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  margin: 0px;
+  line-height: 1;
+}
+
+.sign_in_up_box .floating-input:focus ~ label,
+.sign_in_up_box .floating-input:not(:placeholder-shown) ~ label {
+  top: -7px;
+  left: 10px;
+  font-size: 14px;
+  background-color: var(--main-white-color);
+  padding: 0px 5px;
+}
+
+.sign_in_up_box .floating-select:focus ~ label,
+.sign_in_up_box .floating-select:not([value=""]):valid ~ label {
+  top: -7px;
+  left: 10px;
+  font-size: 14px;
+  color: var(--main-input-label-color);
+  background-color: var(--main-white-color);
+  padding: 0px 5px;
+}
+
+.sign_in_up_box .floating-input:focus ~ .bar:before,
+.sign_in_up_box .floating-input:focus ~ .bar:after,
+.sign_in_up_box .floating-select:focus ~ .bar:before,
+.sign_in_up_box .floating-select:focus ~ .bar:after {
+  width: 50%;
+}
+
+.login_btn_cont {
+  text-align: center;
+  padding-top: 35px;
+}
+
+.invalid_message {
+  text-align: center;
+  color: #f28c8f;
+}
+
+.errormessage {
+  text-align: center;
+  color: #f28c8f;
+}
+
+.errormessage.domain {
+  min-height: 32px;
+}
+
+.Invalid {
+  color: #d0021b !important;
+  border-color: #d0021b !important;
+}
+
+.displayBlock {
+  display: block !important;
+}
+
+.errorStyle {
+  color: red;
+  margin-top: 0;
+  font-size: 14px;
+}

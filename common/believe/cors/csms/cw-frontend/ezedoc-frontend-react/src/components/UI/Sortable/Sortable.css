@@ -1,0 +1,26 @@
+/* Sortable */
+.sortable > div {
+  scrollbar-width: thin;
+}
+
+.sortable > div::-webkit-scrollbar {
+  display: block !important;
+}
+
+.sortable .card {
+  display: block;
+  cursor: grab;
+  font-size: 12px;
+  font-weight: normal;
+  background: white;
+  padding: 5px 5px 5px 0px;
+  color: var(--main-first-primary-color);
+  border: 1px solid var(--main-first-primary-color);
+}
+
+.sortable .card span {
+  padding: 5px;
+  margin-right: 5px;
+  color: var(--main-first-primary-color);
+  border-right: 1px solid var(--main-first-primary-color);
+}

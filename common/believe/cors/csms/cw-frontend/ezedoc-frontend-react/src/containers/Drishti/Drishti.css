@@ -1,0 +1,158 @@
+.drishti_page {
+    padding: 16px 20px;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.drishti_tabs_bar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.drishti_tab_content {
+    padding-top: 16px;
+    overflow-y: auto;
+    height: calc(100vh - 130px);
+}
+
+/* Search tab */
+.drishti_search_type_row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.drishti_radio_label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.drishti_search_row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.drishti_search_input {
+    max-width: 400px;
+}
+
+.drishti_error {
+    color: #e03a3a;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.drishti_result_count {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--main-input-label-color);
+    margin-bottom: 16px;
+}
+
+.drishti_process_block {
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.drishti_process_block_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.drishti_process_block_id {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--main-first-primary-color, #1b2d93);
+    font-family: monospace;
+}
+
+.drishti_section {
+    margin-bottom: 24px;
+}
+
+.drishti_section_title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--main-input-label-color);
+}
+
+.drishti_result_table {
+    margin-top: 8px;
+    width: 100%;
+}
+
+.drishti_result_table td {
+    word-break: break-all;
+    font-size: 13px;
+}
+
+.drishti_result_key {
+    font-weight: 600;
+    white-space: nowrap;
+    width: 220px;
+    color: var(--main-input-label-color);
+}
+
+.drishti_modal_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.drishti_json_cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+}
+
+.drishti_json_cell_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.drishti_json_expand {
+    flex-shrink: 0;
+    color: #8c8c8c;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.drishti_json_expand:hover {
+    color: var(--main-first-primary-color, #1b2d93);
+}
+
+.drishti_stacktrace {
+    font-size: 12px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-height: 60vh;
+    overflow-y: auto;
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+.drishti_stacktrace_loading {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+}

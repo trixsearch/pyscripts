@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="21px" viewBox="0 0 24 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>icon / 24 / info / folder</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,4 C-1.3527075e-16,2.8954305 0.8954305,2 2,2 L10,2 C11.1045695,2 12,2.8954305 12,4 L12,6.319 L22,6.32 C23.1045695,6.32 24,7.2154305 24,8.32 L24,20.4 C24,21.5045695 23.1045695,22.4 22,22.4 L2,22.4 C0.8954305,22.4 1.3527075e-16,21.5045695 0,20.4 L0,4 Z" id="path-1"></path>
+    </defs>
+    <g id="📺-Empty-State" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons-copy" transform="translate(-44.000000, -136.000000)">
+            <g id="location-&amp;-site" transform="translate(36.000000, 126.000000)">
+                <g id="icon-/-24-/-info-/-folder" transform="translate(8.000000, 8.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                    <rect id="Rectangle-6" fill="#000000" opacity="0.600000024" style="mix-blend-mode: multiply;" x="1.44" y="4.4" width="19.92" height="5" rx="1"></rect>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Combined-Shape" fill="#0059B2" xlink:href="#path-1"></use>
+                    <g id="pin-3" mask="url(#mask-2)" fill="#000000" opacity="0.251013768">
+                        <g transform="translate(8.000000, 9.000000)" id="Shape">
+                            <path d="M4,0 C2.03388235,0 0,1.49623529 0,4 C0,6.65529412 3.67694118,10.3628235 3.83364706,10.5192941 C3.87764706,10.5635294 3.93764706,10.5882353 4,10.5882353 C4.06235294,10.5882353 4.12235294,10.5635294 4.16635294,10.5192941 C4.32305882,10.3628235 8,6.65529412 8,4 C8,1.49623529 5.96611765,0 4,0 Z M4,5.41176471 C3.22141176,5.41176471 2.58823529,4.77858824 2.58823529,4 C2.58823529,3.22141176 3.22141176,2.58823529 4,2.58823529 C4.77858824,2.58823529 5.41176471,3.22141176 5.41176471,4 C5.41176471,4.77858824 4.77858824,5.41176471 4,5.41176471 Z"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

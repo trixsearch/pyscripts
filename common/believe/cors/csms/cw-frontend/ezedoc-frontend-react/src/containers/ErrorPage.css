@@ -1,0 +1,180 @@
+.ezedox_main_body .arrow_left {
+  width: 12px;
+  height: 12px;
+  border: none;
+  background: none;
+  position: relative;
+  display: inline-block;
+}
+
+.ezedox_main_body .arrow_left::before {
+  top: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  content: "";
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-shadow: 1.5px 1.5px 0 var(--main-first-primary-color),
+    2px 1.5px 0 var(--main-first-primary-color),
+    1.5px 2px 0 var(--main-first-primary-color),
+    2px 2px 0 var(--main-first-primary-color);
+}
+
+.ezedox_main_body .arrow_left::after {
+  bottom: 4.3px;
+  line-height: 0;
+  font-size: 14px;
+  position: absolute;
+  transition: left 0.1s ease-out, bottom 0.1s ease-out,
+    letter-spacing 0.1s ease-out;
+  left: 0;
+  content: "";
+  text-align: right;
+  border: 1px solid;
+  width: 30px;
+}
+
+.ezedox_main_body .arrow_left.-long {
+  width: 30px;
+}
+
+.ezedox_main_body .arrow_left:hover,
+.ezedox_main_body .arrow_left:focus {
+  outline: none;
+}
+
+.ezedox_main_body .arrow_left:hover::after,
+.ezedox_main_body .arrow_left:focus::after {
+  right: 9px;
+}
+
+.ezedox_main_body .arrow_left:hover.-long::after,
+.ezedox_main_body .arrow_left:focus.-long::after {
+  right: -0.19em;
+  letter-spacing: 0.1em;
+}
+
+.ezedox_main_body .arrow_left:hover::before,
+.ezedox_main_body .arrow_left:focus::before {
+  right: 13px;
+}
+
+.ezedox_main_body .skip_page a:hover .arrow_left.-long::after,
+.ezedox_main_body a:focus .arrow_left.-long::after {
+  width: 40px;
+}
+
+.ezedox_main_body .skip_page a:hover .arrow_left.-long::before,
+.ezedox_main_body a:focus .arrow_left.-long::before {
+  right: -0.5em;
+  letter-spacing: 0.1em;
+}
+
+.ezedox_main_body .skip_page a .arrow_left::before,
+.ezedox_main_body .skip_page a .arrow_left::after {
+  color: var(--main-first-primary-color);
+}
+
+.ezedox_main_body .error_page_continer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  padding-top: 100px;
+  background-color: #f4f6f9;
+  height: 100vh;
+}
+
+.ezedox_main_body .error_page_continer .skip_page a span {
+  font-size: 5vh;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--main-black-color);
+}
+
+.ezedox_main_body .error_page_continer .skip_page a span.arrow_left::before {
+  top: -5px;
+  right: -7px;
+  width: 16px;
+  height: 16px;
+}
+
+.ezedox_main_body .error_page_continer .skip_page a span.arrow_left::after {
+  bottom: 8.3px;
+  width: 40px;
+}
+
+.ezedox_main_body
+  .error_page_continer
+  .skip_page
+  a:hover
+  .arrow_left.-long::after,
+.ezedox_main_body .error_page_continer a:focus .arrow_left.-long::after {
+  width: 48px;
+}
+
+.ezedox_main_body .oops_msg_text {
+  font-size: 5vh;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--main-input-label-color);
+}
+
+.ezedox_main_body .oops_msg_text span {
+  font-size: 8vh;
+  color: var(--main-black-color);
+  font-weight: 600;
+}
+
+.ezedox_main_body .unauthorized_msg_text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ezedox_main_body .unauthorized_oops_msg_text span {
+  font-size: 6vh;
+  color: var(--main-black-color);
+  font-weight: 600;
+}
+
+.ezedox_main_body .error_page_discription {
+  padding-top: 30px;
+}
+
+.ezedox_main_body .descriptive_tex {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9b9b9b;
+}
+
+.ezedox_main_body .skip_page {
+  position: absolute;
+  bottom: 5%;
+  right: 6%;
+}
+
+.ezedox_main_body .skip_page a {
+  color: var(--main-input-label-color);
+}
+
+.ezedox_main_body .skip_page a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+.error_page_img_responsive {
+  width: 100%;
+}

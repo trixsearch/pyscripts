@@ -1,0 +1,194 @@
+.form-cron {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.cron_box {
+  padding: 10px;
+}
+.expression_text {
+  padding-left: 4px;
+  font-weight: bold;
+}
+
+.cron_box_expression {
+  padding: 15px 5px;
+}
+
+.cron_box_expression .cron_entry {
+  display: flex;
+  padding-top: 10px;
+}
+.cron_box_expression .report_select {
+  margin: 5px 15px 5px 15px;
+}
+
+.cron_box_expression .cron_list {
+  display: flex;
+  width: 100%;
+  padding: 0px 15px;
+  justify-content: space-between;
+}
+
+.cron_box_expression .first_cron {
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+.cron_box_expression .first_cron .checkbox {
+  margin-left: 4px;
+}
+.cron_box_expression .second_cron {
+  margin-top: -17px;
+  margin-right: -21px;
+}
+
+.cron_box_expression .stop_scheduler {
+  display: flex;
+  align-items: center;
+  width: 15%;
+  justify-content: space-around;
+}
+
+.cron_box_expression .stop_scheduler .checkbox.checkbox-slider--b-flat label{
+  margin: 0;
+}
+
+.cron_box_expression .stop_scheduler .checkbox.checkbox-slider--b-flat label span{
+  top: 0 !important;
+}
+.cron_box_expression .pause_text {
+  padding-left: 4px;
+}
+
+.cron_box_expression .cron-delete {
+  border-radius: 50%;
+  padding: 8px 10px 6px;
+  background-color: #dddddd;
+}
+
+.scheduler_page .main_changable_container .schedule_cron {
+  padding-top: 10px;
+}
+
+.cron_box_expression .add_email_group {
+  display: flex;
+  padding: 0px 2px;
+}
+
+.cron_box_expression .add_email_group button {
+  background-color: #efefef;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.cron_box_expression .select_email.invalid .email_group {
+  border: 2px solid red;
+}
+
+.cron_box_expression .choose_type {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0px 15px;
+}
+
+.cron_box_expression .date_options {
+  padding-top: 6px;
+  display: flex;
+}
+
+.cron_box_expression .first_choice {
+  width: 35%;
+}
+.cron_box_expression .select_email {
+  text-align: center;
+  align-items: center;
+  padding-top: 2.5px;
+}
+
+.cron_box_expression .select_email > div > div {
+  border-color: #ccc;
+}
+
+.cron_box_expression .email_list {
+  width: 60%;
+  padding: 3px;
+  display: flex;
+  height: 80px;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  scrollbar-width: thin;
+}
+
+.cron_box_expression .email_group_cross.user {
+  display: flex;
+  background-color: #cee7f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 24px;
+  margin: 4px;
+  padding: 2px;
+  align-items: center;
+}
+
+.cron_box_expression .email_group_cross.group {
+  display: flex;
+  border: 1px solid #ccc;
+  background-color: hsl(0, 0%, 90%);
+  border-radius: 4px;
+  height: 24px;
+  margin: 4px;
+  padding: 2px;
+}
+
+.cron_box_expression .email_list::-webkit-scrollbar {
+  display: block !important;
+}
+
+.cron_box_expression .email_group {
+  padding: 0 8px 0 10px;
+  border: 1px solid #ccc;
+  cursor: text;
+  min-height: 44px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.cron_box_expression .cross_button {
+  background-color: transparent;
+  border: none;
+}
+
+.cron_box_expression .cross_button img {
+ height: 10px;
+}
+.cron_box_expression  .email_icon {
+  padding: 1.5px;
+}
+
+
+.cron_box_expression .first_notify {
+  display: flex;
+  flex-direction: row;
+}
+.cron_box_expression .first_notify > div {
+  padding: 5px;
+}
+
+.cron_box_expression .checkbox-slider--b-flat label {
+  position: static !important;
+  line-height: normal !important;
+  pointer-events: auto !important;
+}

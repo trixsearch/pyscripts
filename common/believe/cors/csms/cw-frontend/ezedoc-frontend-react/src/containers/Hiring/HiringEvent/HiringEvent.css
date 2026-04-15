@@ -1,0 +1,33 @@
+.hiring-event {
+    /* margin-left: 10px; */
+}
+
+.hiring-event .ant-table-wrapper .ant-table-body {
+    height: calc(100vh - 424px);
+}
+
+.hiring-event .process_details_btn_cont2 {
+    /* right: 10px; */
+    z-index: 999;
+    /* bottom: 2px; */
+    display: flex;
+    /* position: absolute; */
+
+    padding:7px 10px 0 0;
+}
+
+.hiring-event .charts-container {
+    margin-top: 34px;
+}
+
+.create-event-page .cancel_publish_btn {
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+
+.fancy_btn{
+    min-width:0px!important;
+}
+
+}

@@ -1,0 +1,141 @@
+.ezedox_main_body .login_btn {
+  font-size: 18px;
+  text-align: center;
+  color: var(--main-button-text-color);
+  border-radius: 27.5px;
+  background-image: var(--main-button-gradient-color);
+  padding: 4% 10%;
+  width: 100%;
+  cursor: pointer;
+  border: 0px;
+  font-weight: 100;
+  font-family: inherit;
+}
+
+.ezedox_main_body .login_btn:focus,
+.ezedox_main_body .login_btn:hover {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.login_btn:disabled {
+  opacity: 0.3;
+}
+
+.ezedox_main_body .login_main_body_container {
+  background-image: var(--main-app-gradient-color);
+}
+
+.ezedox_main_body .login_body_container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page-bg {
+  width: 100%;
+}
+
+.ezedox_main_body .login_body_container.forgot_pass_background {
+  background-image: url("../../assets/images/forgot_bg.png");
+}
+
+.ezedox_main_body .forgot_password_label {
+  top: 10px;
+  right: 0px;
+  width: 200px;
+  float: right;
+  display: flex;
+  position: relative;
+}
+
+.ezedox_main_body .forgot_password_label a {
+  right: 0;
+  top: -36px;
+  font-size: 14px;
+  position: absolute;
+  text-decoration: none;
+  color: var(--main-first-primary-color);
+}
+
+.ezedox_main_body .forget_text_heading {
+  padding-bottom: 40px;
+}
+
+.ezedox_main_body .forget_text_heading p {
+  margin: 0px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--main-input-label-color);
+}
+
+.ezedox_main_body .forget_text_heading p.sub_text {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #9b9b9b;
+}
+
+.successmessage {
+  height: auto;
+  color: #31a18a;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.invalid-credentials {
+  height: auto;
+  color: #d0021b;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+div.login-tenant-no-logo {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+}
+
+div.login-tenant-no-logo .noLogo-class {
+  padding: 0px 10px;
+  background: grey;
+  color: white;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.empty_space {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 830px) {
+  div.login-tenant-no-logo span:nth-child(2) {
+    max-height: 80px;
+    width: min-content;
+  }
+}
+
+@media only screen and (min-width: 831px) {
+  div.login-tenant-no-logo span:nth-child(2) {
+    max-height: 80px;
+    overflow: hidden;
+    word-break: break-word;
+  }
+}

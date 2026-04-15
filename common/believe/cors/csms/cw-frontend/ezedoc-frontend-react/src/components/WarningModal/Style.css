@@ -1,0 +1,45 @@
+/* Overriding css for the bootstrap modal */
+.modal-backdrop.fade {
+  opacity: 0.7;
+}
+/* ------------------- */
+
+.warning-container {
+  opacity: 1 !important;
+}
+
+.warning-container .modal-content {
+  padding: 25px 44px 35px 44px;
+  min-height: 190px;
+  max-height: 290px;
+  font-size: 18px;
+}
+
+.warning-container .modal-dialog {
+  height: 0;
+  max-width: 578px;
+}
+
+.warning-body {
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.warning-img {
+  padding-bottom: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.warning-body .modal-body {
+  padding: 0;
+}
+
+.warning-footer .modal-footer {
+  padding: 0;
+  display: flex;
+  border-top: 0;
+  justify-content: center;
+  padding-top: 35px;
+}

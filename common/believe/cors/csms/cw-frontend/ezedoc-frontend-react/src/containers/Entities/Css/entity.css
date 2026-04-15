@@ -1,0 +1,464 @@
+.entityListPage .image-cropper,
+.entityDetailPage .image-cropper {
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #b4b7bd;
+}
+
+.entityListPage .image-cropper,
+.entityListPage .image-cropper canvas {
+  width: 30px;
+  height: 30px;
+}
+
+.entityListPage .entity_email {
+  display: inline-block;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  position: relative;
+}
+
+.entityDetailPage {
+  z-index: 1;
+}
+
+.other_buttons {
+  /* top: 6px;
+  right: 0; */
+  z-index: 10;
+  /* position: absolute; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.entityDetail {
+  margin-top: 28px;
+}
+
+.entityDetail > .card1 {
+  border: none;
+  display: flex;
+  padding: 15px 5px;
+  background: #fff;
+  border-radius: 9px;
+  box-shadow: var(--main-box-shadow-10-color);
+}
+
+.entityDetail > .card1 > div:first-child {
+  padding: 0 0 0 17px;
+}
+
+.entityDetail > .card1 > .card_texts {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.entityDetail > .card1 > img {
+  margin: 0 20px;
+}
+
+.entityDetail > .card1 .image-cropper,
+.entityDetail > .card1 .image-cropper canvas {
+  width: 45px;
+  height: 45px;
+}
+
+.entityDetail > .card1 > .card_texts > div.card_text > p {
+  font-size: 10px;
+  color: #989898;
+  margin-bottom: 5px;
+}
+
+.entityDetail > .card1 > .card_texts > div.card_text > h6 {
+  margin-top: 0px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.entityDetail > .card2 {
+  margin-top: 5px;
+}
+
+.entityDetail
+  > .card2
+  .onboarding_personal_details_row
+  .button-slider:nth-child(2) {
+  left: -10px;
+}
+
+.entityDetail
+  > .card2
+  .onboarding_personal_details_row
+  .button-slider:nth-child(3) {
+  right: -10px;
+}
+
+.entityDetail
+  > .card2
+  .onboarding_personal_details_row
+  .app_category_cont.top_first_containent {
+  padding: unset !important;
+}
+
+.entityDetail
+  > .card2
+  .onboarding_personal_details_row
+  > .app_category_cont.top_first_containent
+  > .tab-content {
+  margin-left: -5px;
+}
+
+.entityDetail
+  > .card2
+  .onboarding_personal_details_row
+  .process_tab_ongoing_comp_ul {
+  padding-left: 5px;
+  margin-right: 0;
+}
+
+.entityDetail
+  > .card2
+  .onboarding_personal_details_row
+  .edit_app_details_tab {
+  margin: 0;
+}
+
+.historyContainer {
+  top: 57px;
+  right: 0;
+  width: 0%;
+  bottom: 1px;
+  z-index: 11;
+  position: fixed;
+  overflow: hidden;
+  background: transparent;
+  transition: all 1s ease;
+}
+
+.entityHistory {
+  float: right;
+  width: 400px;
+  height: 100%;
+  background: #fff;
+  position: relative;
+  border: 1px solid #b3b1b1bf;
+  box-shadow: 0px -2px 9px 1px rgba(0, 0, 0, 0.33);
+}
+
+.entityHistory > .headerSection {
+  display: flex;
+  padding: 2px 15px 5px;
+  background: #efefef;
+  justify-content: space-between;
+  color: rgba(103, 106, 108, 0.83);
+}
+
+.entityHistory > .headerSection h5 {
+  margin: 10px 0 9px;
+}
+
+.entityHistory > .headerSection span.closeIcon {
+  margin: auto 0;
+  text-align: right;
+  height: fit-content;
+}
+
+.entityHistory .historyActivities {
+  width: 98.5%;
+  padding: 0 10px;
+  overflow-y: auto;
+  margin: 10px 0 0 0;
+  scrollbar-width: thin;
+}
+
+.entityHistory .historyActivities::-webkit-scrollbar {
+  display: block;
+}
+.historyActivity {
+  padding: 10px 0;
+  color: #676a6c;
+  position: relative;
+}
+
+.historyActivityBadge {
+  width: 50px;
+}
+
+.historyActivityBadge:before {
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 1px;
+  content: "";
+  position: absolute;
+  background-color: #dadada;
+}
+
+.historyActivity:first-child > .historyActivityBadge:before {
+  top: 10px;
+}
+
+.historyActivity:last-child > .historyActivityBadge:before {
+  height: 30px;
+}
+
+.historyActivityIcon {
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  color: #808486;
+  position: absolute;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dadada;
+  background-color: #ffffff;
+}
+
+.historyActivityPanel {
+  margin-left: 55px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.historyActivityInfo {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.activityDoer {
+  color: var(--main-first-primary-color);
+}
+
+.icon_user {
+  padding: 1.5px;
+  margin-right: 3px;
+  border-radius: 50%;
+  border: 1px solid var(--main-first-primary-color);
+}
+
+
+.activityDateTime {
+  font-size: 80%;
+  color: #9a9d9f;
+  margin-left: 3px;
+}
+
+.entityDetailPage .status_progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.warning_message {
+  text-align: center;
+  font-size: large;
+  margin-top: 40px;
+}
+
+
+
+.entity-list-filter-dropdown {
+  margin-right: 1em;
+}
+
+
+.status-dot {
+  width: 1em ;
+  height: 1em;
+  border: 1px solid white;
+  position: absolute;
+  border-radius: 50%;
+  top: 8px;
+  left: 44px;
+  z-index: 3;
+}
+
+.status-dot.green {
+  background-color: green;
+}
+
+.status-dot.red {
+  background-color: red;
+}
+
+.startNewProcessMenu .no-workflow {
+  padding: 10px 20px;
+}
+
+.entity_update_workflows_container > :first-child > .startNewProcessMenuTriangle {
+  display: none;
+}
+
+.entity_update_workflows_container > :first-child > .startNewProcessMenu {
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 190px;
+  position: relative;
+  scrollbar-width: thin;
+}
+
+.entity_update_workflows_container 
+  > :first-child 
+  > .startNewProcessMenu::-webkit-scrollbar {
+  height: 0;
+  display: block !important;
+}
+
+.entity_update_workflows_container > :first-child > .startNewProcessMenu .no-workflow {
+  padding: 20px;
+}
+
+.entity_update_workflows_container > :first-child > .startNewProcessMenu .startNewProcessMenuItem {
+  border: none;
+}
+
+.entity_update_workflows_container > :first-child > .startNewProcessMenu .start-new-process-item {
+  width: 100%;
+  padding: 15px 10px;
+  border-bottom: 2px solid #cccccc;
+}
+
+.entity_update_workflows_container > :first-child > .startNewProcessMenu > :last-child {
+  border-bottom: unset;
+}
+
+.entity_update_workflows_container 
+  > :first-child 
+  > .startNewProcessMenu 
+  .startNewProcessMenuItem 
+  > .menuItemImageContainer 
+  > .processImage {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  font-size: 30px;
+  color: #00000061;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #00000061;
+}
+
+.entity_update_workflows_container 
+  > :first-child 
+  > .startNewProcessMenu 
+  .startNewProcessMenuItem:hover 
+  > .menuItemImageContainer 
+  > .processImage {
+  color: var(--main-first-primary-color);
+  border-color: var(--main-first-primary-color);
+}
+
+.entity_update_workflows_container 
+  > :first-child 
+  > .startNewProcessMenu
+  .startNewProcessMenuItem 
+  > .menuItemTextContainer {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.entity_update_workflows_container 
+  > :first-child 
+  > .startNewProcessMenu
+  .startNewProcessMenuItem 
+  > .menuItemTextContainer
+  > p {
+  color: #0000008c;
+}
+
+.entity_update_workflows_container 
+  > :first-child 
+  > .startNewProcessMenu
+  .startNewProcessMenuItem:hover 
+  > .menuItemTextContainer
+  > p {
+  color: var(--main-first-primary-color);
+}
+
+.entity_update_workflows_container 
+  > :first-child 
+  > .startNewProcessMenu 
+  .startNewProcessMenuItem 
+  > .menuItemTextContainer 
+  > .descriptionRow {
+  height: 27px;
+  padding-left: 1px;
+}
+
+.entity_update_workflows_container 
+  > :first-child 
+  > .startNewProcessMenu 
+  .start-new-process-item
+  .bulk-init-button-container-loader {
+  padding: 20px 10px;
+}
+
+.entity_view_update_modal .modal-header {
+  padding-bottom: 20px !important;
+}
+
+.entity_view_update_modal .modal-content {
+  min-height: unset !important;
+  padding: 20px !important;
+  padding-left: unset !important;
+  padding-right: unset !important;
+}
+
+.entity_view_update_modal .reusable-modal-body {
+  min-height: unset !important;
+  padding-top: unset !important;
+  border: 2px solid #cccccc !important;
+  border-left: unset !important;
+  border-right: unset !important;
+}
+
+.entity_view_update_modal .modal-footer {
+  padding-top: 20px !important;
+}
+
+.other_buttons.applicant_details_buttons{
+  justify-content: space-between;
+}
+
+.back_btn .fancy_btn{
+  min-width:113px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+
+  #m-table td:nth-of-type(1){ 
+    padding-left:0;
+	  display:flex;
+    justify-content:center;
+    background:#ccc6;
+		
+	}
+
+  /* Label the data */
+	td:nth-of-type(1):before { content: ""; }
+  td:nth-of-type(2):before { content: "Name"; }
+  td:nth-of-type(3):before { content: "Actions"; }
+
+  .status-dot {
+    left:165px;
+  }
+
+}

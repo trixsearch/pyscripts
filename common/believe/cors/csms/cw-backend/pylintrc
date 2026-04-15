@@ -1,0 +1,3 @@
+[MESSAGES CONTROL]
+disable=broad-except,duplicate-code,missing-class-docstring,line-too-long,missing-module-docstring,missing-function-docstring,arguments-differ,unused-argument,invalid-name,no-self-argument,signature-differs,invalid-str-returned,no-self-use,too-many-locals,logging-format-interpolation,no-member,too-many-arguments,too-few-public-methods,bare-except,too-many-statements,too-many-branches,too-many-ancestors,too-many-nested-blocks
+max-line-length=125

@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cw-domain-updates
+  name: cw-domain-updates
+  namespace: cw
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cw-domain-updates
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: cw-domain-updates
+    spec:
+      imagePullSecrets:
+        - name: cwms-jfrog 
+      containers:
+        - command: ["python3"]
+          args: ["consumers/domain_updates.py"]
+          image: devopsartifact.jio.com/jpf-cwms__prod__dcr/cw-backend/consumers:#{Build.BuildId}#
+          imagePullPolicy: Always          
+          name: cw-domain-updates-prod
+          env:
+            - name: KAFKA_BROKERS
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-prod-config
+                  key: KAFKA_BROKERS
+            - name: BACKEND_DOMAIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-prod-config
+                  key: BACKEND_DOMAIN_URL
+            - name: ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-prod-config
+                  key: ENV
+            - name: SSL_VERIFICATION
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-prod-config
+                  key: SSL_VERIFICATION
+          resources:
+            requests:
+              cpu: 2000m
+              memory: "3Gi"
+            limits:
+              cpu: 3000m
+              memory: "4Gi"
+      volumes:
+        - name: tmp-files
+          emptyDir: {}
+      restartPolicy: Always

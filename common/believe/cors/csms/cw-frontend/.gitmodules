@@ -1,0 +1,3 @@
+[submodule "ezedoc-frontend-react/platform-ui-containers-submodule"]
+	path = ezedoc-frontend-react/src/submodules/platform-ui-containers-submodule
+	url = git@bitbucket.org:bpss/platform-ui-containers-submodule.git

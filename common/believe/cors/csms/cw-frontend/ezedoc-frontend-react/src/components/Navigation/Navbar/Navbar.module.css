@@ -1,0 +1,19 @@
+.tabs{
+    text-transform: capitalize;
+    margin-left:0 1rem;
+}
+
+.tabPaneClassName{
+    padding-top: 0.5rem;
+}
+
+.nestedTabClassName{
+    margin:0 0.25rem;
+}
+
+.navbarCss{
+}
+
+.leftIcon{
+    margin-right:0.25rem;
+  }

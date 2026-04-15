@@ -1,0 +1,25 @@
+resources:
+  repositories:
+    - repository: pipeline-templates
+      type: git
+      name: CWMS/pipeline-templates
+      ref: jfrog
+
+
+trigger:
+  - developer
+
+name: $(Build.DefinitionName)_$(Component_Name)_$(SourceBranchName)_$(Build.BuildId)_$(Date:yyyyMMdd)$(Rev:.r) #Do Not Change
+
+
+jobs:
+  - template: python-main-2.yml@pipeline-templates
+    parameters:
+      # RUN-CI: ${{ variables.RUN-CI }}
+      run_ci: 'true'
+      run_sonar: $(Sonar)
+      run_secops: $(SecOpsFortify)
+      run_release: $(Release)
+      sonar_project_name: 'jio-enterprise-ram-upload'
+      sonar_project_key: 'jio-enterprise-ram-upload'
+      sonar_project_version: 'jio-enterprise-ram-upload'

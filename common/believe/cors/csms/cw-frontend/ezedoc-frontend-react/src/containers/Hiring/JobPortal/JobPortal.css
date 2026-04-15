@@ -1,0 +1,353 @@
+.job-portal,
+.job-portal-view {
+    min-height: 100vh;
+}
+
+.job-portal .portal-container {
+    padding: 0 110px 0 110px;
+}
+
+.job-portal #container1 {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    padding-top: 20px;
+    position: relative;
+    background-color: #ebf3fa;
+    justify-content: space-between;
+}
+
+.job-portal .sub-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.job-portal .title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.job-portal .desc {
+    width: 450px;
+    height: 115px;
+    font-size: 16px;
+    overflow: hidden;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.job-portal .banner-img-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.job-portal .filters {
+    width: 84%;
+    display: flex;
+    bottom: -60.5px;
+    position: absolute;
+    justify-content: center;
+}
+
+.job-portal .filters .filter_dropdown {
+    margin-right: 16px;
+    height: 43px;
+    width: 210px;
+}
+
+.job-portal .filters .filter_dropdown > div:first-child {
+    border: unset;
+    box-shadow: 1px 1px 6px 0 #00000045;
+}
+
+.job-portal .filters .filter_dropdown .filter_dropdown_menu {
+    width: 210px;
+}
+
+.job-portal .search-btn {
+    width: 210px;
+    margin-left: 16px;
+    height: 43px !important;
+    margin-right: 0 !important;
+}
+
+.job-portal .search-btn:disabled {
+    opacity: .65;
+}
+
+.job-portal #container2 {
+    padding-top: 80px;
+}
+
+.job-portal .job-list {
+    overflow-x: hidden;
+    overflow-y: overlay;
+    scrollbar-width: thin;
+    height: calc(100vh - 405px);
+}
+
+.job-portal .job-list::-webkit-scrollbar {
+    display: block !important;
+}
+
+.job-portal .no-data {
+    width: 100%;
+    font-weight: 500;
+    color: #545454;
+    text-align: center;
+}
+
+.job-portal .no-data img {
+    margin-bottom: 15px;
+}
+
+.job-portal .job-row {
+    height: 46px;
+    font-size: 12px;
+    color: #7b7d85;
+    display: grid;
+    grid-template-columns: 40% 20% 28% 13%;
+}
+
+.job-portal .job-row:nth-child(odd) {
+    background-color: #f6f6f6;
+}
+
+.job-portal .job-row > div,
+.job-portal-view .text-over-flow-ellipsis {
+    overflow: hidden;
+    align-self: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.job-portal .job-title {
+    color: #000000;
+    padding-left: 30px;
+}
+
+.job-portal .job-title,
+.job-portal .job-location {
+    padding-right: 25px;
+}
+
+.job-portal .view-btn {
+    font-weight: 500;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.job-portal .view-btn a {
+    color: var(--main-first-primary-color);
+}
+
+.job-portal-view {
+    background-color: #fbfcfd;
+}
+
+.job-portal-view .job-portal-view-container {
+    padding: 0 110px 0 110px;
+}
+
+.job-portal-view #container1 {
+    width: 100%;
+    padding-top: 10px;
+    position: relative;
+    padding-bottom: 30px;
+    background-color: #ebf3fa;
+}
+
+.job-portal-view .job-title {
+    width: 500px;
+    font-weight: bold;
+}
+
+.job-portal-view .job-location {
+    width: 450px;
+    font-weight: 600;
+}
+
+.job-portal-view .referral-btn {
+    top: 20px;
+    right: 10px;
+    position: absolute;
+}
+
+.job-portal-view #container2 {
+    padding-bottom: 20px;
+}
+
+.job-portal-view .section-title {
+    color: #4a4a4a;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.job-portal-view .section-desc {
+    background-color: #ffffff;
+    padding: 16px 46px 16px 16px;
+    border: 0.7px solid #dfe5f9;
+    color: var(--main-input-label-color);
+
+    height:400px;
+    overflow-y:scroll; 
+    scrollbar-width: thin;
+}
+
+.job-portal-view .section-desc::-webkit-scrollbar {
+    display: block!important;
+}
+
+.job-portal-view .section-desc img {
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+
+    position:sticky;
+    bottom:0;
+    background:#fff;
+    padding:10px;
+}
+
+.button-container > a {
+    margin-right: 10px;
+}
+
+.button-container button {
+    margin-right: unset !important;
+}
+
+@media only screen and (max-width: 576px) {
+    .job-portal #container1 {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .job-portal .title {
+        font-size: 20px;
+        margin-top: 10px;
+        padding-left: unset;
+    }
+
+    .job-portal .desc {
+        width: 350px;
+        margin-top: unset;
+        height: 90px;
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .job-portal .banner-img-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .job-portal .banner-img {
+        width: 90%;
+    }
+    
+    .job-portal .filters {
+        width: 100%;
+        flex-direction: column;
+        position: static;
+    }
+
+    .job-portal .filters .filter_dropdown {
+        width: 100%;
+        margin-top: 10px;
+        margin-right: unset;
+    }
+
+    .job-portal .filters .filter_dropdown .filter_dropdown_menu {
+        width: 100%;
+    }
+
+    .job-portal .search-btn {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: unset;
+    }
+
+    .job-portal #container2 {
+        flex-direction: column;
+        position: static;
+        padding-top: unset;
+        margin-top: 10px;
+    }
+    
+    .job-portal .sub-container {
+        width: 100%;
+    }
+
+    .job-portal .job-row {
+        display: flex;
+        position: static;
+        flex-direction: column;
+        height: auto;
+        margin-top: 10px;
+        background-color:  #f6f6f6;
+        padding: 15px;
+    }
+    
+    .job-portal .job-location {
+        padding-right: unset;
+
+    }
+
+    .job-portal .job-row .job-title,
+    .job-portal .job-row .job-location,
+    .job-portal .job-row .job-role {
+        width: calc(100vw - 63px);
+        align-self: flex-start;
+        margin-bottom: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-right: unset;
+    }
+
+    .job-portal .job-title {
+        padding-left: unset;
+    }
+
+    .job-portal-view .job-portal-view-container {
+        padding: 10px;
+    }
+
+    .job-portal-view .job-title {
+        width: 100%;
+        font-size: 20px;
+        align-self: flex-start;
+    }
+    
+    .job-portal-view .job-location {
+        font-size: 12px;
+    }
+
+    .job-portal-view .referral-btn {
+        position: static;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .job-portal-view .text-over-flow-ellipsis {
+        width: 100%;
+    }
+    
+    .job-portal-view #container2 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .job-portal-view .section-desc {
+        height:280px;
+    }
+}

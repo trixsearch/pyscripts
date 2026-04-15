@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --main-button-gradient-color: linear-gradient(100deg, #66aef1, #267acc); */
+  --main-green-blue-gradient-color: linear-gradient(50deg, #7df0ba, #0c60ae);
+  --main-green-gradient-color: linear-gradient(116deg, #64db9c, #50b7ae);
+
+  /* --main-first-primary-color: #4a90e2;
+  --main-second-primary-color: #51b8ae; */
+
+  /*colors acc to betterplace*/
+  --main-primary-color:#1B2D93;
+  --main-button-gradient-color: linear-gradient(100deg, #1B2D93, #1B2D93);
+  --main-first-primary-color: #1B2D93;
+  --main-second-primary-color: #1B2D93;
+  /*===============================*/
+
+  --main-light-blue-color: #8a68fb;
+
+  --main-white-color: #ffffff;
+
+  --main-black-color: #000000;
+
+  --main-button-text-color: #ffffff;
+  /* --main-light-green-color: #31a18a; */
+
+  --main-light-red-color: #e1258e;
+
+  /* --main-input-boder-color: #9b9b9b; */
+  --main-input-boder-color: #828792;
+  --main-input-label-color: #4a4a4a;
+
+  --main-status-complete-color: #417505;
+  --main-status-rejected-color: #e90808;
+  --main-status-pending-color: #f7c033;
+
+  --main-box-shadow-10-color: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  --main-box-shadow-8-color: 0 0 8px 0 rgba(200, 200, 200, 0.5);
+
+  --main-app-gradient-color: linear-gradient(104deg, #1b308d, #1b308d);
+  /* --main-first-button-color: #267acc; */
+  /*colors acc to betterplace*/
+  --main-first-button-color: #1B2D93;
+ /*===============================*/
+
+  --main-disabled-button-primary-text-color: #ffffff;
+  --main-disabled-button-primary-border-color: #9b9b9b;
+  --main-disabled-button-primary-background-color: #9b9b9b;
+  --main-disabled-button-secondary-text-color: #4a4a4a;
+  --main-disabled-button-secondary-border-color: #4a4a4a;
+  --main-disabled-button-secondary-background-color: #ffffff;
+}
+
+#new_version_alert {
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 100001;
+  user-select: none;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 2, 2, 0.5);
+}
+
+#new_version_card {
+  width: 50%;
+  display: flex;
+  border-radius: 5px;
+  padding: 40px 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 2px 6px 0 #000000bf;
+}
+
+#new_version_card > #message {
+  text-align: center;
+}
+
+#refresh_btn {
+  padding: 5px;
+  color: #039be5;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 30px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+/*------------------*/
+
+.ezedox_main_body ul {
+  overflow: visible;
+}
+
+.ezedox_main_body .ant-pagination li{
+  padding:0;
+}
+
+/* fix for toaster visiblity issue */
+.ezedox_main_body .toasters .toast {
+  opacity: 1;
+  border: none
+}
+
+/*------------------*/
+
+@media only screen and (max-width: 576px){
+  #new_version_card {
+    width: 75%;
+  }
+}
+

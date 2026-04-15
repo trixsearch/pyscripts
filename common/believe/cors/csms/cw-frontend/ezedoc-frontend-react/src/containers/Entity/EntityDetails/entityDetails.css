@@ -1,0 +1,12 @@
+.ant-drawer-wrapper-body .ant-drawer-body {
+  padding: 0px;
+  background-color: #FBFCFD;
+}
+.ant-drawer-wrapper-body .ant-drawer-header{
+  background-color: #e5e2e2;
+}
+
+.ant-table-thead>tr>th,
+.ant-table-tbody>tr>td {
+  word-wrap: break-word;
+}

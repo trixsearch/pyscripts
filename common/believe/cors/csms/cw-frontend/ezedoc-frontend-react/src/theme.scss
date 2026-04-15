@@ -1,0 +1,269 @@
+//color pallettes
+//primary
+$primaryBlue100:#1B2D93;
+$primaryBlue20: #D1D5E9;
+$primaryBlue10: #E8EAF4;
+$primaryBlue5: #F4F4FA;
+$primaryBlueBg: #F8F9FC;
+
+//secondary
+$secondaryRed100:#FF706F;
+$secondaryRed10: #FFF1F0;
+$secondaryYellow100: #FFC053;
+$secondaryYellow10: #FFF9EE;
+$secondaryGreen100: #ABD354;
+$secondaryGreen10: #F7FBEE;
+$secondarySkyblue100: #32CAD4;
+$secondarySkyblue10: #EBFAFB;
+$secondaryLightblue100: #568AF7;
+$secondaryLightblue10: #EEF3FE;
+$secondaryPurple100: #7460E4;
+$secondaryPurple10: #F1EFFC;
+
+//info
+$infoFailed100: #FB5247;
+$infoFailed05: #FFF5F5;
+$infoWarning100: #FFC401;
+$infoWarning10: #FFF9E6;
+$infoSuccess100: #00BA88;
+$infoSuccess10: #E5F8F3;
+
+//black
+$black100: #050F24;
+$black50: #828792;
+$black30: #B4B7BD;
+$black15: #D9DBDE;
+$black05: #F2F3F4;
+
+//white
+$white100: #FFFFFF;
+
+//scrollbar
+$scrollbar: #C2CBD3;
+$scrollbar-blue: #CCDEF0;
+
+// need to be replaced later
+$box-government: #F5A996;
+$brown : #9A5A1E;
+$legal-comment-bg: #F3F7FD;
+$card-court : #EDF7ED;
+$card-pan : #E8EEF8;
+$card-aadhaar : #E2EFEB;
+$card-voter : #E9E6E6;
+$card-dl : #F4F2E4;
+$card-rc: #F0EDFA;
+$card-manual: #E6EFF0;
+$card-postal: #F6ECEF;
+$apiResponse-font: #A84567;
+$apiResponse-bg: #F6ECEF;
+
+
+// App fonts
+$primaryFont: "Inter";
+$primaryFontLight: "Inter-light";
+$primaryFontBold: "Inter-Bold";
+$primaryFontSemiBold: "Inter-SemiBold";
+$primaryFontMedium: "Inter-Medium";
+$primaryFontRegular: "Inter-Regular";
+
+// Typographies
+//.[typographyCategory_desktop_mobile]
+@mixin heading1_sb_b{
+  font-size: 22px !important;
+  font-family: $primaryFontSemiBold !important;
+  @media (max-width: 767px){
+    font-size: 20px !important;
+    font-family: $primaryFontBold !important;
+    }
+}
+
+@mixin heading1_sb_m{
+  font-size: 22px !important;
+  font-family: $primaryFontSemiBold !important;
+  @media (max-width: 767px){
+    font-size: 20px !important;
+    font-family: $primaryFontMedium !important;
+    }
+}
+
+@mixin heading1_lt_m{
+  font-size: 22px !important;
+  font-family: $primaryFontLight !important;
+  @media (max-width: 767px){
+    font-size: 20px !important;
+    font-family: $primaryFontMedium !important;
+    }
+}
+
+@mixin heading2_b_sb{
+  font-size: 18px !important;
+  font-family: $primaryFontBold !important;
+  @media (max-width: 767px){
+    font-size: 16px !important;
+    font-family: $primaryFontSemiBold !important;
+    }
+}
+
+@mixin heading2_m_sb{
+  font-size: 18px !important;
+  font-family: $primaryFontMedium !important;
+  @media (max-width: 767px){
+    font-size: 16px !important;
+    font-family: $primaryFontSemiBold !important;
+    }
+}
+
+@mixin heading3_sb_sb{
+  font-size: 14px !important;
+  font-family: $primaryFontSemiBold !important;
+}
+
+@mixin body_r_r{
+  font-size: 14px !important;
+  font-family: $primaryFontRegular !important;
+}
+
+@mixin body_it_r{
+  font-size: 14px !important;
+  font-family: $primaryFontRegular !important;
+  font-style: italic !important;
+  @media (max-width: 767px){
+    font-family: $primaryFontRegular !important;
+    font-style: normal !important;
+  }
+}
+
+@mixin caption_sb_m{
+  font-size: 12px !important;
+  font-family: $primaryFontSemiBold !important;
+  @media (max-width: 767px){
+    font-size: 12px !important;
+    font-family: $primaryFontMedium !important;
+    }
+}
+
+@mixin caption_m_m{
+  font-size: 12px !important;
+  font-family: $primaryFontMedium !important;
+}
+
+@mixin caption_it_m{
+  font-size: 12px !important;
+  font-family: $primaryFontMedium !important;
+  font-style: italic !important;
+  @media (max-width: 767px){
+    font-family: $primaryFontMedium !important;
+    font-style: normal !important;
+  }
+}
+
+
+// spacings
+@mixin regular($property,$selectors...) {
+  @for $i from 0 to length($selectors) {
+    #{nth($selectors, $i + 1)} {
+      #{$property}: ($i+1) * 4px;
+    }
+  }
+}
+
+@mixin small($property,$selectors...) {
+  @for $i from 0 to length($selectors) {
+    #{nth($selectors, $i + 1)} {
+      @media (max-width: 480px){
+      #{$property}: ($i+1) * 4px;
+      }
+    }
+  }
+}
+
+@mixin xSmall($property,$selectors...) {
+  @for $i from 0 to length($selectors) {
+    #{nth($selectors, $i + 1)} {
+      @media (max-width: 767px){
+      #{$property}: ($i+1) * 4px;
+      }
+    }
+  }
+}
+
+//{propertyName}_{screen_size}_{unit} mr_xs_6 
+
+@include regular("padding",".p_1", ".p_2", ".p_3", ".p_4", ".p_5" ,".p_6", ".p_7", ".p_8");
+@include regular("padding-left",".pl_1", ".pl_2", ".pl_3", ".pl_4", ".pl_5" ,".pl_6", ".pl_7", ".pl_8");
+@include regular("padding-top",".pt_1", ".pt_2", ".pt_3", ".pt_4", ".pt_5" ,".pt_6", ".pt_7", ".pt_8");
+@include regular("padding-right",".pr_1", ".pr_2", ".pr_3", ".pr_4", ".pr_5" ,".pr_6", ".pr_7", ".pr_8");
+@include regular("padding-bottom",".pb_1", ".pb_2", ".pb_3", ".pb_4", ".pb_5" ,".pb_6", ".pb_7", ".pb_8");
+
+@include regular("margin",".m_1", ".m_2", ".m_3", ".m_4", ".m_5" ,".m_6", ".m_7", ".m_8");
+@include regular("margin-left",".ml_1", ".ml_2", ".ml_3", ".ml_4", ".ml_5" ,".ml_6", ".ml_7", ".ml_8");
+@include regular("margin-top",".mt_1", ".mt_2", ".mt_3", ".mt_4", ".mt_5" ,".mt_6", ".mt_7", ".mt_8");
+@include regular("margin-right",".mr_1", ".mr_2", ".mr_3", ".mr_4", ".mr_5" ,".mr_6", ".mr_7", ".mr_8");
+@include regular("margin-bottom",".mb_1", ".mb_2", ".mb_3", ".mb_4", ".mb_5" ,".mb_6", ".mb_7", ".mb_8");
+
+@include small("padding",".p_sm_1", ".p_sm_2", ".p_sm_3", ".p_sm_4", ".p_sm_5" ,".p_sm_6", ".p_sm_7", ".p_sm_8");
+@include small("padding-left",".pl_sm_1", ".pl_sm_2", ".pl_sm_3", ".pl_sm_4", ".pl_sm_5" ,".pl_sm_6", ".pl_sm_7", ".pl_sm_8");
+@include small("padding-top",".pt_sm_1", ".pt_sm_2", ".pt_sm_3", ".pt_sm_4", ".pt_sm_5" ,".pt_sm_6", ".pt_sm_7", ".pt_sm_8");
+@include small("padding-right",".pr_sm_1", ".pr_sm_2", ".pr_sm_3", ".pr_sm_4", ".pr_sm_5" ,".pr_sm_6", ".pr_sm_7", ".pr_sm_8");
+@include small("padding-bottom",".pb_sm_1", ".pb_sm_2", ".pb_sm_3", ".pb_sm_4", ".pb_sm_5" ,".pb_sm_6", ".pb_sm_7", ".pb_sm_8");
+
+@include small("margin",".m_sm_1", ".m_sm_2", ".m_sm_3", ".m_sm_4", ".m_sm_5" ,".m_sm_6", ".m_sm_7", ".m_sm_8");
+@include small("margin-left",".ml_sm_1", ".ml_sm_2", ".ml_sm_3", ".ml_sm_4", ".ml_sm_5" ,".ml_sm_6", ".ml_sm_7", ".ml_sm_8");
+@include small("margin-top",".mt_sm_1", ".mt_sm_2", ".mt_sm_3", ".mt_sm_4", ".mt_sm_5" ,".mt_sm_6", ".mt_sm_7", ".mt_sm_8");
+@include small("margin-right",".mr_sm_1", ".mr_sm_2", ".mr_sm_3", ".mr_sm_4", ".mr_sm_5" ,".mr_sm_6", ".mr_sm_7", ".mr_sm_8");
+@include small("margin-bottom",".mb_sm_1", ".mb_sm_2", ".mb_sm_3", ".mb_sm_4", ".mb_sm_5" ,".mb_sm_6", ".mb_sm_7", ".mb_sm_8");
+
+@include xSmall("padding",".p_xs_1", ".p_xs_2", ".p_xs_3", ".p_xs_4", ".p_xs_5" ,".p_xs_6", ".p_xs_7", ".p_xs_8");
+@include xSmall("padding-left",".pl_xs_1", ".pl_xs_2", ".pl_xs_3", ".pl_xs_4", ".pl_xs_5" ,".pl_xs_6", ".pl_xs_7", ".pl_xs_8");
+@include xSmall("padding-top",".pt_xs_1", ".pt_xs_2", ".pt_xs_3", ".pt_xs_4", ".pt_xs_5" ,".pt_xs_6", ".pt_xs_7", ".pt_xs_8");
+@include xSmall("padding-right",".pr_xs_1", ".pr_xs_2", ".pr_xs_3", ".pr_xs_4", ".pr_xs_5" ,".pr_xs_6", ".pr_xs_7", ".pr_xs_8");
+@include xSmall("padding-bottom",".pb_xs_1", ".pb_xs_2", ".pb_xs_3", ".pb_xs_4", ".pb_xs_5" ,".pb_xs_6", ".pb_xs_7", ".pb_xs_8");
+
+@include xSmall("margin",".m_xs_1", ".m_xs_2", ".m_xs_3", ".m_xs_4", ".m_xs_5" ,".m_xs_6", ".m_xs_7", ".m_xs_8");
+@include xSmall("margin-left",".ml_xs_1", ".ml_xs_2", ".ml_xs_3", ".ml_xs_4", ".ml_xs_5" ,".ml_xs_6", ".ml_xs_7", ".ml_xs_8");
+@include xSmall("margin-top",".mt_xs_1", ".mt_xs_2", ".mt_xs_3", ".mt_xs_4", ".mt_xs_5" ,".mt_xs_6", ".mt_xs_7", ".mt_xs_8");
+@include xSmall("margin-right",".mr_xs_1", ".mr_xs_2", ".mr_xs_3", ".mr_xs_4", ".mr_xs_5" ,".mr_xs_6", ".mr_xs_7", ".mr_xs_8");
+@include xSmall("margin-bottom",".mb_xs_1", ".mb_xs_2", ".mb_xs_3", ".mb_xs_4", ".mb_xs_5" ,".mb_xs_6", ".mb_xs_7", ".mb_xs_8");
+
+:export{
+    primaryFont: $primaryFont;
+    primaryFontLight: $primaryFontLight;
+    primaryFontBold: $primaryFontBold;
+    primaryFontSemiBold: $primaryFontSemiBold;
+    primaryFontMedium: $primaryFontMedium;
+    primaryFontRegular: $primaryFontRegular;
+    primaryBlue100: $primaryBlue100;
+    primaryBlue20: $primaryBlue20;
+    primaryBlue10: $primaryBlue10;
+    primaryBlue5: $primaryBlue5;
+    primaryBlueBg: $primaryBlueBg;
+    secondaryRed100: $secondaryRed100;
+    secondaryRed10: $secondaryRed10;
+    secondaryYellow100: $secondaryYellow100;
+    secondaryYellow10: $secondaryYellow10;
+    secondaryGreen100: $secondaryGreen100;
+    secondaryGreen10: $secondaryGreen10;
+    secondarySkyblue100: $secondarySkyblue100;
+    secondarySkyblue10: $secondarySkyblue10;
+    secondaryLightblue100: $secondaryLightblue100;
+    secondaryLightblue10: $secondaryLightblue10;
+    secondaryPurple100: $secondaryPurple100;
+    secondaryPurple10: $secondaryPurple10;
+    infoFailed100: $infoFailed100;
+    infoFailed05: $infoFailed05;
+    infoWarning100: $infoWarning100;
+    infoWarning10: $infoWarning10;
+    infoSuccess100: $infoSuccess100;
+    infoSuccess10: $infoSuccess10;
+    black100: $black100;
+    black50: $black50;
+    black30: $black30;
+    black15: $black15;
+    black05: $black05;
+    white100: $white100;
+    scrollbar: $scrollbar;
+    scrollbarBlue:$scrollbar-blue;
+    boxGovernment: $box-government;
+	apiResponseFont: $apiResponse-font;
+	apiResponseBg: $apiResponse-bg;
+}

@@ -1,0 +1,123 @@
+.eze-digilocker-page {
+    height: 100vh;
+    text-align: center;
+    color: var(--main-input-label-color);
+}
+
+.eze-digilocker-page .eze-digilocker-container-left {
+    height: 100vh;
+    display: flex;
+    padding: 0 45px;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: var(--main-app-gradient-color);
+}
+
+.eze-digilocker-page .eze-digilocker-container-left img {
+    width: 35%;
+    margin: 0 30px;
+}
+
+.eze-digilocker-page .eze-digilocker-container-right {
+    top: 22%;
+    right: 12%;
+    width: 31%;
+    display: flex;
+    padding: 35px;
+    position: absolute;
+    height: fit-content;
+    border-radius: 40px;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.eze-digilocker-page .digi-card {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    flex-direction: column;
+}
+
+.eze-digilocker-page .digi-card .digi-title {
+    font-size: 23px;
+    padding: 20px 0;
+    font-weight: bold;
+    margin: unset !important;
+}
+
+.eze-digilocker-page .digi-card .digi-statement {
+    padding: 10px;
+}
+
+.eze-digilocker-page .digi-timer {
+    margin-top: 10px;
+    font-style: italic;
+    color: darkgray;
+}
+
+.eze-digilocker-page .eze-digi-logo {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 25px 0 20px 0;
+    justify-content: center;
+}
+
+.eze-digilocker-page .eze-digi-logo span {
+    padding-top: 9px;
+    color: var(--main-input-boder-color);
+}
+
+.eze-digilocker-page .eze-digi-logo img {
+    width: 100px;
+}
+
+.eze-digilocker-page button {
+    margin-right: unset !important;
+}
+
+.eze-digilocker-page .digi-response-status {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.eze-digilocker-page .digi-response-status > img {
+    margin-right: 5px;
+}
+
+.eze-digilocker-page .digi-response-status > div {
+    text-align: left;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .eze-digilocker-page .eze-digilocker-container-right {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .eze-digilocker-page .eze-digilocker-container-left {
+        height: 40vh;
+        padding: 4.5px 40px 0;
+        justify-content: center;
+        border-bottom-left-radius: 350px 120px;
+        border-bottom-right-radius: 350px 120px;
+    }
+
+    .eze-digilocker-page .eze-digilocker-container-left img {
+        width: auto;
+    }
+
+    .eze-digilocker-page .eze-digilocker-container-right {
+        top: 30%;
+        left: 50%;
+        width: 85%;
+        right: unset;
+        padding: 30px;
+        transform: translate(-50%, 0%);
+    }
+}

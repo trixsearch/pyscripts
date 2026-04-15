@@ -1,0 +1,188 @@
+.master-db {
+  padding-bottom: 30px;
+}
+
+.master-react-table {
+  margin-top: 20px;
+  scrollbar-width: thin;
+}
+
+.rt-resizable-header:focus {
+  outline: none !important;
+}
+
+.master-header {
+  padding: 0 24px;
+}
+
+.master-db .main-container .floating-label .floating-input {
+  margin-top: 0px;
+}
+
+.master-db-checkbox {
+  display: flex;
+  align-self: center;
+  margin: 12px 0 44px 0;
+  justify-content: space-evenly;
+}
+
+.master-db-checkbox input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  margin-left: 4px;
+}
+
+.master-db-checkbox p {
+  margin: 0;
+}
+
+.create-master-model-opacity {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.master-db-add-btn {
+  margin-left: 32px;
+}
+
+.master-db-row-delete-btn {
+  border-radius: 50%;
+  padding: 8px 10px 6px;
+  background-color: #dddddd;
+}
+
+.master-db-row-delete-btn :focus,
+.master-db-row-delete :focus {
+  outline: none !important;
+  outline-style: none !important;
+}
+
+.master-db-row-delete {
+  display: flex;
+  align-self: center;
+  margin: 0px 0 44px 0;
+  justify-content: space-evenly;
+}
+
+.master-record-del-btn {
+  align-self: center;
+}
+
+.master-react-table-component {
+  scrollbar-width: thin;
+  height: calc(100vh - 240px) !important;
+}
+
+.master-react-table ::-webkit-scrollbar,
+.master-react-table-component ::-webkit-scrollbar {
+  display: block !important;
+  -webkit-appearance: block;
+}
+
+.master-pt-0 {
+  padding-top: 10px !important;
+}
+
+.master-cell-input {
+  width: 100%;
+  font-size: 15px;
+  border: none;
+  background: transparent;
+}
+
+.master-cell-capitalize {
+  text-transform: capitalize;
+}
+
+.master-pagination {
+  margin-top: -5px;
+}
+
+/* 
+Checkbox css 
+TODO : remove css after vishal's bulk email gets merged 
+*/
+
+.round {
+  position: relative;
+  height: 28px;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+
+.round label:after {
+  border: 2px solid black;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 4px;
+  opacity: 0;
+  position: absolute;
+  top: 6px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: var(--main-first-button-color);
+  border-color: var(--main-first-primary-color);
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.master-fields-prompt {
+  margin-top: -24px;
+}
+
+.master-fields-prompt-body p {
+  padding-bottom: 4px;
+}
+
+.master-fields-prompt .warning-icon {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 8px;
+}
+
+.master-db-no-bg-button {
+  background: none;
+  border: transparent;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.master-db-no-bg-button:focus {
+  outline: none !important;
+}
+
+.master-react-dt-picker .rdtPicker {
+  width: 100%;
+}
+
+.master-download-btn {
+  display: flex;
+  position: absolute;
+  right: 3px;
+  top: 4px;
+  z-index: 999;
+}

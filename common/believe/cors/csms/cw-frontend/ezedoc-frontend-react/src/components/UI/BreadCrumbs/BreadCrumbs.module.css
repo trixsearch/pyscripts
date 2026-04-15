@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  gap: 0.813rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.link {
+  background-color: #F8F9FC;
+  color: #828792;
+  margin-top: -1px;
+  border:none;
+  padding-left: 0;
+}
+
+.container img {
+  margin-left: 0.813rem;
+  filter: brightness(0) saturate(100%);
+}

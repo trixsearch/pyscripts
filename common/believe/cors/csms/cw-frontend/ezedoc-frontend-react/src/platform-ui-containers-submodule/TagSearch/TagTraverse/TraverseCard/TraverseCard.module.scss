@@ -1,0 +1,99 @@
+@import "../../../../theme.scss";
+.FolderAlign {
+    display: inline-flex;
+    color: $black100;
+    @include body_r_r;
+    margin-bottom: 4px;
+    padding: 10px;
+    width: 15rem;
+    //position: absolute;
+    z-index: 0;
+    &:hover {
+        background-color: $white100;
+        border-radius: 4px;
+        cursor: pointer;
+        // width:15rem;
+    }
+}
+.EditButton {
+    //xmargin-left:1.5rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    background: none;
+    border: none;
+    @include body_r_r;
+    color: $black50;
+}
+.FolderActive {
+    background-color: $white100;
+    //border: 1px dotted rgba(120, 146, 184, 0.356);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 6px;
+    width: 15rem !important ;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.11);
+}
+.dropdown {
+    position: absolute;
+    background-color: $white100;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 5rem;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.11);
+    //z-index: 9999;
+    display: inline-table;
+    margin-left: 2px;
+}
+
+.UnorderedList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.List {
+    width: 100%;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.List:hover {
+    color: $primaryBlue100;
+    background-color: $primaryBlue5;
+    cursor: pointer;
+}
+
+.arrow {
+    transform: rotate(90deg);
+    margin-left: 0.5rem;
+    height: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+    //position: absolute;
+}
+
+.disableSelection {
+    cursor: not-allowed;
+}
+
+.RadioButton {
+    height: 12px;
+    width: 12px;
+    background-color: #ff8095;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.verticalLine {
+    border-left: 1px solid $primaryBlue10;
+    height: 1rem;
+    margin-top: 2px;
+}
+
+.disabled{
+    cursor: not-allowed !important;
+}

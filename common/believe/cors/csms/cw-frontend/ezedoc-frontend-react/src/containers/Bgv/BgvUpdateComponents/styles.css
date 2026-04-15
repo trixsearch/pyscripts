@@ -1,0 +1,49 @@
+form div .floating-label.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+input.capture-file {
+  display: none !important;
+}
+.capture-file-input {
+  /* background-color: #337ab7; */
+  border-radius: 4px;
+  display: inline-block;
+  border: 1px solid grey;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+}
+
+.capture-file-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-tag {
+  background-color: lightgrey;
+  margin-left: 1rem;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.file-tag-name {
+  padding: 0 0.5rem;
+}
+
+.file-tag-close-btn {
+  background: transparent;
+  border: none;
+  border-left: 1px solid black;
+}
+
+.file-tag-close-btn:hover {
+  border: 1px solid black;
+  border-radius: 50%;
+  font-weight: 900;
+}

@@ -1,0 +1,19 @@
+.hiring-page-content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: calc(100vh - 120px);
+}
+
+@media only screen and (max-width: 855px){
+    .hiring-page-content {
+        align-items: center;
+    }
+
+    .big-cards{
+        flex-direction:column;
+    }
+
+}
+

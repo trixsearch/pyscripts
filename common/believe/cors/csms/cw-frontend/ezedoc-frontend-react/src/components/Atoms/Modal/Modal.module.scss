@@ -1,0 +1,26 @@
+@import "../../../theme.scss";
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(242, 246, 252, 0.9);
+    z-index: 9998;
+
+    .modal_main {
+        position: fixed;
+        background: white;
+        //transform: translate(-50.1%, -50.1%);
+        box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.11);
+        border-radius: 4px;
+    }
+}
+
+.displayBlock {
+    display: block;
+}
+
+.displayNone {
+    display: none;
+}

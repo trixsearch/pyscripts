@@ -1,0 +1,50 @@
+@import '../../../../theme.scss';
+.AddButtonStyle{
+    border:0;
+    background: 0;
+    color:$primaryBlue100 ;
+	@include caption_m_m;
+    padding-top:15px;
+    padding-bottom: 20px;
+    margin-left: -5px;
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+.SectionStyle{
+    //background-color: rgba(127, 255, 244, 0.356);
+    border-right: 2px solid $primaryBlue10;
+    //display: inline-block;
+    margin-right: 10px;
+    max-height: 40rem;
+    //white-space: nowrap;
+    
+    margin-top: 10px;
+    width: 16rem;
+    overflow-x: visible;
+    overflow-y: auto;
+     
+}
+.sectionHead{
+    @include body_r_r;
+    position: static;
+    width: 16rem;
+    color: $black50;
+    padding-left: 10px;
+    padding-right: 10px; 
+    background-color: $primaryBlue5;
+}
+
+.selectAllBtn{
+    @include caption_m_m;
+    color: $primaryBlue100;
+    padding-left: 10px;
+    padding-right: 10px; 
+    &:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+}

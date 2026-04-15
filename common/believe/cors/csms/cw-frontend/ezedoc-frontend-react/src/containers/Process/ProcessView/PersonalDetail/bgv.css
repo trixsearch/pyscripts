@@ -1,0 +1,152 @@
+div.ReactModalPortal {
+  z-index: 1030!important;
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  background-color: rgba(0,0,0,0.6) !important;
+}
+
+.a {
+  --bgv-box-shadow-color: lightgrey;
+}
+
+.a {
+  display: flex;
+  height: 120px;
+  justify-content: space-evenly;
+  box-shadow: 0 0 6px 0px var(--bgv-box-shadow-color);
+  padding: 4px 16px;
+  border-radius: 8px;
+  margin: 16px;
+  text-align: left;
+  scroll-margin: 100px;
+  transition: ease-in-out;
+  border: 2px solid white;
+}
+
+.b,
+.c {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 50%;
+  flex-direction: column;
+}
+
+.d {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 50%;
+}
+
+.bgv-detail-container {
+  padding: 12px 0;
+}
+
+.e {
+  flex-basis: 20%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.formatted-date-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.d div {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: flex-start;
+}
+
+.bgv-card-active {
+  border: 2px solid black;
+}
+
+.profile-details {
+  height: 100%;
+}
+
+.profile-details > div > div {
+  padding: 2px 8px;
+}
+
+.profile-details > .col-md-6 {
+  padding: 12px;
+}
+
+.profile-details > .col-md-6 :first-child {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.profile-details > .col-md-6 :last-child {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.disabled-btn {
+  pointer-events: none;
+}
+
+@media (max-width: 990px) {
+  .profile-details {
+    height: 100%;
+  }
+}
+
+.bgv-list-containe::-webkit-scrollbar {
+  display: block !important;
+}
+
+.bgv-modal{
+  max-height: 250px;
+  overflow: auto;
+  scrollbar-width: thin;
+  padding-top: 7px;
+}
+
+.bgv-modal::-webkit-scrollbar {
+  display: block !important;
+}
+
+@media (max-width: 960px) {
+
+  .a{
+    display:block;
+    min-height:275px;
+    max-height:280px;
+  }
+  
+  .d{
+    display:block;
+  }
+  
+  .d div{
+    display:flex;
+    flex-direction: row;
+  }
+  
+  .en{
+    display:block!important;
+    width:100%!important;
+    
+  }
+  
+  .b{
+    text-align:center;
+  }
+  
+  .d div span{
+    margin:3px;
+  }
+  
+  .v{
+    background:#ccc6;
+  }
+  
+  }
+  

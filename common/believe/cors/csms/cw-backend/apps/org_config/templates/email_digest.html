@@ -1,0 +1,33 @@
+{% load tz %}
+<html>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #696969;
+        }
+        th {
+            padding: 15px;
+            text-align: center;
+        }
+        td {
+            padding: 15px;
+        }
+    </style>
+    <body>
+        <h3>Activity Summary : </h3>
+        <table border="1">
+            <tr >
+                <th>Activity</th>
+                <th>Time</th>
+            </tr>
+            {% for instance in obj %}
+            <tr>
+                <td>{{instance.msg}}</td>
+                <td>{{instance.created_at|timezone:"Asia/Kolkata"|time}}</td>
+            </tr>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

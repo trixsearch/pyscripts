@@ -1,0 +1,377 @@
+.ezedox_main_body .config_portals_no_data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.ezedox_main_body .config_portals_no_data p {
+  margin: 0px;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--main-input-label-color);
+}
+
+.ezedox_main_body .config_portals_no_data p a {
+  color: #4a90e2;
+}
+
+.ezedox_main_body .portal_text_editor_container {
+  width: 899px;
+  padding-top: 20px;
+}
+
+.ezedox_main_body .portal_text_editor_box {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--main-white-color);
+}
+
+.ezedox_main_body .portal_text_editor_heading {
+  height: 37px;
+  background-color: var(--main-first-primary-color);
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.ezedox_main_body .portal_text_editor_heading p {
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--main-white-color);
+}
+
+.ezedox_main_body .portal_text_editor_body {
+  padding: 10px 0 10px 0;
+}
+
+.ezedox_main_body .descrip_view_card {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.ezedox_main_body .view_card_btn .install_app_btn {
+  margin-top: 5px;
+  width: 110px;
+}
+
+.ezedox_main_body .text_editor_input {
+  position: relative;
+}
+
+.ezedox_main_body .text_editor_input input {
+  border: 0px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  padding: 5px 3px;
+}
+
+.ezedox_main_body .text_editor_input.second input {
+  padding-top: 15px;
+}
+
+.ezedox_main_body .text_editor_input input:focus,
+.ezedox_main_body .text_editor_input input:hover {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.ql-editor {
+  height: 300px !important;
+}
+
+.ezedox_main_body .text_editor_input.textarea {
+  height: none !important;
+}
+
+.ezedox_main_body .app_category_cont {
+  margin-top: 5px;
+}
+
+.ezedox_link:hover {
+  text-decoration: none;
+}
+
+.remove-content {
+  position: absolute;
+  top: 5px;
+  right: 26px;
+  cursor: pointer;
+  font-size: 8px;
+  color: #337ab7;
+}
+
+.ezedox_top_content {
+  margin-top: 10px;
+}
+
+.add-workflow-btn {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 8px;
+}
+
+.category_card_text {
+  margin-left: 5px;
+}
+
+.ezedox_main_body .app_showing_card .descrip_view_card p.category_card_text {
+  font-size: 9px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--main-input-label-color);
+  padding-top: 5px;
+}
+
+/* Css for modal starts here */
+.for_destop_view {
+  width: 700px !important;
+  transition: 0.3s ease-in-out;
+}
+
+.for_destop_view .col-md-12 {
+  padding-left: 0px;
+}
+
+.for_destop_view .col-md-6 {
+  padding-left: 5px;
+}
+
+.for_mobile_view {
+  width: 300px !important;
+  transition: 0.3s ease-in-out;
+}
+
+.for_destop_view .col-md-offset-6 {
+  text-align: right !important;
+  margin-right: 2em !important;
+  transition: 0.3s ease-in-out;
+}
+
+.icon-desktop_preview {
+  font-size: 18px;
+  color: #707584;
+  font-weight: 600 !important;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #55608021;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.icon-smartphone_preview {
+  font-size: 18px;
+  color: #707584;
+  font-weight: 600 !important;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #55608021;
+  cursor: pointer;
+}
+
+.icon-desktop_preview:hover,
+.icon-smartphone_preview:hover {
+  color: var(--main-first-primary-color);
+}
+/* Css for modal ends here */
+
+.add_workflow_content_btn {
+  display: flex;
+  margin: auto 0;
+  flex-direction: column;
+  width: 180px !important;
+}
+
+.add_workflow_content_btn .portal_content_btns {
+  width: 180px;
+}
+
+.ezedox_main_body .app_category_head .app_category_portal_title {
+  margin-top: 30px;
+}
+
+.ezedox_main_body .category_card_btn button {
+  min-width: 75px;
+  height: 25px;
+  padding: 0px;
+  margin: 3px 0px 0px;
+  color: var(--main-first-button-color);
+  background-color: #fff;
+  border: 1px solid var(--main-first-button-color);
+  border-radius: 5px;
+  background-image: none;
+}
+
+.ezedox_main_body .category_card_btn button:hover {
+  background-image: var(--main-button-gradient-color);
+  color: var(--main-white-color);
+  border: 0;
+}
+
+.ezedox_main_body .portal_view_card {
+  border: none;
+  background-image: none;
+  padding: 10px;
+  position: relative;
+}
+
+.ezedox_main_body .portal_view_card .message_heading {
+  display: flex;
+  width: 100%;
+}
+
+.ezedox_main_body .portal_view_card .message_heading p {
+  width: 75%;
+  margin-left: 1px;
+  font-size: 12px;
+}
+
+.ezedox_main_body .portal_view_card .message_heading p a {
+  position: absolute;
+  top: 13px;
+  right: 4px;
+  font-size: 10px;
+}
+
+.ezedox_main_body .portal_view_card .message_heading p a:hover {
+  text-decoration: none;
+}
+
+.ezedox_main_body .portal_view_card .message_heading p span {
+  word-break: break-word;
+}
+
+.ezedox_main_body .portal_view_card .icon-edit {
+  font-size: 12px;
+}
+
+.ezedox_main_body .portal_view_card p .delete-content {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.ezedox_main_body .portal_view_card .category_card_text {
+  margin-left: 1px;
+}
+
+.assoc_wflows_card_icons {
+  font-size: 24px;
+}
+
+.ezedox_main_body .app_category_card {
+  height: 100px;
+}
+
+.ezedox_main_body .app_category_card p.category_card_text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100px;
+  text-align: center;
+  margin-left: 8px;
+}
+
+.app_category_assoc_wfls {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.app_showing_card_cont .app_btn_bg_color .app_title {
+  color: var(--main-white-color);
+  max-width: 150px;
+  width: auto;
+  word-break: break-word;
+}
+
+.app_showing_changeord_txt {
+  font-size: 9px;
+  margin-left: 5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  color: #9b9b9b;
+  letter-spacing: 0.1px;
+}
+
+.ezedox_main_body .app_category_disable_inner_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ezedox_main_body
+  .app_category_card_cont
+  .app_category_card
+  .category_card_text {
+  margin-left: 0;
+  margin-top: 2px;
+}
+
+.ezedox_main_body .app_category_card .icon-portal-template {
+  font-size: 28px;
+}
+
+.addWorkflow-content {
+  padding: 0 56px;
+}
+
+.add-workflow-btn span:first-child {
+  margin-right: 5px;
+  margin-top: -3px;
+}
+div.portals_container > div:nth-child(3) > div:nth-child(2) {
+  width: 100%;
+  margin-left: -7px;
+  display: inline-flex;
+}
+
+div.portals_container
+  > div:nth-child(3)
+  > div:nth-child(2)
+  > div:nth-child(1) {
+  scrollbar-width: thin;
+}
+
+div.portals_container
+  > div:nth-child(3)
+  > div:nth-child(2)
+  > div:nth-child(1)::-webkit-scrollbar {
+  display: block !important;
+}
+
+.main_changable_content_cont {
+  margin-top: 10px;
+}
+
+.ezedox_main_body .main_changable_content_cont .modal-title {
+  margin-bottom: 10px;
+}
+
+.add-portal-window .floating-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.fancy_btn.create_portal_btn{
+  margin-left:15px;
+}

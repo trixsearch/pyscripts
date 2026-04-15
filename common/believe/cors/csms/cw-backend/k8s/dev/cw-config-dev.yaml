@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cw-dev-config
+data:
+  KAFKA_BROKERS: "b-2.engineering-kafka-clu.l9lf4l.c2.kafka.ap-south-1.amazonaws.com:9092"
+  BACKEND_DOMAIN_URL: "http://cw-backend-service-dev.engineering.internal"
+  ENV: "dev"
+  LAUNCH_PROCESS_TOPICS: "dev-domain-updates"

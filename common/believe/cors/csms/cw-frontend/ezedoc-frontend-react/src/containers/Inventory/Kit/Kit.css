@@ -1,0 +1,51 @@
+.kit-container {
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+}
+
+.kit-assets-header {
+    display: flex;
+    align-items: center;
+}
+
+.kit-assets-container {
+    padding-top: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    height: calc(100vh - 280px);
+}
+
+.kit-assets-container::-webkit-scrollbar {
+    display: block !important;
+}
+
+.kit-container .delete-button-container {
+    align-self: center;
+}
+
+.kit-container .lists-option-row-delete {
+    border-radius: 50%;
+    padding: 8px 10px 6px;
+    background-color: #dddddd;
+}
+
+.kit-container .lists-option-row-delete:focus {
+    outline: none !important;
+}
+
+.kit-container .form_up_box .floating-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.kit-container .error-message-element {
+    color: red;
+    font-size: 14px;
+}
+
+.kit-footer {
+    display: flex;
+    justify-content: center;
+}

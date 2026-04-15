@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>blue_arrow</title>
+    <defs>
+        <path d="M9.74258745,3.85793245 L12.6842065,6.79993245 L12.7902065,6.80074149 L12.7902065,6.90593245 L13.3520632,7.46740816 L12.7902065,8.02793245 L12.7902065,8.13407483 L12.6842065,8.13393245 L9.74258745,11.0768839 L8.79977841,10.1340748 L10.7992065,8.13393245 L1.79020649,8.13407483 L1.79020649,6.80074149 L10.7992065,6.79993245 L8.79977841,4.80074149 L9.74258745,3.85793245 Z" id="path-1"></path>
+    </defs>
+    <g id="site/-shift-management" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="roster_01" transform="translate(-1140.000000, -72.000000)">
+            <g id="button-/-secondary-/-midium" transform="translate(1109.000000, 64.000000)">
+                <g id="blue_arrow" transform="translate(31.000000, 8.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Path" fill="#1B2D93" fill-rule="nonzero" transform="translate(7.571135, 7.467408) rotate(-43.000000) translate(-7.571135, -7.467408) " xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,422 @@
+.dashboard_container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  position: relative;
+  top: -45px;
+}
+
+.dashboard_container::-webkit-scrollbar {
+  height: 0;
+  display: block !important;
+}
+
+/* small card*/
+.ezedox_main_body .small_card_container {
+  display: flex;
+  padding-top: 14px;
+  padding-bottom: 14px; 
+}
+
+.ezedox_main_body .small_card_div {
+  background-color: var(--main-white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  flex-grow: 1;
+  height: 86px;
+  min-width: 0px;
+}
+.middle_small_card_div{
+  margin: 0px 14px 0px 14px
+}
+
+.ezedox_main_body .small_card_div:focus,
+.ezedox_main_body .small_card_div:hover {
+  text-decoration: none;
+}
+
+.ezedox_main_body .small_card_div.active {
+  background-image: var(--main-green-gradient-color);
+}
+
+.ezedox_main_body .small_card_div.active p,
+.ezedox_main_body .small_card_div.active h1 {
+  color: var(--main-white-color);
+  -webkit-text-fill-color: var(--main-white-color);
+}
+
+.ezedox_main_body .small_card_div p {
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000a12;
+}
+
+.ezedox_main_body .small_card_div h1 {
+  margin: 0px;
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: 500;
+  background-clip: text;
+  background: -webkit-linear-gradient(
+    var(--main-first-primary-color),
+    var(--main-second-primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.default-cursor{
+  cursor: default !important;
+}
+
+.ezedox_main_body .graph_cont {
+  min-width: calc(100% - 415px);
+}
+
+.ezedox_main_body .graph_cont_body {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--main-white-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ezedox_main_body .graph_cont_heading {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.ezedox_main_body .graph_cont_heading_text {
+  display: flex;
+}
+
+.ezedox_main_body .graph_head_text {
+  display: flex;
+  align-items: center;
+  width: 150px;
+}
+
+.ezedox_main_body .graph_head_text p {
+  margin: 0px;
+  font-size: 10px;
+}
+
+.ezedox_main_body .graph_head_text p.ongoing_color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--main-first-primary-color);
+  margin-right: 5px;
+}
+
+.ezedox_main_body .graph_head_text p.completed_color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--main-first-button-color);
+  margin-right: 5px;
+}
+
+.ezedox_main_body .graph_head_text.progress_text p {
+  font-size: 12px;
+}
+
+.ezedox_main_body .graph_head_text .date_pic input {
+  border: 0px;
+}
+
+.ezedox_main_body .graph_head_text .date_pic input:focus {
+  box-shadow: none;
+  outline: none;
+  border: 0px;
+  text-decoration: none;
+}
+
+.ezedox_main_body .graph_cont_heading_dropdown {
+  display: flex;
+  flex: 0 0 25%;
+  justify-content: flex-end;
+}
+
+.ezedox_main_body .graph_cont_heading_dropdown .form-group {
+  margin: 0px;
+}
+
+.ezedox_main_body .graph_cont_heading_dropdown .form-group select.form-control {
+  font-size: 12px;
+  height: auto;
+  width: auto;
+  border-radius: 0px;
+  border: 0px;
+  box-shadow: none;
+}
+
+.ezedox_main_body
+  .graph_cont_heading_dropdown
+  .form-group
+  select.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.ezedox_main_body #process_chart_container {
+  min-width: 310px;
+  margin: 0 auto;
+}
+
+.ezedox_main_body #process_chart_container > div {
+  height: 269px !important; 
+  padding: 15px;
+}
+
+/* chart content loader related css */
+.graph_cont #process_chart_container > svg {
+  width: 100%;
+  height: calc(100vh - 412px);
+}
+
+/* -------------------------------- */
+
+.ezedox_main_body .show_btn_container {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.ezedox_main_body .show_app_filter_btn {
+  float: right;
+  right: 0;
+}
+
+.pending-task-cont,
+.my-activities-container {
+  height: 86px;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  z-index: 99999;
+  opacity: 0.9;
+  display: grid;
+}
+
+.my-activities-container {
+  width: 416px;
+  grid-template-columns: 75% 25%;
+}
+
+.pending-task-cont p,
+.my-activities-container p {
+  margin-bottom: unset;
+}
+
+.pending-task-cont > a,
+.my-activities-container > a {
+  align-self: center;
+}
+
+.my-pending-Tasks,
+.my-activities-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  align-self: center;
+}
+
+.pending-task-count {
+  /* background-image: -webkit-linear-gradient(
+    var(--main-first-primary-color),
+    var(--main-second-primary-color)
+  ); */
+  font-size: 30px;
+  font-weight: 500;
+  align-self: center;
+  background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+}
+
+.task-cont-loader > svg{
+  height: 26px;
+}
+
+.pending-task-hover:hover{
+  text-decoration: none
+}
+
+.my-activities-detail {
+  align-self: center;
+}
+
+.task-card {
+  line-height: 3;
+  width: auto;
+  max-height: 55px;
+}
+
+.view-all-tasks,
+.view-all-import-history {
+  font-size: 10px;
+  text-decoration: underline;
+  color: var(--main-first-primary-color);
+}
+
+.no-task-text {
+  text-align: center;
+  color: #000000;
+}
+
+.startNewProcessMenuDashboard {
+  position: fixed;
+  top: 104px;
+  height: auto;
+  max-height: 287px;
+  right:10px;
+  box-shadow: 0 11px 20px 0 rgba(0, 0, 0, 0.23);
+  border: solid 1px #e5f2ff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  overflow: scroll;
+  z-index: 10;
+}
+
+.dashboard-process-filter{
+  margin-top: 16px;
+}
+
+.disabled_none{
+  pointer-events: none !important;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.process_chart_loader{
+  height:274px
+}
+
+.process_chart_loader > svg{
+  height:274px;
+  width:90%;
+}
+
+.responsive-containers{
+  padding: 7px;
+}
+
+.responsive-main-container{
+  margin-top: 16px;
+}
+
+/* dashboard carousel content loader css */
+.courasel-viewport > svg {
+  margin-bottom: 10px;
+}
+/* ===================================== */
+
+/* Process Count Content Loader css */
+.ezedox_main_body .small_card_div h1 > svg {
+  height: 26px;
+}
+
+.pending-my-task-cont{
+  transform: translate(0px, -9px)
+}
+
+.pending-group-task-cont{
+  transform: translate(0px, -24px)
+}
+
+.dashboard_top_nav_btn {
+  min-height: 37px;
+  padding-right: 7px;
+}
+
+.dashboard_top_nav_btn .fancy_btn{
+  position: relative;
+  z-index: 1000;
+}
+
+/* ================================ */
+
+@media only screen and (max-width: 576px) {
+
+  .ezedox_main_body .show_btn_container {
+    display: contents;
+  }
+
+  .startNewProcessMenuDashboard {
+    position: absolute;
+    top: 46px;
+  }
+  
+  .process_filter_dropdown_container {
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .dashboard-process-filter {
+    margin-top: 0px;
+  }
+
+  .responsive-main-container{
+    margin-top: 0px;
+  }
+
+  .pending-task-cont,
+  .pending-task-list {
+    width: 100% !important;
+  }
+
+  #right_side main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard_container .app_btn_heading {
+    margin-top: 0 !important;
+  }
+
+  .body_nav_button_mobile {
+    margin: 6px 0px;
+  }
+
+  .body_nav_button_mobile .fancy_btn {
+    width: 100%;
+    min-width: 0;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .graph_cont {
+    width: 100% !important;
+    padding: 10px 0 0 0 !important;
+  }
+
+  .graph_cont_heading {
+    flex-direction: column;
+  }
+
+  .graph_head_text > p:not(:first-child) {
+    width: min-content;
+  }
+
+  .small_card_container .small_card_div {
+    width: 100%;
+    margin: 14px 0px 0px 0px;
+  }
+
+  .ezedox_main_body .small_card_container{
+    padding: 0px;
+    flex-wrap: wrap;
+  }
+  .config_widgets_container {
+  }
+
+}
+

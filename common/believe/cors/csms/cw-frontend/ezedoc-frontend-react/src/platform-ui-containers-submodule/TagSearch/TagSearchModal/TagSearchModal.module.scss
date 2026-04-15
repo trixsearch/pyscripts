@@ -1,0 +1,101 @@
+@import '../../../theme.scss';
+
+
+.ModalStyle{
+    width:100%;
+    height: 100%;
+    background-color: rgba(243, 247, 253, 0.637) !important;
+    box-shadow: none !important;   
+}
+.ModalCardLayout{
+    width: 100%;
+    //height: 20rem;
+    margin-top: 1.5rem;
+    background-color: $white100  !important;
+}
+
+.closeIcon{
+    text-align: center; 
+    margin-bottom: 0.8rem;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.modalAlign{
+    //text-align: center;
+    left: 10rem;
+    top:3rem;
+}
+
+.closeAlign{
+    text-align: center;    
+}
+.closeText{
+    @include heading1_sb_b;
+    color: $black50;
+}
+
+.barStyle{
+    z-index: 999;
+    //position: absolute;
+    background-color: $white100 !important;
+    border-bottom: 2px solid $primaryBlue10;
+    width:100%;  
+    padding-bottom: 1rem;
+}
+
+
+.searchBar{
+    
+    width: 20rem !important;
+}
+.CancelButton{
+    background-color: $primaryBlue5 !important;
+    color:$black50 !important;
+    &:hover{
+        background-color: $primaryBlue5 !important;
+        color: $black50 !important;
+        text-decoration: underline !important;
+    }
+    
+}
+.Traverse{
+    //margin-top: 3rem !important;
+    margin-left: 0rem !important;
+}
+.card{
+    &:hover{
+        background-color:$primaryBlue10 !important; 
+    }
+}
+
+.ActiveClass{
+    background-color: $primaryBlue10 !important;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.11);
+}
+.sectionHead{
+    background-color: $white100 !important;
+    color: $black50 !important;
+	@include caption_m_m;
+}
+.TagTypeButton{
+    padding: 10px 16px 10px 16px;
+    background-color:rgba(235, 236, 253, 0.205);
+    color: $black50;
+    outline: none;
+    border: none;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    @include body_r_r;
+    &:hover{
+        background-color:$primaryBlue10;
+        color: $primaryBlue100;
+        border-radius: 4px;
+    }
+}
+.ActiveMode{
+    background-color:$primaryBlue10;
+    color: $primaryBlue100;
+    border-radius: 4px;
+}

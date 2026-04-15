@@ -1,0 +1,15 @@
+org_group_errors = {
+    13001:["Failed to get Organisation Group data.", " User: {}, Exception: {} "],
+    13002:["Organisation Group with this name already exists.", " User: {}, Error: {} "],
+    13003:["Failed to create Organisation Group.", " User: {}, Error: {} "],
+    13004:["Failed to create Organisation Group.", " User: {}, Exception: {} "],
+    13005:["ID not found.", " {}, Failed to retrieve Organisation Group details for Id: {}, Error: {} "],
+    13006:["Failed to retrieve Organisation Group details.", " User: {}, Id: {}, Exception: {} "],
+    13007:["ID not found.", "{}, Failed to update Organisation Group details for Id :{}, Error: {}"],
+    13008:["Organisation Group with this name already exists.", "{}, Failed to update Organisation Group details for Id :{}, Error: {}"],
+    13009:["Failed to update Organisation Group details.",  " User: {}, Id: {}, Error: {} "],
+    13010:["Failed to update Organisation Group details..", " User: {}, Id: {}, Error: {} "],
+    13011:["ID not found.", "{}, Failed to delete Organisation Group details for Id :{}, Error: {}"],
+    13012:["Failed to delete organisation group.", " User: {}, Id :{}, Exception: {} "],
+    13013:["Failed to get csv.", " User: {}, Exception: {} "],
+}

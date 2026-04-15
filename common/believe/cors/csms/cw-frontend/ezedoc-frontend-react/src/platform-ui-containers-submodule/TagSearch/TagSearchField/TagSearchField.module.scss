@@ -1,0 +1,94 @@
+@import '../../../theme.scss';
+
+.searchBar{
+    @include heading1_sb_b;
+    padding-right: 2rem;
+    outline: none;
+    padding-bottom: 4px;
+    border: none;
+    color: $primaryBlue100;
+    // width: 24rem;
+    background-color: $white100;
+    z-index: 0;
+    position: inherit;
+    ::placeholder{
+        color: $black50
+    }
+}
+
+.tagHeight {
+    height: 12px;
+}
+
+.requiredStar{
+    color: $infoFailed100;
+}
+
+.tagDropDown{
+    cursor: pointer;
+    color : $black50;
+    border-bottom: 1px solid $primaryBlue5;
+    @include body_r_r;
+    padding: 8px 16px 8px 16px;
+    &:hover{
+        background-color: $primaryBlue5;
+    }
+}
+
+.labelText{
+    @include caption_m_m;
+    font-weight: bold;
+    color:$black50;
+    display: block;
+    margin-bottom: 8px;
+    min-height: 18px;
+}
+.tagBar{
+    border:1px solid $primaryBlue5;
+    padding: 0px;
+    background-color: $white100;
+}
+.tagButtons{
+    padding: 2px 12px 2px 8px;
+    background-color: $primaryBlue5;
+    border-radius: 12px;
+    @include caption_m_m;
+    color:$black50;
+    margin-right: 0.5rem;
+    display: inline-block;
+    // transform: translateY(-3px);
+}
+.tagBarButtons{
+    @extend .tagButtons;
+    border-radius: 8px;
+    color:$primaryBlue100;
+}
+.dropdownMenu{
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.11);
+    position: absolute;
+    background: $white100;
+    width: 91%;
+    z-index: 2;
+    max-height: 15rem;
+    overflow-y: auto;
+    overflow-x : auto;
+   
+}
+.close{
+    cursor: pointer ;  
+}
+.closeDisable{
+    cursor: default ;  
+}
+.searchText{
+    color: $primaryBlue100;
+}
+
+.iconStyle{
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.iconSize{
+    height: 14px;
+}

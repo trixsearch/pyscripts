@@ -1,0 +1,2 @@
+OrganisationWorkflow__filter_fields = ["app_key", "is_open", "name", "is_global", "bulk_support"]
+OrganisationWorkflowAccess__filter_fields = ["app__app_key", "app__name", "policy__name", "policy__id"]

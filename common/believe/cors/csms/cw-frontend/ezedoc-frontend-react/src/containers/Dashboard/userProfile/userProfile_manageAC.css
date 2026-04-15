@@ -1,0 +1,339 @@
+.manage_profile_cont {
+  margin-top: 2em;
+}
+
+.react-tel-input .form-control {
+  max-width: 66%;
+}
+
+.manage_ap_text {
+  position: relative;
+}
+
+.manage_profile_underline {
+  width: 100px;
+  display: inline-block;
+  border-bottom: 1px solid #0000006e;
+}
+
+.manage_ap_text:first-child span {
+  margin-right: 10px;
+}
+
+.manage_ap_text,
+.manage_ap_emp {
+  margin-top: 20px;
+}
+
+.manage_ap_details {
+  margin-top: 10px;
+}
+
+.change_pass_text,
+.change_mobile_text {
+  margin-bottom: 10px;
+}
+
+.change_pass_text .pass_text,
+.change_mobile_text .mobile_text {
+  margin-right: 10px;
+}
+
+.change_password_underline {
+  width: 77%;
+  display: inline-block;
+  border-bottom: 1px solid #0000006e;
+  padding-left: 15px;
+}
+
+.manage_ap_name,
+.manage_ap_emp_text {
+  font-size: 12px;
+  color: #94979B;
+}
+
+.text_green {
+  color: var(--main-first-primary-color);
+}
+
+.orglogo-container {
+  width: 195px;
+  height: 195px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.orglogo-text {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 140px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.manage_profile_cont > .col-md-4 > .col-md-8.profile_pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile_pic_edit_btn {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 50%);
+  bottom: 4.5em;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.edit_icon {
+  color: #267acc;
+}
+
+.profile_pic_edit_label {
+  margin-left: 7px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 576px) {
+  .manage_account_page > div:first-child > div:first-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  .manage_account_page > div:first-child,
+  .manage_account_page > div:last-child {
+    margin-bottom: 20px;
+  }
+
+  .manage_account_page .manage_ap_text,
+  .manage_account_page .change_pass_text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .manage_account_page .manage_ap_text > span:nth-child(2),
+  .manage_account_page .change_pass_text > span:nth-child(2) {
+    margin-top: 5px;
+  }
+
+  .manage_account_page .manage_ap_text > span:nth-child(2) {
+    width: 116px;
+  }
+
+  .manage_account_page > div:last-child > div:nth-child(even) {
+    display: grid;
+    padding: unset;
+  }
+
+  .manage_account_page > div:last-child > div:nth-child(even) .fancy_btn {
+    margin: unset;
+  }
+
+  .manage_account_page > div:last-child > div:nth-child(1) span:nth-child(2) {
+    width: 103px;
+  }
+
+  .manage_account_page > div:last-child > div:nth-child(3) span:nth-child(2) {
+    width: 107px;
+  }
+
+  .manage_ap_text,
+  .change_pass_text,
+  .change_mobile_text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .manage_ap_text > span:nth-child(2),
+  .change_pass_text > span:nth-child(2) {
+    margin-top: 5px;
+  }
+
+  .manage_ap_text > span:nth-child(2) {
+    width: 43px;
+  }
+
+  .change_pass_text > span:nth-child(2) {
+    width: 130px;
+  }
+
+  .manage_profile_cont > div:nth-child(2) {
+    margin-top: 20px;
+  }
+
+  .manage_profile_cont
+    > div:nth-child(2)
+    > div:not(:first-child):not(:last-child) {
+    margin-top: 10px;
+  }
+
+  .build-version-text {
+    position: static !important;
+    text-align: center;
+  }
+
+  .user-profile-ph-input-cont {
+    flex-direction: column !important;
+  }
+
+  .react-tel-input .form-control {
+    max-width: 100% !important;
+  }
+}
+
+.my-id-card-btn {
+  padding-top: 2em;
+  text-align: center;
+}
+
+.my-id-card-btn > button {
+  width: 100%;
+}
+
+.build-version-text {
+  position: fixed;
+  bottom: 0.25em;
+  left: 50%;
+}
+
+.change-number-pswd-cont {
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+}
+
+.change-number-pswd-cont > div {
+  margin-top: 10px;
+  /* border: 1.5px solid black; */
+  padding: 10px;
+  /* border-radius: 6px; */
+}
+
+.change-number-pswd-cont .floating-input {
+  background: white !important;
+}
+
+.manage_profile_cont .col-md-6.pt-10 {
+  padding-top: 10px;
+}
+
+.user-profile-ph-input-cont {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  padding: 0 14px;
+}
+
+.manage_account_page .org-textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.manage_account_page .org-textfield {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  border: 0.5px solid #767676;
+}
+
+.manage_account_page .block-divider {
+  border-top-color: #0000006e;
+}
+
+.manage_account_page {
+  padding-top: 10px;
+}
+
+.signature-save-btn {
+  text-align: center;
+}
+
+.signature-save-btn > button{
+  width:100%;
+}
+
+.signature-pad--body {
+  position: relative;
+  height: calc(100% - 60px);
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 27%), 0 0 40px rgb(0 0 0 / 8%) inset;
+  border-radius: 4px; 
+}
+
+.signature-add__img-container{
+  width: 100%;
+  max-width: 330px;
+  margin-bottom: 3rem;
+}
+
+.signature-image{
+  width: 100%;
+  max-width: 330px;
+  margin-bottom: 3rem;
+}
+
+.signature-add__img{
+  margin-top:3rem;
+  max-width: 330px;
+  max-height: 100%;
+  vertical-align: top;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 4px rgb(0 0 0 / 27%), 0 0 40px rgb(0 0 0 / 8%) inset;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 27%), 0 0 40px rgb(0 0 0 / 8%) inset;
+  border-radius: 4px;
+}
+
+.form-check-input{
+ margin-right: 0.3125rem!important;
+ }
+
+.signature-pad{
+  position:relative;
+}
+
+.signature-clear{
+  position:relative;
+  bottom:176px;
+}
+
+.change-signature{
+  text-align: center;
+}
+
+.signature-add__img{
+  width:60%;
+}
+
+.signature-add__img-container{
+  display:flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 425px) {
+  .signature-pad--body{
+    width:303px;
+  }
+
+  .signature-add__img{
+    width:100%;
+  }
+
+  .signature-image{
+    width:50%!important;
+  }
+}

@@ -1,0 +1,27 @@
+
+.searchText{
+    color: #1b2d93;
+}
+
+.iconStyle{
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.iconSize{
+    height: 14px;
+}
+.tagOption{
+    align-items: center;
+    display: flex;
+    padding: 3px 10px;
+    margin: 5px;
+}
+.roleSelect .ant-select-selection-overflow{
+    padding: 5px !important;
+    position: relative;
+    display: flex;
+    flex: auto;
+    flex-wrap: wrap;
+    max-width: 100%;
+}

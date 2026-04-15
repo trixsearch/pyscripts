@@ -1,0 +1,29 @@
+.ezedox_manage:hover {
+  text-decoration: none;
+}
+
+.add_workflows_btn {
+  margin-top: 7px !important;
+}
+
+.ezedox_main_body .msg_text p {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--main-input-label-color);
+}
+
+.body_nav_config_btn {
+  position: absolute;
+  right: 0;
+  top: 53px;
+  z-index: 999;
+  margin-right: 11px;
+}
+
+.body_nav_config_btn a button {
+  padding: 10px 25px !important;
+}

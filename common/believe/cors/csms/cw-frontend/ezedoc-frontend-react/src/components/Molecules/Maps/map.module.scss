@@ -1,0 +1,81 @@
+@import  '../../../theme.scss';
+
+.container {
+    border-radius : 4px;
+    background-color : $white100;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.11);
+    margin : auto;
+    text-align : center;
+}
+
+.geosuggest {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    @include caption_m_m;
+  }
+
+  .geosuggestInput {
+    outline: none;
+    border: 1px solid $primaryBlueBg;
+    background-color: $white100;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    height:40px;
+    border-radius: 4px;
+    &:focus{
+        outline: none;
+        border: 1px solid $primaryBlue100;
+    }
+    &::placeholder{
+        outline: none;
+        font: inherit;
+        color:$black50;
+    }
+    @include body_r_r;
+  }
+  .geosuggestSuggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 25em;
+    padding: 0;
+    margin-top: 10px;
+    background: $white100;
+    border-top-width: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+    cursor: pointer;
+    z-index: 5;
+    text-align: left;
+    -webkit-transition: max-height 0.2s, border 0.2s;
+            transition: max-height 0.2s, border 0.2s;
+  }
+  .hide{
+    display: none;
+  }
+  .geosuggestSuggestions--hidden {
+    max-height: 0;
+    overflow: hidden;
+    border-width: 0;
+  }
+  
+  .geosuggestText{
+    text-align: left;
+  }
+
+  .defaultContainer{
+    height: 300px;
+    width: 700px;
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .geosuggestItem{
+    width: 100%;
+  }
+

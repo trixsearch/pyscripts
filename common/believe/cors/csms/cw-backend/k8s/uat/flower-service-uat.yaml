@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: cw-flower
+  name: cw-flower
+  namespace: uat
+spec:
+  type: ClusterIP
+  ports:
+    - name: "cw-flower"
+      port: 80
+      targetPort: 5555
+  selector:
+    app: cw-flower-uat

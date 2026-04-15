@@ -1,0 +1,450 @@
+{% extends 'drishti/index.html' %}
+{% block content %}
+<style>
+    h2{
+      background-color:#eee;
+    }
+    td, th{
+      vertical-align:middle;
+      overflow-y: auto;
+    }
+    .inlineForm{
+      display: inline-block;
+    }
+    .extarData{
+    }
+    table{
+      width:100%;
+    }
+    .dashboard #content{
+      width:auto;
+      margin:0px;
+    }
+    tbody {
+      vertical-align:center;
+    }
+    .overflow_data {
+    height:auto;
+    }
+
+    /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var tablinks = document.getElementsByClassName("tablinks");
+    if(!["","None"].includes("{{search_data}}")) {
+      tablinks[3].click();
+    }else if("{{activitiesTab}}"==="True") {
+      tablinks[2].click();
+    }else{
+      tablinks[1].click();
+    }
+    
+  });
+</script>
+
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="location.href='.'">Home</button>
+  <button class="tablinks" onclick="openTab(event, 'Overview')">Overview</button>
+  <button class="tablinks" onclick="openTab(event, 'Activities')">Activities</button>
+  <button class="tablinks" onclick="openTab(event, 'ProcessVariables')">ProcessVariables</button>
+  <button class="tablinks" onclick="openTab(event, 'VariablesDetails')">VariablesDetails</button>
+  <button class="tablinks" onclick="location.href='/cw/admin/logout'">Log Out</button>
+</div>
+
+<!-- Tab content -->
+<div id="Overview" class="tabcontent">
+              <h2>Overview</h2>
+                {% if response%}
+                  <h2>Status:</h2>
+                  <div>{{status}}</div>
+                  <br>
+                  <h2>Response:</h2>
+                  <div class="overflow_data">{{response}}</div><br><br>
+                {%endif%}
+              {% if deadletter_jobs_response or suspended_jobs_response or timer_jobs_response %}  
+                <h2>Jobs:</h2>
+                {% if deadletter_jobs_response.data or suspended_jobs_response.data or timer_jobs_response.data %}
+                <div class="overflow_data">
+                  <table>
+                  <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Job</th>
+
+                  </tr>  
+                  {%for data in deadletter_jobs_response.data%}
+                  <tr>
+                    <td>{{data.id}}</td>
+                    <td>Dead Letter Job</td>
+                    <td>{{data.exceptionMessage}}</td>
+                    <td>
+                    <form class="inlineForm" action="job/dead_letter/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/{{data.id}}/" method="post"> {% csrf_token %}
+                    <input hidden type="text" name="type" value="submit">
+                    <input type="submit" value="Stack Trace">
+                    </form>
+                    
+                    <form class="inlineForm" action="job/dead_letter/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/{{data.id}}/" method="post"> {% csrf_token %}
+                    <input hidden type="text" name="type" value="move">
+                    <input type="submit" value="Move">
+                    </form>
+                    </td>
+                  </tr>
+                  {%endfor%}
+
+                  {%for data in suspended_jobs_response.data%}
+                  
+                  <tr>
+                    <td>{{data.id}}</td>
+                    <td>Suspended Job</td>
+                    <td>{{data.exceptionMessage}}</td>
+                    <td>
+                    <form class="inlineForm" action="job/suspended/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/{{data.id}}/" method="post"> {% csrf_token %}
+                    <input type="submit" value="Stack Trace">
+                    </form>
+                    </td>
+                  </tr>
+                  {%endfor%}
+
+                  {%for data in timer_jobs_response.data%}
+                  
+                  <tr>
+                    <td>{{data.id}}</td>
+                    <td>Timer Job</td>
+                    <td>{{data.exceptionMessage}}</td>
+                    <td>
+                    <form class="inlineForm" action="job/timer/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/{{data.id}}/" method="post"> {% csrf_token %}
+                    <input hidden type="text" name="type" value="submit">
+                    <input type="submit" value="Stack Trace">
+                    </form>
+                    
+                    <form class="inlineForm" action="job/timer/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/{{data.id}}/" method="post"> {% csrf_token %}
+                    <input hidden type="text" name="type" value="move">
+                    <input type="submit" value="Move">
+                    </form>
+                    </td>
+                  </tr>
+                  {%endfor%} 
+
+                  </table>
+                </div>
+                {% else %}
+                  <p>No Jobs found.</p>
+                {% endif %}
+
+                {%if stack_trace_data%}
+                <div style="height:150px; overflow:scroll;">
+                <p>{{stack_trace_data}}<p>
+                </div>
+                {%endif%}
+                <br><br>
+                {% endif %}
+
+                {% if tasks_response %}
+                <h2>Tasks:</h2>
+                {% if tasks_response.data %}
+                <div class="overflow_data">
+                  <table>
+                  <tr>
+                    <th>Task Id</th>
+                    <th>Name</th>
+                    <th>Assignee</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Identity Link</th>
+                  </tr>
+                  {%for data in tasks_response.data%}
+                  <tr>
+                    <td>{{data.id}}</td>
+                    <td>{{data.name}}</td>
+                    <td>{{data.assignee}}</td>
+                    {%if data.endTime and data.deleteReason%}
+                    <td>Withdrawn</td>
+                    <td/>
+                    {%elif data.endTime%}
+                    <td>Completed</td>
+                    <td/>
+                    {%else%}
+                    <td>Ongoing</td>
+                    <td>
+                    <form class="inlineForm" action="tasks/update/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/{{data.id}}/" method="post"> {% csrf_token %}
+                    <select name="Email" id='label'> 
+                          {% for user in users_list|dictsort:"email"%}
+                              <option value="{{user.email}}" >{{ user.email }}</option>
+                          {% endfor %}
+                      </select>
+                    <input type="submit" name = "type" value = "Reassign">
+                    <input type="submit"  name = "type" value = "Claim">
+                    </form>
+                    </td>
+                    {%endif%}
+                    <td>
+                    {{data.startTime}}
+                    </td>
+                    <td>
+                    {{data.endTime}}
+                    </td>
+                    <td>
+                      <form style="margin-top:30px" action="identity-link" method="get">
+                          <input hidden name='task_id' value={{data.id}} id='task_id' type='text' />                  <input hidden type="text" name="tenant" value="{{tenant_id}}">
+                          <input hidden type="text" name="tenant" value="{{tenant_id}}">
+                          <input type="submit" value="View">
+                      </form>
+                    </td>
+                  </tr>
+                  {%endfor%}
+                  </table>
+                </div>
+                {% else %}
+                <p> No task assigned.<p>
+                {% endif %}
+                {% if tasks_response.total > 10 %}
+                <form type="get" action="result" style="margin: 0">
+                  <input hidden type="text" name="tenant" value="{{tenant_id}}">
+                  <input hidden type="text" name="process_id" value="{{process_instance_id}}">
+                  <input hidden type="text" name="start" value="{{tasks_response.start}}">
+                  <input hidden type="text" name="requested_data" value="{{request_type}}">
+                  {%if tasks_response.start >= 10 %}
+                  <input type="submit" name="previous_tasks" value="Previous">
+                  {% endif %}
+                  {%if tasks_response.size >= 10%}
+                  <input type="submit" name="next_tasks" value="Next">
+                  {%endif%}
+                </form>
+                {%endif%}
+                <br><br>
+                {%endif%}
+
+              {%if identity_links_response%}
+              <h2>Identity Links:</h2>
+              {% if not type_of_response%}
+              <div>
+              <form action="identityLink/add/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/" method="post"> {% csrf_token %}
+              <label for="User">User :</label>
+              <input id="User" type="text" name="User" value="{{ User }}" required>
+              <label for="Type">Type :</label>
+              <input id="Type" type="text" name="Type" value="{{ Type }}" required>
+              <input type="submit" value="Add">
+              </form>
+              </div>
+              {%endif%}
+              <div class="overflow_data">
+                <table>
+                <tr>
+                  <th>User</th>
+                  <th>Group</th>
+                  <th>Type</th>
+                </tr>
+                {%for data in identity_links_response%}
+                <tr>
+                  <td>{{data.userId}}</td>
+                  <td>{{data.groupId}}</td>
+                  <td>{{data.type}}</td>
+                  {% if not type_of_response%}
+                  <td>
+                  <form action="identityLink/delete/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/{{data.userId}}/{{data.type}}/" method="post"> {% csrf_token %}
+                  <input type="submit" value="DELETE">
+                  </form>
+                  </td>
+                  {%endif%}
+                </tr>
+                {%endfor%}
+                </table>
+              </div>
+              <br><br>
+              {% endif%}
+</div>
+<div id="Activities" class="tabcontent">
+              {%if activities_response.data%}
+              <h2>Activities:</h2>
+              <div class="overflow_data">
+              
+                <table >
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                  <th></th>
+                </tr>
+                {%for data in activities_response.data%}
+                <tr>
+                  <td><p>{{data.activityName}}</p></td>
+                  <td ><p>{{data.activityType}}</p></td>
+                  <td><p>{{data.startTime}}</p></td>
+                  <td><p>{{data.endTime}}</p></td>
+                </tr>
+                {%endfor%}
+                </table>
+              </div>
+              {% if activities_response.total > 10 %}
+              <form type="get" action="result" style="margin: 0">
+                <input hidden type="text" name="tenant" value="{{tenant_id}}">
+                <input hidden type="text" name="process_id" value="{{process_instance_id}}">
+                <input hidden type="text" name="start" value="{{activities_response.start}}">
+                <input hidden type="text" name="requested_data" value="{{request_type}}">
+                {%if activities_response.start >= 10 %}
+                <input type="submit" name="previous_activities" value="Previous">
+                {% endif %}
+                {%if activities_response.size >= 10%}
+                <input type="submit" name="next_activities" value="Next">
+                {%endif%}
+            </form>
+              {%endif%}
+              <br><br>
+              {%endif%}
+
+</div>
+
+<div id="ProcessVariables" class="tabcontent">
+              {% if process_variables_response%}
+              <h2>Process Variables:</h2>
+              {% if not type_of_response%}
+              <div>
+                <form action="processVariable/add/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/" method="post"> {% csrf_token %}
+                  <label for="Name">Name :</label>
+                  <input id="Name" type="text" name="Name" value="{{ Name }}" required>
+                  <label for="Type">Type:</label>
+                  <select name="Type" id="Type" required style="width: 100px;">
+                    <option value="string">String</option>
+                    <option value="integer">Integer</option>
+                    <option value="json">Json</option>
+                    <option value="boolean">Boolean</option>
+                    <option value="date">Date</option>
+                  </select>
+                  <label for="Value">Value :</label>
+                  <input id="Value" type="text" name="Value" value="{{ Value }}" required>
+                  <input type="submit" value="Add">
+                </form>
+              </div>
+              <div>
+              <form id= "variablecreationform" action="processVariable/add_bulk/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/" method="post"> {% csrf_token %}
+                <label for="body">Body :</label>
+                <textarea rows="3" cols="50" name="body" form="variablecreationform" placeholder= 'Example: [{"name":"variable_name", "type":"variable_type","value":"variable_value"}]' required></textarea>
+                <input type="submit" name="action" value="add">
+                <input type="submit" name="action" value="update">
+              </form>
+              </div>
+              <form type="get" action="result" style="margin: 0">
+                <input hidden type="text" name="tenant" value="{{tenant_id}}">
+                <input hidden type="text" name="process_id" value="{{process_instance_id}}">
+                <input hidden type="text" name="requested_data" value="{{request_type}}">
+                {%if search_data%}
+                <input style="width:223px"  id="search_box" type="text" name="search_data"  placeholder="{{search_data}}" >
+                {%else%}
+                <input style="width:223px" id="search_box" type="text" name="search_data"  placeholder="search.." >
+                {%endif%}
+                <input type="submit" value="Search">
+              </form>
+              {%endif%}
+              <div class="overflow_data">
+              
+                <table >
+                <tr>
+                  <th>Name</th>
+                  <th >Value</th>
+                  <th>Type</th>
+                  <th></th>
+                </tr>
+                {% for data in process_variables_response|dictsort:"name" %}
+                <tr>
+                  <td><p>{{data.name}}</p></td>
+                  <td class="extarData"><p style="width: 350px;" >{{data.value}}</p></td>
+                  <td><p>{{data.type}}</p></td>
+                  {% if not type_of_response%}
+                  <td>
+                  <form  class="inlineForm" action="processVariable/update/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/{{data.name}}/" method="post"> {% csrf_token %}
+                    <label for="Value">Value :</label>
+                    <input id="Value" type="text" name="Value" value="{{ Value }}" required>
+                    <label for="Type">Type :</label>
+                    <input id="Type" type="text" name="Type" value="{{ Type }}" required>
+                    <input type="submit" value="Update">
+                  </form>
+                
+                  <form class="inlineForm" action="processVariable/delete/{{request_type}}/{{process_instance_id}}/{{tenant_id}}/{{data.name}}/" method="post"> {% csrf_token %}
+                  <input type="submit" value="Delete">
+                  </form>
+                  </td>
+                {%endif%}
+                </tr>
+                {%endfor%}
+                </table>
+                
+              </div>
+
+</div>
+<div id="VariablesDetails" class="tabcontent">
+              <h2>Variable Details:</h2>
+              <div class="overflow_data">
+              
+                <table >
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Revision</th>
+                  <th>Time</th>
+                  <th>TaskId</th>
+                  <th></th>
+                </tr>
+                {%for data in variables_details_response.data|dictsort:"variable.name"%}
+                <tr>
+                  <td><p>{{data.variable.name}}</p></td>
+                  <td ><p>{{data.variable.type}}</p></td>
+                  <td><p>{{data.revision}}</p></td>
+                  <td><p>{{data.time}}</p></td>
+                  <td><p>{{data.taskId}}</p></td>
+                </tr>
+                {%endfor%}
+                </table>
+                
+              </div>
+              {%endif%}
+                
+</div>
+{% endblock content %}

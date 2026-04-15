@@ -1,0 +1,2 @@
+DepartmentDetail_filter_fields = ['department__name', 'head__first_name', 'head__last_name', 'head__email','department__created_at', 'department__updated_at']
+DepartmentDetail_search_fields = DepartmentDetail_filter_fields + ['department__extra_fields']

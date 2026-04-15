@@ -1,0 +1,38 @@
+.loader-dots {
+  width: 100px;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+#loader-dots-4 span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #3498db;
+  margin: 0px 8px;
+  opacity: 0;
+}
+
+#loader-dots-4 span:nth-child(1) {
+  animation: opacitychange 1s ease-in-out infinite;
+}
+
+#loader-dots-4 span:nth-child(2) {
+  animation: opacitychange 1s ease-in-out 0.33s infinite;
+}
+
+#loader-dots-4 span:nth-child(3) {
+  animation: opacitychange 1s ease-in-out 0.66s infinite;
+}
+
+@keyframes opacitychange {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}

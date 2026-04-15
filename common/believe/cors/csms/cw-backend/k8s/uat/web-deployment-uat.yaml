@@ -1,0 +1,98 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cw-backend-web-uat
+  name: cw-backend-web-uat
+  namespace: uat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cw-backend-web-uat
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: cw-backend-web-uat
+    spec:
+      containers:
+        - command: ["gunicorn"]    
+          args: ["ezedox.wsgi", "--bind", "0.0.0.0:8000", "--workers", "4", "--threads", "4"] 
+          image: 372004264077.dkr.ecr.ap-south-1.amazonaws.com/betterplace/cw-backend:uat
+          imagePullPolicy: Always
+          name: cw-backend-web-uat
+          ports:
+            - containerPort: 8000
+          volumeMounts:
+            - name: tmp-files
+              mountPath: /tmp
+        - command: ["celery"]
+          args: ["-A", "ezedox", "worker", "--loglevel=info", "-Q launch_process_bulk_queue,celery,launch_process_emp_verify_bulk_queue,report_queue", "--concurrency", "8", "-E", "--logfile=/code/logs/celery.log"]
+          image: 372004264077.dkr.ecr.ap-south-1.amazonaws.com/betterplace/cw-backend:uat
+          imagePullPolicy: Always
+          name: cw-backend-celery-uat
+          volumeMounts:
+            - name: tmp-files
+              mountPath: /tmp
+        - command: ["python3"]
+          args: ["consumers/domain_updates.py"]
+          image: 372004264077.dkr.ecr.ap-south-1.amazonaws.com/betterplace/cw-domain-updates-consumer:uat
+          imagePullPolicy: Always          
+          name: cw-backend-domain-updates-uat
+          resources:
+            requests:
+              memory: "2Gi"
+              cpu: "1000m"
+            limits:
+              memory: "2Gi"
+              cpu: "1000m"
+          env:
+            - name: KAFKA_BROKERS
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-uat-config
+                  key: KAFKA_BROKERS
+            - name: BACKEND_DOMAIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-uat-config
+                  key: BACKEND_DOMAIN_URL
+            - name: ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-uat-config
+                  key: ENV
+        - command: ["python3"]
+          args: ["consumers/launch_event_controller.py"]
+          image: 372004264077.dkr.ecr.ap-south-1.amazonaws.com/betterplace/cw-launch-process-consumer:uat
+          imagePullPolicy: Always          
+          name: cw-backend-launch-event-controller-uat
+          resources:
+            requests:
+              memory: "2Gi"
+              cpu: "1000m"
+            limits:
+              memory: "2Gi"
+              cpu: "1000m"
+          env:
+            - name: KAFKA_BROKERS
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-uat-config
+                  key: KAFKA_BROKERS
+            - name: BACKEND_DOMAIN_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-uat-config
+                  key: BACKEND_DOMAIN_URL
+            - name: LAUNCH_PROCESS_TOPICS
+              valueFrom:
+                configMapKeyRef:
+                  name: cw-uat-config
+                  key: LAUNCH_PROCESS_TOPICS
+      volumes:
+        - name: tmp-files
+          emptyDir: {}
+      restartPolicy: Always

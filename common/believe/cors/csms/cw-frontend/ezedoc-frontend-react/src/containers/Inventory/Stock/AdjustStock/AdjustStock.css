@@ -1,0 +1,36 @@
+.stock-adjust-form .inventory_datetime {
+    display: block !important;
+    color: var(--main-input-label-color);
+}
+
+.stock-adjust-form .adjustment-type-select {
+    margin-top: 5px;
+}
+
+.stock-adjust-form .add-reduce-radio-buttons {
+    margin-top: 17px;
+    padding-left: 30px;
+}
+
+.stock-adjust-form .add-reduce-radio-buttons .radio-container {
+    display: flex;
+    align-items: center;
+}
+
+.stock-adjust-form .add-reduce-radio-buttons .radio-input {
+    margin-top: unset !important;
+}
+
+.stock-adjust-form .add-reduce-radio-buttons .radio-label {
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.stock-adjust-form .add-reduce-radio-buttons label {
+    top: -32px !important;
+}
+
+.stock-adjust-form .add-reduce-radio-buttons .radio-label.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

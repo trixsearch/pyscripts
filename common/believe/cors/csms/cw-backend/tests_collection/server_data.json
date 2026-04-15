@@ -1,0 +1,20 @@
+[
+    {       
+        "email_id_to_login":"ayush.v@ezedox.com",        
+        "user_password_to_login":"87654321",       
+        "quantity_to_update_supply":250,        
+        "checked_value":true,       
+        "distribution_quantity":50,        
+        "ordered_at_to_create_supply": "2020-03-31T18:30:00.000Z",  
+        "arrived_at_to_create_supply": "2020-04-27T19:39:36.550Z", 
+        "quantity_to_create_supply":200,   
+        "entity_type_to_get_import_details":"user", 
+        "content_value_to_create_content": "<p><s>this is the sample content just for testing </s><strong><s>purpose</s></strong></p>",        "document_template_id":"cf4f2e82-a7ad-4647-a378-505b4c795d3b",      
+        "test_doc_tem":false,  
+        "document_template_key":"welcome_letter",      
+        "test_file":false,     
+        "file_path_to_upload":"",     
+        "app_key":"newemployeeonboarding",    
+        "process_Definition_Key":"new_employee"   
+    }
+]

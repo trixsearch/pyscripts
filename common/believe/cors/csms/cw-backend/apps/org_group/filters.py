@@ -1,0 +1,1 @@
+OrganisationGroup_filter_fields = ['name', 'filter_by', 'key', 'users__first_name', 'users__last_name', 'users__email', 'users__mobile', 'created_at', 'updated_at']

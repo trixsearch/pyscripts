@@ -1,0 +1,171 @@
+/* Overriding ant-design css */
+.ant-drawer-header-title {
+    width: 100% !important;
+    flex-direction: row-reverse !important;
+}
+
+.ant-drawer-body {
+    padding: unset !important;
+    overflow: auto;
+}
+
+/* ========================= */
+
+.drawer-filter {
+    margin: 16px 24px;
+}
+
+.drawer-filter .drawer-filter-header p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px; 
+    color: #04050B;
+}
+
+.drawer-filter .drawer-filter-sections {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    scrollbar-width: thin;
+    height: calc(100vh - 200px);
+}
+
+.drawer-filter .drawer-filter-sections::-webkit-scrollbar {
+    display: block !important;
+}
+
+.drawer-filter .drawer-filter-section {
+    color: var(--main-input-label-color);
+}
+
+.drawer-filter .drawer-filter-section .section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drawer-filter .drawer-filter-section .section-title {
+    font-weight: 500;
+}
+
+.drawer-filter .drawer-filter-section .section-content {
+    display: none;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.drawer-filter .drawer-filter-section .section-content.active {
+    display: block;
+}
+
+.drawer-filter .drawer-filter-section .section-item {
+    display: flex;
+    align-items: center;
+}
+
+.drawer-filter .drawer-filter-section .section-item-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-filter .drawer-filter-section input[type="checkbox"] {
+    margin-top: unset;
+}
+
+.drawer-filter .drawer-filter-section label {
+    width: 190px;
+    margin-top: 2px;
+    overflow: hidden;
+    margin-left: 10px;
+    font-weight: unset;
+    white-space: nowrap;
+    margin-bottom: unset;
+    text-overflow: ellipsis;
+}
+
+.drawer-filter .drawer-filter-section .section-item-date label {
+    margin-top: 5px;
+    margin-left: unset;
+}
+
+.drawer-filter .drawer-filter-section .section-item-date input {
+    padding: 3px;
+    box-shadow: none;
+    border-radius: 5px;
+    border: 2px solid rgb(74 74 74 / 69%);
+}
+
+.drawer-filter-btn-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+    padding: 10px 35px;
+    text-align: right;
+    left: 0;
+    background: #fff;
+    border-radius: 0 0 4px 4px
+}
+
+.drawer-filter-btn-container > button {
+    width: 100px;
+    min-width: 100px !important;
+}
+
+.drawer-filter-btn-container > button:last-child {
+    margin-right: unset;
+}
+.fancy_btn_custom{
+    border: 1px solid var(--main-white-color);
+    border-radius: 5px;
+    padding: 9px 21px;
+    min-width: 150px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    color: var(--main-first-button-color);
+    background-color: var(--main-white-color);
+    text-align: center;
+    height: 37px;
+}
+.drawer-filter-label{
+    margin-bottom:3px;
+    font-weight: 500;
+}
+.drawer-select .ant-select-arrow{
+    margin-right:10px;
+}
+.drawer-select .ant-select-selector{
+    border-radius: 4px !important;
+    padding: 0px 6px !important;
+    height: 32px !important;
+}
+.drawer-custom .ant-drawer-title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+}
+.drawer-custom .ant-select-selection-overflow{
+    flex-wrap: nowrap !important;
+}
+.drawer-select .ant-picker-input > input:placeholder-shown{
+    margin-left: 10px;
+}
+.errorField {
+    border-color: red !important;
+}
+
+.drawer-location-filter .roleSelect .ant-select{
+    width: 100%;
+}
+
+.drawer-location-filter .roleSelect .ant-select .ant-select-selector{
+    border-radius: 4px;
+}
+
+.drawer-filter-field-note {
+    font-size: 0.7rem;
+}

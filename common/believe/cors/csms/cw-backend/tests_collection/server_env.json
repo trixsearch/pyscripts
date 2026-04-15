@@ -1,0 +1,39 @@
+{
+    "id": "27731998-937c-4a70-8d45-857ee4a800ee",
+    "name": "local_env_variables",
+    "values": [
+            {
+                "key": "API_URL",
+                "value": "https://automation.codzedev.com",
+                "enabled": true
+            },
+            {
+                "key": "AUTHORIZATION",
+                "value": "\"\"",
+                "enabled": true
+            },
+            {
+                "key": "CONTENT-TYPE",
+                "value": "application/json",
+                "enabled": true
+            },
+            {
+                "key": "X-API-KEY",
+                "value": "ELr5KLtl.t5yQHmpf7J0TejD5Gyjxhs9VPfBhkqjX",
+                "enabled": true
+            },
+            {
+                "key": "NORMAL-API-RESPONSE-TIME",
+                "value": "2000",
+                "enabled": true
+            },
+            {
+                "key": "PROXY-API-RESPONSE-TIME",
+                "value": "3000",
+                "enabled": true
+            } 
+    ],
+    "_postman_variable_scope": "environment",
+    "_postman_exported_at": "2020-07-30T14:55:58.351Z",
+    "_postman_exported_using": "Postman/7.29.1"
+}

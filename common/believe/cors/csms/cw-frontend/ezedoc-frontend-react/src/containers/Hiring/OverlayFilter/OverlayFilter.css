@@ -1,0 +1,146 @@
+/* Overriding ant-design css */
+.ant-drawer {
+    /* top: 57px !important; */
+}
+
+.ant-drawer-title {
+    font-size:20px;
+}
+
+.ant-drawer-header {
+    padding: 16px 18px;
+}
+
+.ant-drawer-header-title {
+    width: 100% !important;
+    flex-direction: row-reverse !important;
+}
+
+.ant-drawer-body {
+    flex-grow: 0 !important;
+    padding: unset !important;
+}
+
+/* ========================= */
+
+.overlay-filter {
+    margin: 18px 0;
+}
+
+.overlay-filter .overlay-filter-sections {
+    padding: 0 18px;
+    margin-bottom: 10px;
+    overflow-y: overlay;
+    scrollbar-width: thin;
+    height: calc(100vh - 200px);
+}
+
+.overlay-filter .overlay-filter-sections::-webkit-scrollbar {
+    display: block !important;
+}
+
+.overlay-filter .overlay-filter-section {
+    color: var(--main-input-label-color);
+}
+
+.overlay-filter .overlay-filter-section .section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overlay-filter .overlay-filter-section .section-title {
+    font-weight: 500;
+}
+
+.overlay-filter .overlay-filter-section .section-content {
+    display: none;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.overlay-filter .overlay-filter-section .section-content.active {
+    display: block;
+}
+
+.overlay-filter .overlay-filter-section .section-item {
+    display: flex;
+    align-items: center;
+}
+
+.overlay-filter .overlay-filter-section .section-item-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay-filter .overlay-filter-section input[type="checkbox"] {
+    margin-top: unset;
+}
+
+.overlay-filter .overlay-filter-section label {
+    width: 190px;
+    margin-top: 2px;
+    overflow: hidden;
+    margin-left: 10px;
+    font-weight: unset;
+    white-space: nowrap;
+    margin-bottom: unset;
+    text-overflow: ellipsis;
+}
+
+.overlay-filter .overlay-filter-section .section-item-date label {
+    margin-top: 5px;
+    margin-left: unset;
+}
+
+.overlay-filter .overlay-filter-section .section-item-date input {
+    padding: 3px;
+    box-shadow: none;
+    border-radius: 5px;
+    border: 2px solid rgb(74 74 74 / 69%);
+}
+
+.overlay-filter-btn-container {
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding:10px 18px;
+}
+
+.overlay-filter-btn-container > button {
+    width: 100px;
+    min-width: 100px !important;
+}
+
+.overlay-filter-btn-container > button:last-child {
+    margin-right: unset;
+}
+
+.overlay-filter .fancy_btn.apply_button{
+    width: 144px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.fancy_btn_custom {
+    border: 1px solid var(--main-white-color);
+    border-radius: 5px;
+    padding: 9px 21px;
+    min-width: 150px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    color: var(--main-first-button-color);
+    background-color: var(--main-white-color);
+    text-align: center;
+    height: 37px;
+}
+
+.ant-drawer-close {
+    margin-right:0;
+    padding:0;
+}

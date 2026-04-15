@@ -1,0 +1,52 @@
+.custom-attributes .static-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.custom-attributes .static-header h5 {
+    margin:  8px 0;
+}
+
+.custom-attributes .form_up_box {
+    width: 95%;
+    margin: auto;
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+.custom-attributes .floating-input.Invalid,  .custom-attributes .Invalid{
+    border: 1px solid #d0021b !important;
+}
+
+.custom-attribs-multi-select-label {
+    position: unset !important;
+    pointer-events: all !important;
+    margin-left: 8px !important;
+    vertical-align: text-top;
+}
+
+.attribs-form-checkbox {
+    margin-top: 12px;
+}
+
+.attribs-form-checkbox input {
+    height: 16px;
+    width: 16px;
+}
+
+.attribs-form-checkbox label {
+    font-size: 14px;
+}
+
+.custom-attributes .cancelIcon{
+    font-size:15px;
+    height:35px;
+    width:35px;
+    background: #ddd;
+    border-radius:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

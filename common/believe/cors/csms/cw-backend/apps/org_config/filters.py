@@ -1,0 +1,5 @@
+ReportTemplate_filter_fields = ['name', 'description', 'apps__name','apps__app_key','apps__is_global', 'is_involved', 'process_type', 'prompt_variable', 'report_type', 'send_via_email', 'report_on', 'entity_master_model__name', 'entity_master_model__key', 'created_at', 'updated_at']
+CustomAttribute_filter_fields = ['type','created_at', 'updated_at']
+DashboardView_filter_fields = ['name', 'description', 'created_at', 'updated_at']
+JobConfigView_filter_fields = ['name', 'description', 'created_at', 'updated_at']
+EventConfigView_filter_fields = ['name', 'description', 'created_at', 'updated_at']

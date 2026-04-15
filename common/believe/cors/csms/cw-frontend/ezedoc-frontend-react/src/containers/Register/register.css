@@ -1,0 +1,145 @@
+.ezedox_main_body .signup_btn {
+  font-size: 18px;
+  text-align: center;
+  color: var(--main-white-color);
+  border-radius: 5px;
+  background-image: var(--main-button-gradient-color);
+  padding: 4% 28%;
+  cursor: pointer;
+  border: 0px;
+}
+
+.ezedox_main_body .signup_btn:focus,
+.ezedox_main_body .signup_btn:hover {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.signup_btn:disabled {
+  opacity: 0.3;
+}
+
+.ezedox_main_body .signup_main_body_container {
+  background-color: var(--main-white-color);
+}
+
+.ezedox_main_body .signup_body_container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ezedox_main_body .signup_body {
+  position: absolute;
+  margin: auto;
+  width: 36%;
+  min-width: 300px;
+  min-height: 530px;
+  box-shadow: 0 7px 20px 7px rgba(0, 0, 0, 0.28);
+  background-color: var(--main-white-color);
+}
+
+.ezedox_main_body .signup_body.signup_proceed_body {
+  min-height: 399px;
+}
+
+.ezedox_main_body .top_border_nav {
+  height: 5px;
+  width: 100%;
+  background-color: var(--main-first-primary-color);
+}
+
+.ezedox_main_body .signup_text_left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background-image: var(--main-button-gradient-color);
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-left: 8px solid var(--main-first-primary-color);
+  margin-left: 20px;
+  padding-left: 10px;
+  line-height: 1.3;
+}
+
+.sign-up-bg-img {
+  width: 100%;
+}
+
+.signup_body_container .sign_in_up_box {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 85% !important;
+  padding: 15px 15px 40px 15px;
+}
+
+.ezedox_main_body .signup_body .sign_in_up_box .floating-input {
+  border: 0px;
+  border-radius: 0px;
+  border-bottom: 1px solid;
+  border-color: var(--main-input-boder-color);
+  padding-left: 0px;
+}
+
+.ezedox_main_body .signup_body .sign_in_up_box .floating-input:focus {
+  border-color: var(--main-first-primary-color);
+}
+
+.ezedox_main_body .signup_body .sign_in_up_box label {
+  left: 0px;
+}
+
+.ezedox_main_body .signup_body .sign_in_up_box .floating-input:focus ~ label,
+.ezedox_main_body
+  .signup_body
+  .sign_in_up_box
+  .floating-input:not(:placeholder-shown)
+  ~ label {
+  left: 0px;
+  padding-left: 0px;
+}
+
+.ezedox_main_body .signup_body .login_logo {
+  padding: 0px;
+}
+
+.register_message {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 23px;
+}
+
+@media only screen and (max-width: 576px) {
+  .signup_text_left {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .signup_body_container .sign_in_up_box .floating-label .company_identifier .floating-input:placeholder-shown:not(:focus) + label {
+    width: 106px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 831px) and (max-width: 930px) {
+  .signup_body_container .sign_in_up_box .floating-label .company_identifier .floating-input:placeholder-shown:not(:focus) + label {
+    width: 116px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

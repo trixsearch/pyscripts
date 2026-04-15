@@ -1,0 +1,199 @@
+@-webkit-keyframes fadeIn {
+    from {
+        left: -73px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        right: -73px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes opacitychange {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.startNewProcessMenuTriangle {
+    content: "";
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #e5f2ff;
+    position: absolute;
+    right: 50px;
+    top: 40px;
+}
+
+.startNewProcessMenu {
+    position: absolute;
+    top: 235px;
+    right: 24px;
+    height: auto;
+    max-height: 287px;
+    box-shadow: 0 11px 20px 0 rgba(0, 0, 0, 0.23);
+    border: solid 1px #e5f2ff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    overflow: scroll;
+    z-index: 10;
+}
+
+.startNewProcessMenuItem {
+    display: flex;
+    width: 100%;
+    border-bottom: solid 1px #e6e6e6;
+    border-left: 2px solid transparent;
+}
+
+.startNewProcessMenuItem:hover {
+    cursor: pointer;
+    border-left: 2px solid var(--main-first-primary-color);
+}
+
+.startNewProcessMenuItem:hover .menuItemImageContainer > .processImage {
+    color: var(--main-first-primary-color);
+    border-color: var(--main-first-primary-color);
+}
+
+.startNewProcessMenuItem:hover .menuItemTextContainer > .headerRow {
+    color: var(--main-first-primary-color);
+}
+
+.startNewProcessMenuItem:hover .menuItemTextContainer > .descriptionRow {
+    color: var(--main-first-primary-color);
+}
+
+.startNewProcessMenuItem > .menuItemImageContainer {
+    height: 63px;
+    display: flex;
+    margin: 0 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.startNewProcessMenuItem > .menuItemImageContainer > .processImage {
+    height: 33px;
+    width: 33px;
+    border: solid 0.5px #e6e6e6;
+    border-radius: 50%;
+    padding: 9px;
+    display: block;
+    margin: 0 auto;
+}
+
+.startNewProcessMenuItem > .menuItemTextContainer {
+    margin: 5px;
+    height: auto;
+}
+
+.startNewProcessMenuItem > .menuItemTextContainer > .headerRow {
+    font-size: 14px;
+    color: var(--main-input-label-color);
+    margin-bottom: 1px;
+}
+
+.startNewProcessMenuItem > .menuItemTextContainer > .descriptionRow {
+    font-size: 10px;
+    color: #9b9b9b;
+    overflow: hidden;
+    height: 30px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    line-height: 10px;
+    margin-bottom: 0;
+}
+
+.bulk-init-button-container,
+.bulk-init-button-container-loader {
+    width: 73px;
+    height: auto;
+    box-shadow: -4px 0 7px 0 rgba(0, 0, 0, 0.1);
+    padding: 6px;
+    background-image: var(--main-button-gradient-color);
+    border: none;
+    display: none;
+    transition: opacity 3s ease-out;
+    position: absolute;
+    opacity: 1;
+}
+
+.bulk-init-button-container-loader {
+    background-image: none;
+    background-color: #ffffff;
+    position: unset;
+    padding: 22px 10px;
+    margin-right: 2px;
+    border-radius: 5px;
+}
+
+.start-new-process-item:hover .bulk-init-button-container-loader {
+    display: block;
+}
+
+.bulk-init-button-container:focus {
+    outline: none !important;
+}
+
+.start-new-process-item {
+    display: flex;
+    width: 348px;
+}
+
+.start-new-process-item:hover button {
+    display: block;
+    right: 0;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+
+.bulk-init-icon {
+    font-size: 32px;
+    color: white;
+    display: block;
+}
+
+.bulk-init-text {
+    font-size: 8px;
+    color: white;
+}
+
+.bulk-init-loader-dots {
+    border-radius: 100%;
+    display: inline;
+}
+
+.bulk-init-loader-dots span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #3498db;
+    margin: 0px 4px;
+    opacity: 1;
+}
+
+.bulk-init-loader-dots span {
+    animation: opacitychange 700ms ease-in-out 0.66s infinite;
+}
+
+.disabled_none {
+    pointer-events: none !important;
+    opacity: 0.6;
+    cursor: not-allowed;
+}

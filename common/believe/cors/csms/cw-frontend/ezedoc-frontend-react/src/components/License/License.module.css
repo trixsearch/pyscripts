@@ -1,0 +1,39 @@
+.license {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background-color: rgb(111, 125, 137, 0.3);
+    z-index: 999;
+    margin-left: -15px;
+}
+
+.blur {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+.contact {
+    min-width: 50%;
+    min-height: 20%;
+    background-color: #F3C19D;
+    text-align: left;
+    max-width: 60%;
+    margin: auto;
+    border-radius: 3px;
+    border-color: #EDA26C;
+    border-style: solid;
+    display: flex;
+    padding: 0.6rem;
+    align-content: space-around;
+}
+
+.premium {
+    display: flex;
+    align-items: center;
+    transform: scale(4);
+    margin: 1.5rem 3rem 3rem;
+}

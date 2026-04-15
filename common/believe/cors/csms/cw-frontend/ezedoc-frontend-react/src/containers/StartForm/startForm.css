@@ -1,0 +1,109 @@
+.process-form-header .form_padding {
+  padding: 0px !important;
+}
+
+.process-form-header .form-detail {
+  display: flex;
+  padding: 10px 0 0 0;
+  justify-content: space-between;
+}
+
+.process-form-header .form-detail .form-name {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.process-form-header .form-detail .form-description {
+  font-size: 10px;
+  padding-top: 5px;
+}
+
+.process-form-header {
+  /* position: fixed; */
+  /* top: 56px; */
+  display: inline-block;
+  z-index: 999;
+  /* margin-left: -13px; */
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+
+.process-form-header .fancy_btn {
+  margin-top: -7px;
+}
+
+.body_nav_button .lang_btn {
+  margin-top: -14px;
+  margin-right: 8px;
+  border: none;
+  background-color: transparent;
+}
+
+.body_nav_button .lang_btn img {
+  height: 1.25rem;
+}
+
+.body_nav_button .lang_btn.dropdown-toggle::after {
+  display: none;
+}
+
+.ezedox-form-page {
+  /* margin-top: 50px; */
+  /* padding-left: 15px; */
+  padding-right: 15px;
+  padding-top:20px;
+  width: 100%;
+  overflow: overlay;
+  scrollbar-width: thin;
+}
+
+.ezedox-form-page::-webkit-scrollbar {
+  display: block !important;
+  height: 0;
+}
+
+.process-form-header .body_nav_button {
+  margin-top: -3px;
+}
+
+/* submission completed form io message to hide   */
+.alert.alert-success {
+  display: none;
+}
+
+.fancy_btn.form_cancel_btn{
+  margin-left:15px;
+}
+
+@media only screen and (max-width: 576px) {
+  .process-form-header {
+    margin-left: -10px !important;
+  }
+
+  .ezedox-form-page {
+    margin-top: 100px;
+  }
+
+  .process-form-header .form-detail > .form-description {
+    padding-right: 15px;
+  }
+
+  .process-form-header .form-detail > .body_nav_button > .fancy_btn {
+    min-width: 110px;
+    margin-top: -4px;
+  }
+
+  /*Custom CSS classes for formio.*/
+  /*Override dayMonthYear component*/
+  .dayMonthYearCustom div.form-group  {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+
+.formio-component-submit{
+  display:block!important;
+  visibility: visible!important;
+  
+}

@@ -1,0 +1,7 @@
+.deleted-user > td {
+    color: #d0021b !important;
+}
+
+.deleted-user > td.ant-table-cell.ant-table-selection-column * {
+    display: none;
+}

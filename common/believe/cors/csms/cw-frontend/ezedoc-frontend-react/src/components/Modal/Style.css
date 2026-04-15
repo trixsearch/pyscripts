@@ -1,0 +1,50 @@
+/* Css for reusable-modal => every css class is prefixed with reusable-modal-container, header, body, footer. 
+  So as to not disturb any other components , where bootstap-modal has been used. */
+
+/* Overriding css for the bootstrap modal */
+.modal-backdrop.fade {
+  opacity: 0.7;
+}
+/* ------------------- */
+
+.reusable-modal-container {
+  opacity: 1 !important;
+  /* top: 120px; */
+}
+
+.reusable-modal-container .modal-content {
+  padding: 28px 38px 38px 38px;
+  min-height: 343px;
+  max-height: 500px;
+}
+
+.reusable-modal-container .modal-dialog {
+  height: 0;
+  max-width: 620px;
+}
+
+.reusable-modal-body {
+  min-height: 212px;
+  overflow: auto;
+  position: relative;
+  padding-top: 35px;
+}
+
+.reusable-modal-body .modal-body {
+  padding: 0;
+}
+
+.reusable-modal-header .modal-header {
+  text-align: center;
+  border-bottom: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.reusable-modal-footer .modal-footer {
+  padding: 0;
+  display: flex;
+  border-top: 0;
+  justify-content: center;
+  padding-top: 35px;
+}

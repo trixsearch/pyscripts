@@ -1,0 +1,12 @@
+.dristhi-cntr {
+  margin-top: 2px;
+}
+
+.drishti-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 5px;
+}

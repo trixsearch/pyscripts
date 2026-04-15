@@ -1,0 +1,67 @@
+/* Css for querybuilder-modal => every css class is prefixed with querybuilder-modal-container, header, body, footer. 
+  So as to not disturb any other components , where bootstap-modal has been used. */
+
+/* Overriding css for the bootstrap modal */
+.modal-backdrop.fade {
+  opacity: 0.7;
+}
+/* ------------------- */
+
+.querybuilder-modal-container {
+  opacity: 1 !important;
+  top: 30px;
+}
+
+.querybuilder-modal-container .modal-content {
+  padding: 28px 38px 38px 38px;
+  max-height: 500px;
+  width: fit-content;
+  margin: 0 -160px;
+}
+
+.querybuilder-modal-container .modal-dialog {
+  height: 0;
+}
+
+.querybuilder-modal-body {
+  position: relative;
+}
+
+.reports-query-modal {
+  margin: 0 4px;
+  overflow: auto;
+  max-height: 247px;
+  scroll-behavior: smooth;
+}
+
+.querybuilder-modal-body .reports-query-modal {
+  scrollbar-width: thin;
+}
+
+.querybuilder-modal-body .reports-query-modal::-webkit-scrollbar {
+  display: block;
+}
+
+.querybuilder-modal-body .modal-body {
+  padding: 0;
+  width: fit-content;
+}
+
+.querybuilder-modal-header .modal-header {
+  text-align: center;
+  border-bottom: none;
+  padding: 0;
+  align-items: center;
+}
+
+.querybuilder-modal-header .modal-subtitle{
+  margin-left: 10px;
+}
+
+.querybuilder-modal-footer .modal-footer {
+  padding: 0;
+  display: flex;
+  border-top: 0;
+  justify-content: center;
+  padding-top: 35px;
+}

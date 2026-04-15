@@ -1,0 +1,11 @@
+.internal-server-error {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.internal-server-error > .cloud-error {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    width: 25%;
+}

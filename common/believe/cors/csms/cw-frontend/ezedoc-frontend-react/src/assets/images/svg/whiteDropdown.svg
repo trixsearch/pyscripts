@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="8px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>icon / 12 / info / arrow-down</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="6 6.58578644 2 2.58578644 0.585786438 4 6 9.41421356 11.4142136 4 10 2.58578644"></polygon>
+    </defs>
+    <g id="📤-excel-uploade" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="excel-uploade_1" transform="translate(-1375.000000, -76.000000)">
+            <g id="Security-Guard" transform="translate(1181.000000, 64.000000)">
+                <g id="icon-/-12-/-info-/-arrow-down" transform="translate(194.000000, 10.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Path" fill="#3F47F4" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="evenodd" mask="url(#mask-2)" x="0" y="0" width="12" height="12"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

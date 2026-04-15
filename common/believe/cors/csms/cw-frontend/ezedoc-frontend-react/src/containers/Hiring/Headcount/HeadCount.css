@@ -1,0 +1,3 @@
+.headcount-plan-list .ant-table-wrapper .ant-table-body {
+    height: calc(100vh - 320px);
+}

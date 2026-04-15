@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cw-qa-config
+data:
+  KAFKA_BROKERS: "b-2.engineering-kafka-clu.l9lf4l.c2.kafka.ap-south-1.amazonaws.com:9092"
+  BACKEND_DOMAIN_URL: "http://cw-backend-service-qa.engineering.internal"
+  ENV: "qa"
+  LAUNCH_PROCESS_TOPICS: "qa-domain-updates"

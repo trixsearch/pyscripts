@@ -1,0 +1,15 @@
+.not-applicable-cont {
+  margin: 0px;
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: 500;
+  background-clip: text;
+  background: -webkit-linear-gradient(
+    var(--main-first-primary-color),
+    var(--main-second-primary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+}
