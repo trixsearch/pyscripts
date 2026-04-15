@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="relVm_Sec">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/relVm_Sec.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
