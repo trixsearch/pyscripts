@@ -1,4 +1,0 @@
-spring:
-  cloud:
-    config:
-     uri: http://10.173.76.18:31006
