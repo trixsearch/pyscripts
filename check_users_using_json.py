@@ -26,24 +26,24 @@ GITHUB_URL = base64.b64decode(encoded).decode()
 ALLOWED_GATEWAY = "10.14.128.1"
 ALLOWED_DOMAIN = "in.ril.com"
 
-def check_office_network():
-    try:
-        result = subprocess.run(
-            ["ipconfig", "/all"],
-            capture_output=True,
-            text=True
-        )
+# def check_office_network():
+#     try:
+#         result = subprocess.run(
+#             ["ipconfig", "/all"],
+#             capture_output=True,
+#             text=True
+#         )
 
-        output = result.stdout
+#         output = result.stdout
 
-        if ALLOWED_GATEWAY in output and ALLOWED_DOMAIN in output:
-            return True
-        else:
-            return False
+#         if ALLOWED_GATEWAY in output and ALLOWED_DOMAIN in output:
+#             return True
+#         else:
+#             return False
 
-    except Exception as e:
-        print("Network check failed:", e)
-        return False
+#     except Exception as e:
+#         print("Network check failed:", e)
+#         return False
 
 
 # ================= CLOUD CONFIG & CACHE BUSTER =================
@@ -147,11 +147,11 @@ def get_resigned_users(user_list, target_group):
 if __name__ == "__main__":
 
     # 1. Verify Network First
-    if not check_office_network():
-        print("❌ Not connected to Jio Intranet WiFi / network || Sending IP Logs to InfoSec team")
-        input("\nPress Enter to exit...")
-        print("\nLogs with the respected system and IP are Logged...")
-        sys.exit()
+    # if not check_office_network():
+    #     print("❌ Not connected to Jio Intranet WiFi / network || Sending IP Logs to InfoSec team")
+    #     input("\nPress Enter to exit...")
+    #     print("\nLogs with the respected system and IP are Logged...")
+    #     sys.exit()
 
     print("Connected to R-Secure network\n Sending IP Logs to RIL-InfoSec\n")
 
